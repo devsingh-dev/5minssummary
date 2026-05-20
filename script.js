@@ -1483,3 +1483,19 @@ window.addEventListener('popstate', () => {
         showListView();
     }
 });
+function shareOnWhatsApp() {
+    // 1. Get the exact current URL (including the ?book=slug part)
+    const currentUrl = window.location.href;
+    
+    // 2. Get the title of the book currently being viewed
+    const bookTitle = document.getElementById('detail-title').innerText;
+    
+    // 3. Create the message you want to send
+    const message = `Check out this 5-minute summary of "${bookTitle}": ${currentUrl}`;
+    
+    // 4. Encode the message so it works in a URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // 5. Open WhatsApp with the pre-filled message
+    window.open(`https://api.whatsapp.com/send?text=${encodedMessage}`, '_blank');
+}
