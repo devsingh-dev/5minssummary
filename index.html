@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Mins Summary | Knowledge Simplified</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fdfdfd; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -4px; left: 0; background-color: #10b981;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after { width: 100%; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
+    </style>
+     </style><link rel="icon" type="image/png" href="image/logo.png"></head>
+</head>
+<body class="text-slate-800">
+
+    <!-- TOP DISCLAIMER -->
+    <div class="bg-slate-900 text-white text-[11px] md:text-xs py-2 px-4 text-center font-medium tracking-wide">
+        <i class="fa-solid fa-circle-info mr-2 text-emerald-400"></i>
+        Disclaimer: This website contains affiliate links. We may earn a commission from purchases made through these links at no extra cost to you.
+    </div>
+
+    <!-- NAVBAR WITH NEW LOGO -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- LOGO -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer group gap-2" onclick="window.location.href='index.html'">
+                    <div class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white p-2 rounded-xl shadow-lg group-hover:shadow-emerald-200 transition-all transform group-hover:-rotate-12">
+                        <i class="fa-solid fa-hourglass-half text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-serif font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                        5 Mins <span class="text-emerald-500">Summary</span>
+                    </span>
+                </div>
+
+                <!-- DESKTOP MENU -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium text-slate-900">Home</a>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-medium text-slate-600 hover:text-emerald-600 transition-colors py-2">
+                            <span>Browse Categories</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] pt-1 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+                        
+                        <!-- Dropdown Links with URL Parameters -->
+                        <div class="absolute left-0 mt-0 w-56 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-2 py-3 z-50">
+                            <a href="summary.html?type=genre" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-layer-group mr-3 w-4"></i> By Genre
+                            </a>
+                            <a href="summary.html?type=author" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-user-pen mr-3 w-4"></i> By Author
+                            </a>
+                            <a href="summary.html?type=title" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-book mr-3 w-4"></i> By Book Title
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="summary.html" class="nav-link font-medium text-slate-600 hover:text-slate-900">Latest Summaries</a>
+                    <a href="#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
+                        Subscribe Free
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON (Fixed Toggle) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:text-emerald-600 focus:outline-none" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU CONTENT -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-50 px-4 py-6 space-y-4 shadow-inner absolute w-full z-40">
+            <a href="index.html" class="block text-slate-900 font-medium hover:text-emerald-600">Home</a>
+            <div class="space-y-2 pt-2 border-t border-slate-50">
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Categories</p>
+                <a href="summary.html?type=genre" class="block text-slate-600 pl-2 hover:text-emerald-600">By Genre</a>
+                <a href="summary.html?type=author" class="block text-slate-600 pl-2 hover:text-emerald-600">By Author</a>
+                <a href="summary.html?type=title" class="block text-slate-600 pl-2 hover:text-emerald-600">By Book Title</a>
+            </div>
+            <a href="summary.html" class="block text-slate-700 font-medium hover:text-emerald-600">Latest Summaries</a>
+        
+        <br>
+             <a href="index.html#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
+                        Subscribe Free
+                    </a>
+</div>
+    </nav>
+  
+
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-white pt-16 pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            
+            <div class="w-full md:w-1/2 text-center md:text-left z-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 border border-emerald-200">
+                    Smarter Learning
+                </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-slate-900 leading-tight mb-6">
+                    We read for hours, so you can learn in <span class="text-emerald-500 italic">minutes.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
+                    Welcome to 5 Mins Summary. We distill the world's best non-fiction, business, and self-help books into quick, actionable summaries. Extract the core ideas, save your time, and level up your knowledge instantly.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="window.location.href='summary.html'" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl flex items-center justify-center">
+                        Explore Summaries <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 mt-16 md:mt-0 relative flex justify-center">
+                <div class="absolute w-[120%] h-[120%] bg-emerald-50 rounded-full -top-10 -right-20 z-0 opacity-50 blur-3xl"></div>
+                
+                <div class="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Person reading a book with coffee" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENDING BOOKS SECTION -->
+    <section class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold text-slate-800 mb-4">Trending Book Summaries</h2>
+            <p class="text-slate-500 mb-10">Discover the most popular reads this week.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Book 1: Atomic Habits (ID: 1) -->
+                <a href="summary.html?bookId=1" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
+                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
+                        <img src="image/atomic-habit.webp" alt="Atomic Habits Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Atomic Habits</span>
+                    <span class="text-xs text-slate-400 mt-1">James Clear</span>
+                </a>
+                
+                <!-- Book 2: Psychology of Money (ID: 2) -->
+                <a href="summary.html?bookId=2" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
+                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
+                        <img src="image/pshychology-of-money.jpg" alt="Psychology of Money Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Psychology of Money</span>
+                    <span class="text-xs text-slate-400 mt-1">Morgan Housel</span>
+                </a>
+                
+                <!-- Book 3: Deep Work (ID: 3) -->
+                <a href="summary.html?bookId=3" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
+                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
+                        <img src="image/deep-work.jpg" alt="Deep Work Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Deep Work</span>
+                    <span class="text-xs text-slate-400 mt-1">Cal Newport</span>
+                </a>
+            </div>
+            
+            <div class="mt-12">
+                <button onclick="window.location.href='summary.html'" class="text-emerald-600 font-bold hover:text-emerald-700 flex items-center justify-center mx-auto transition-colors">
+                    View All Summaries <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- NEWSLETTER / SUBSCRIBE SECTION (COMING SOON) -->
+    <section id="subscribe" class="bg-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl shadow-xl overflow-hidden relative">
+                <!-- Decorative Background Icon (Changed to a bell for notifications) -->
+                <div class="absolute top-0 right-0 -mt-16 -mr-16 text-emerald-400 opacity-20 transform rotate-12 transition-transform hover:rotate-0 duration-500">
+                    <i class="fa-solid fa-bell text-[250px]"></i>
+                </div>
+                
+                <div class="relative px-6 py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20 z-10">
+                    <div class="lg:w-0 lg:flex-1">
+                        <h2 class="text-3xl font-serif font-bold tracking-tight text-white sm:text-4xl">
+                            Never Miss a New Book!
+                            <span class="block text-xl sm:text-2xl mt-2 text-emerald-200 font-sans font-semibold tracking-normal">
+                                (Coming Soon 🚀)
+                            </span>
+                        </h2>
+                        <p class="mt-4 max-w-3xl text-lg text-emerald-50">
+                            We are working on a new feature! Soon, you will be able to subscribe to get instant alerts whenever we add new books and summaries to the platform. Stay tuned!
+                        </p>
+                    </div>
+                    <div class="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
+                        <!-- DISABLED FORM -->
+                        <form class="sm:flex" onsubmit="event.preventDefault();">
+                            <!-- Email Input (Disabled state) -->
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input id="email-address" name="email" type="email" disabled class="w-full rounded-xl border-transparent bg-emerald-50/50 px-5 py-4 text-slate-500 placeholder-slate-500 focus:outline-none shadow-sm cursor-not-allowed transition-all" placeholder="Feature arriving soon...">
+                            
+                            <!-- Subscribe Button (Disabled state) -->
+                            <button type="button" disabled class="mt-3 flex w-full items-center justify-center rounded-xl border border-transparent bg-slate-800/50 px-5 py-4 text-base font-bold text-slate-300 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 shadow-none cursor-not-allowed transition-all duration-300">
+                                Coming Soon <i class="fa-solid fa-clock ml-2"></i>
+                            </button>
+                        </form>
+                        <p class="mt-3 text-sm text-emerald-100">
+                            Our backend team is building this feature. Check back later!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH NEW LOGO -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-emerald-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <!-- NAYA LOGO FOOTER ME -->
+                    <span class="text-2xl font-serif font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-hourglass-half text-emerald-500"></i> 
+                        5 Mins <span class="text-emerald-500">Summary</span>
+                    </span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
+                        Empowering minds with bite-sized wisdom. We read the heavy books so you don't have to.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Library</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Business & Finance</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Self Development</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Technology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
+                   <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="privacy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-emerald-400 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="affiliate.html" class="hover:text-emerald-400 transition-colors">Affiliate Disclosure</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-xs text-slate-500 mb-4 md:mb-0">
+                    &copy; 2026 5 Mins Summary. All rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-emerald-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE MENU JAVASCRIPT -->
+    <script>
+        // Ye chhota function mobile me hamburger menu (3 lines) ko open/close karta hai
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+       
+    </script>
+</body>
+</html>
