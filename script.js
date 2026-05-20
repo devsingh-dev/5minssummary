@@ -1379,6 +1379,12 @@ function showBookDetail(slug) {
     document.getElementById('detail-summary-text').innerText = localized.summary;
     document.getElementById('amazon-link').href = book.links.amazon;
     document.getElementById('flipkart-link').href = book.links.flipkart;
+   // NEW CODE: WhatsApp Share Link Generator
+// ==========================================
+const shareUrl = window.location.origin + window.location.pathname + '?book=' + slug;
+const shareMessage = `Check out this 5-minute summary of "${localized.title}": ${shareUrl}`;
+document.getElementById('whatsapp-share-btn').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
+// ==========================================
 
     const pointsContainer = document.getElementById('detail-key-points');
     pointsContainer.innerHTML = '';
@@ -1483,19 +1489,3 @@ window.addEventListener('popstate', () => {
         showListView();
     }
 });
-function shareOnWhatsApp() {
-    // 1. Get the exact current URL (including the ?book=slug part)
-    const currentUrl = window.location.href;
-    
-    // 2. Get the title of the book currently being viewed
-    const bookTitle = document.getElementById('detail-title').innerText;
-    
-    // 3. Create the message you want to send
-    const message = `Check out this 5-minute summary of "${bookTitle}": ${currentUrl}`;
-    
-    // 4. Encode the message so it works in a URL
-    const encodedMessage = encodeURIComponent(message);
-    
-    // 5. Open WhatsApp with the pre-filled message
-    window.open(`https://api.whatsapp.com/send?text=${encodedMessage}`, '_blank');
-}
