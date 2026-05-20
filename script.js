@@ -4,6 +4,7 @@
             
               {
                 id: 1,
+                slug: "atomic-habits",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/atomic-habit.webp",
                 links: { amazon: "https://amzn.in/d/08lI30yn", flipkart: "https://dl.flipkart.com/s/L7ylPNuuuN" },
                 en: {
@@ -45,6 +46,7 @@
             },
             {
                 id: 2,
+                    slug: "psychology-of-money",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/pshychology-of-money.jpg",
                 links: { amazon: "https://amzn.in/d/0dY9QgeJ", flipkart: "https://dl.flipkart.com/s/LouHGluuuN" },
                 en: {
@@ -86,6 +88,7 @@
             },
             {
                 id: 3,
+                    slug: "deep-work",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/deep-work.jpg",
                 links: { amazon: "https://amzn.in/d/0ahxNnhq", flipkart: "https://dl.flipkart.com/s/LoQzGsuuuNhttps://flipkart.com" },
                 en: {
@@ -127,6 +130,7 @@
             },
             {
                 id: 4,
+                    slug: "the-lean-startup",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/the-lean-startup.webp",
                 links: { amazon: "https://amzn.in/d/0irT4HYf", flipkart: "https://dl.flipkart.com/s/LomnD2uuuN" },
                 en: {
@@ -168,6 +172,7 @@
             },
             {
                 id: 5,
+                    slug: "zero-to-one",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/zero-to-one.jpg",
                 links: { amazon: "https://amzn.in/d/0fDHrugz", flipkart: "https://dl.flipkart.com/s/Lo4x3QuuuN" },
                 en: {
@@ -209,6 +214,7 @@
             },
             {
                 id: 6,
+                    slug: "rich-dad-poor-dad",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/rich-dad-poor-dad.jpg",
                 links: { amazon: "https://amzn.in/d/01hydCSw", flipkart: "https://dl.flipkart.com/s/2c!!dLNNNN" },
                 en: {
@@ -250,6 +256,7 @@
             },
             {
                 id: 7,
+                    slug: "the-5-am-club",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/the-5-am-club.jpg",
                 links: { amazon: "https://amzn.in/d/05Hbi4uz", flipkart: "https://dl.flipkart.com/s/LfZ7GQuuuN" },
                 en: {
@@ -291,6 +298,7 @@
             },
             {
                 id: 8,
+                    slug: "think-and-grow-rich",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/think-and-grow-rich.jpg",
                 links: { amazon: "https://amzn.in/d/087Mpmjn", flipkart: "https://dl.flipkart.com/s/LkX6U7uuuN" },
                 en: {
@@ -332,6 +340,7 @@
             },
             {
                 id: 9,
+                    slug: "the-power-of-habit",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/the-power-of-habit.webp",
                 links: { amazon: "https://amzn.in/d/0bGcNehw", flipkart: "https://dl.flipkart.com/s/2cGDV_NNNN" },
                 en: {
@@ -373,6 +382,7 @@
             },
             {
                 id: 10,
+                    slug: "start-with-why",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/start-with-why.jpg",
                 links: { amazon: "https://amzn.in/d/0aGEpWt5", flipkart: "https://dl.flipkart.com/s/2x2kUdNNNN" },
                 en: {
@@ -414,6 +424,7 @@
             },
             {
                 id: 11,
+                slug: "how-to-win-friends-and-influence-people",
                 image: "image/How-to-Win-Friends-and-Influence-People.webp",
                 links: { amazon: "https://amzn.in/d/0bXTjEqX", flipkart: "https://dl.flipkart.com/s/Ydsi!dNNNN" },
                 en: {
@@ -455,6 +466,7 @@
             },
             {
                 id: 12,
+                slug: "good-to-great",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/good-to-great.webp",
                 links: { amazon: "https://amzn.in/d/080pkunF", flipkart: "https://dl.flipkart.com/s/YSMMabNNNN" },
                 en: {
@@ -496,6 +508,7 @@
             },
             {
                 id: 13,
+                slug: "thinking-fast-and-slow",  // <-- BAS YEH LINE ADD KARNI HAI
                 image: "image/Thinking-Fast-and-Slow.jpg",
                 links: { amazon: "https://amzn.in/d/06wmGM8Z", flipkart: "https://dl.flipkart.com/s/YSyhWdNNNN"},
                 en: {
@@ -537,6 +550,7 @@
             },
             {
                 id: 14,
+                slug: "man's-search-for-meaning",
                 image: "image/man's-search-for-meaning.webp",
                 links: { amazon: "https://amzn.in/d/0f9x4Wyw", flipkart: "https://dl.flipkart.com/s/JIm7_euuuN" },
                 en: {
@@ -578,6 +592,7 @@
             },
             {
                 id: 15,
+                slug: "the-subtle-art-of-not-giving-a-fck",
                 image: "image/The-Subtle-Art-of-Giving-a.jpg",
                 links: { amazon: "https://amzn.in/d/0clcEDWb", flipkart: "https://dl.flipkart.com/s/JI8BnKuuuN" },
                 en: {
@@ -619,6 +634,7 @@
             },
             {
                 id: 16,
+                slug: "ego-is-the-enemy",
                 image: "image/ego-is-the-enemy.webp",
                 links: { amazon: "https://dl.flipkart.com/s/JI8BnKuuuN", flipkart: "https://dl.flipkart.com/dl/ego-enemy-book/p/itm1c9c1c0eb69cd?pid=9785193938446&lid=LSTBOK9785193938446XVLRJO&marketplace=FLIPKART&q=ego+is+the+enemy+book&store=bks&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_ps&fm=search-autosuggest&iid=en_bt12v-rxR67wCqawOmLbL8t7CTuV2WaZ_49zuofGm7hjiMGnqH9Iz7O7RW_l4fLj4EVXbKYj2ZqXDy-V33lBcQ==&ppt=sp&ppn=sp&ssid=srhzlxtrhs0000001779247694933&qH=827e66f6858ba434&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -660,6 +676,7 @@
             },
             {
                 id: 17,
+                slug: "essentialism",
                 image: "image/essentialism.jpg",
                 links: { amazon: "https://amzn.in/d/0efsAWyb", flipkart: "https://dl.flipkart.com/s/YX4_48NNNN" },
                 en: {
@@ -701,6 +718,7 @@
             },
             {
                 id: 18,
+                slug: "shoe-dog",
                 image: "image/shoe-dog.webp",
                 links: { amazon: "https://dl.flipkart.com/s/YX4_48NNNN", flipkart: "https://dl.flipkart.com/dl/shoe-dog-phil-knight-best-quality-book-free-mark/p/itmad8526e27fd9b?pid=9783383524905&lid=LSTBOK9783383524905T9EMQB&marketplace=FLIPKART&q=shoe+dog+phil+knight+english+paperback&store=search.flipkart.com&srno=s_1_1&otracker=AS_Query_OrganicAutoSuggest_1_16_na_na_ps&otracker1=AS_Query_OrganicAutoSuggest_1_16_na_na_ps&fm=search-autosuggest&iid=en_LKpHH4gxC18kLI6j9AaxXM2duti2ae76nkzpnsC4joqjB5Z1geeAm2-rZ9wTT6D2N3cThDqHJLciXu5TYn4OoQ==&ppt=sp&ppn=sp&ssid=jkk8l2c8z40000001779248353068&qH=f6614ea3b1338acb&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -742,6 +760,7 @@
             },
             {
                 id: 19,
+                slug: "rework",
                 image: "image/rework.webp",
                 links: { amazon: "https://amzn.in/d/009wbJQW", flipkart: "https://dl.flipkart.com/s/Y1aWf8NNNN" },
                 en: {
@@ -783,6 +802,7 @@
             },
             {
                 id: 20,
+                slug: "blue-ocean-strategy",
                 image: "image/blue-ocean-strategy.webp",
                 links: { amazon: "https://amzn.in/d/00692c2s", flipkart: "https://dl.flipkart.com/s/Jz_jm!uuuN" },
                 en: {
@@ -824,6 +844,7 @@
             },
             {
                 id: 21,
+                slug: "the-hard-thing-about-the-hard-things",
                 image: "image/the-hard-thing-about-the-hard-things.webp",
                 links: { amazon: "https://amzn.in/d/0alXHecq", flipkart: "https://dl.flipkart.com/s/JlUTocuuuN" },
                 en: {
@@ -865,6 +886,7 @@
             },
             {
                 id: 22,
+                slug: "the-power-of-your-subconcious-mind",
                 image: "image/the-power-of-your-subconcious-mind.webp",
                 links: { amazon: "https://amzn.in/d/0dYec3r7", flipkart: "https://dl.flipkart.com/dl/power-your-subconscious-mind-unlock-master-key-success/p/itmfc599jmcfhhwm?pid=9788172345662&lid=LSTBOK9788172345662QK6IL5&marketplace=FLIPKART&q=the+power+of+subconscious+mind&store=bks&spotlightTagId=default_BestsellerId_bks&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_12_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_12_na_na_ps&fm=search-autosuggest&iid=dc32b13d-7634-42b4-981b-91ec105c648f.9788172345662.SEARCH&ppt=sp&ppn=sp&ssid=drcegxbda80000001779251159724&qH=65e0b40e49fbc360&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -906,6 +928,7 @@
             },
             {
                 id: 23,
+                slug: "the-7-habits-of-highly-effective-people",
                 image: "image/7habits.webp",
                 links: { amazon: "https://amzn.in/d/04nsrjDg", flipkart: "https://dl.flipkart.com/s/Jp2lveuuuN" },
                 en: {
@@ -947,6 +970,7 @@
             },
             {
                 id: 24,
+                slug: "mindset-the-new-psychology-of-success",
                 image: "image/mindset.webp",
                 links: { amazon: "https://amzn.in/d/0ht4j08h", flipkart: "https://dl.flipkart.com/dl/mindset-changing-way-you-think-fulfil-your-potential/p/itm2dab1d67c0244?pid=RBKHN7BPDYY3VH3F&lid=LSTRBKHN7BPDYY3VH3FSPBLNB&marketplace=FLIPKART&q=mindset+book&store=bks&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_ps&fm=search-autosuggest&iid=en_MACxFxsEaWRQqj77q6zalV_eZr997jqf5WRF4q2qcT7wyQ3nlVz_gkbjfg-z7f78rVTB4SlJKxQtJnwv7WT3OA==&ppt=sp&ppn=sp&ssid=ct7277vuxc0000001779253609585&qH=066bbd4093a1d544&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -988,6 +1012,7 @@
             },
             {
                 id: 25,
+                slug: "outliers-the-story-of-success",
                 image: "image/outliers.webp",
                 links: { amazon: "https://amzn.in/d/09dFslWj", flipkart: "https://dl.flipkart.com/s/YeV78uNNNN" },
                 en: {
@@ -1029,6 +1054,7 @@
             },
             {
                 id: 26,
+                slug: "sapiens-a-brief-history-of-humankind",
                 image: "image/sapiens.webp",
                 links: { amazon: "https://amzn.in/d/002NSbPz", flipkart: "https://dl.flipkart.com/dl/sapiens-brief-history-humankind/p/itmc99e858ad808f?pid=RBKHNG6HJDHZ4H7X&lid=LSTRBKHNG6HJDHZ4H7X2GFRVM&marketplace=FLIPKART&q=sapiens&store=bks&srno=s_1_1&otracker=search&otracker1=search&fm=search-autosuggest&iid=en_-uVmhk1Ix1OwXyqO8Y_oDGhNqEAvJyOqYDDd4Q3uZ7SS1GdSYahxxt6HBB3ILTAPBfq3qpifXOqPDw4nEg-xvg==&ppt=sp&ppn=sp&ssid=54ezogww1s0000001779257061310&qH=bdb5f662bcf59f6e&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -1070,6 +1096,7 @@
             },
             {
                 id: 27,
+                slug: "steve-jobs",
                 image: "image/steve-jobs.webp",
                 links: { amazon: "https://amzn.in/d/04BgDFDp", flipkart: "https://dl.flipkart.com/s/JhHUFhuuuN" },
                 en: {
@@ -1111,6 +1138,7 @@
             },
             {
                 id: 28,
+                slug: "elon-musk-tesla-spacex-and-the-quest-for-a-fantastic-future",
                 image: "image/elon-musk.webp",
                 links: { amazon: "https://amzn.in/d/0crZMjBQ", flipkart: "https://dl.flipkart.com/dl/elon-musk-tech-story/p/itmd48bb22d52ff2?pid=9789510486184&lid=LSTBOK9789510486184AZ5PKW&marketplace=FLIPKART&q=elon+musk+book&store=bks&srno=s_1_12&otracker=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_5_na_na_ps&fm=search-autosuggest&iid=en_tVZAOtOktG3G5CpdiDjv-QPjoAD1MJkaa86RTCqSwdavH0fthCi3zVjVvNFRwUm8IwsU4NwbMBzFp7CHMYxeaA==&ppt=sp&ppn=sp&ssid=twybu4u8280000001779257518755&qH=1868e30f22a244e3&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL" },
                 en: {
@@ -1152,6 +1180,7 @@
             },
             {
                 id: 29,
+                slug: "the-almanack-of-naval-ravikant",
                 image: "image/the-almanack-of-naval-ravikant.webp",
                 links: { amazon: "https://amzn.in/d/0eB6OSzr", flipkart: "https://dl.flipkart.com/s/J5MRcvuuuN" },
                 en: {
@@ -1203,15 +1232,14 @@ function toggleMobileMenu() {
 function checkURLParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const filterType = urlParams.get('type');
-    const bookId = urlParams.get('bookId');
-    const searchKeyword = urlParams.get('search'); // URL search support
+    const bookSlug = urlParams.get('book'); // NEW: bookId ki jagah book
+    const searchKeyword = urlParams.get('search'); 
 
-    if (bookId) {
+    if (bookSlug) {
         initPage(); 
-        showBookDetail(parseInt(bookId)); 
+        showBookDetail(bookSlug); // NEW: parseInt hata diya
     } else if (searchKeyword) {
         initPage();
-        // Agar URL mein search keyword hai, toh input field mein daal kar filter karein
         const searchInput = document.getElementById('realtime-search');
         if(searchInput) {
             searchInput.value = searchKeyword;
@@ -1239,12 +1267,13 @@ function renderBookList(data) {
     }
 
     data.forEach(book => {
-        // Fallback incase currentLang data is missing
         const localized = book[currentLang] || book['en']; 
         
         const card = document.createElement('div');
         card.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group";
-        card.onclick = () => showBookDetail(book.id);
+        
+        // NEW: book.id ki jagah book.slug
+        card.onclick = () => showBookDetail(book.slug); 
 
         card.innerHTML = `
             <div>
@@ -1279,7 +1308,6 @@ function setFilterType(type) {
         if(dropdownContainer) dropdownContainer.classList.add('hidden');
         showListView();
         renderBookList(booksData);
-        // Clear search input when 'All' is clicked
         const searchInput = document.getElementById('realtime-search');
         if(searchInput) searchInput.value = '';
     } else {
@@ -1323,10 +1351,9 @@ function toggleLanguage() {
     setupDropdownOptions();
     
     if(document.getElementById('book-list-view').classList.contains('hidden')) {
-        const activeId = document.getElementById('book-detail-view').dataset.activeBookId;
-        if(activeId) showBookDetail(parseInt(activeId));
+        const activeSlug = document.getElementById('book-detail-view').dataset.activeBookSlug; // NEW
+        if(activeSlug) showBookDetail(activeSlug); // NEW
     } else {
-        // Re-apply search if there is text in the search bar
         const searchInput = document.getElementById('realtime-search');
         if(searchInput && searchInput.value.trim() !== '') {
             filterBooksBySearch(searchInput.value);
@@ -1337,12 +1364,13 @@ function toggleLanguage() {
     }
 }
 
-function showBookDetail(id) {
-    const book = booksData.find(b => b.id === id);
+// NEW: id ki jagah slug argument pass hoga
+function showBookDetail(slug) {
+    const book = booksData.find(b => b.slug === slug); // NEW: find by slug
     if(!book) return;
 
     const localized = book[currentLang];
-    document.getElementById('book-detail-view').dataset.activeBookId = id;
+    document.getElementById('book-detail-view').dataset.activeBookSlug = slug; // NEW
     
     document.getElementById('detail-img').src = book.image;
     document.getElementById('detail-genre').innerText = localized.genre;
@@ -1365,28 +1393,37 @@ function showBookDetail(id) {
     document.getElementById('book-list-view').classList.add('hidden');
     document.getElementById('book-detail-view').classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // NEW: URL mein ?bookId ki jagah ?book=slug
+    const newUrl = window.location.pathname + '?book=' + slug;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+
+    document.title = localized.title + " | 5 Mins Summary";
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if(metaDesc) {
+        metaDesc.setAttribute("content", localized.summary.substring(0, 150) + "...");
+    }
 }
 
 function showListView() {
     document.getElementById('book-detail-view').classList.add('hidden');
     document.getElementById('book-list-view').classList.remove('hidden');
+
+    const newUrl = window.location.pathname;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+    document.title = "5 Mins Summary | Knowledge Simplified";
 }
 
-
-// ==========================================
-// REAL-TIME SEARCH LOGIC (JSON FILTERING)
-// ==========================================
 function filterBooksBySearch(searchTerm) {
     const term = searchTerm.toLowerCase().trim();
     
-    // Agar search bar khali hai, toh saari books dikhao
     if(term === '') {
         renderBookList(booksData);
         return;
     }
 
     const filtered = booksData.filter(book => {
-        // English aur Hindi dono mein check karega
         const enTitle = (book.en?.title || '').toLowerCase();
         const enAuthor = (book.en?.author || '').toLowerCase();
         const hiTitle = (book.hi?.title || '').toLowerCase();
@@ -1401,13 +1438,11 @@ function filterBooksBySearch(searchTerm) {
     renderBookList(filtered);
 }
 
-// Event Listener for the Search Input Box
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('realtime-search');
     
     if(searchInput) {
         searchInput.addEventListener('input', (e) => {
-            // Jab koi search kare, toh pehle list view par aa jao (agar wo detail page par hai)
             showListView(); 
             filterBooksBySearch(e.target.value);
         });
@@ -1416,25 +1451,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.onload = checkURLParams;
 
-
-// ==========================================
-// LATEST SUMMARIES LOGIC (DESCENDING ORDER)
-// ==========================================
 function showLatestSummaries() {
-    // 1. Original data ki ek copy banate hain [...booksData] taaki original data kharab na ho
-    // 2. sort() use karke 'id' ke hisaab se descending order (bade se chhota) mein set karte hain
+    // Aapki ID descending me sort ho rahi hai (bade numbers pehle), yeh bilkul theek chalega!
     const latestBooks = [...booksData].sort((a, b) => b.id - a.id);
     
-    // Note: Agar aap id use nahi karte aur bas JSON ke end me naye data dalte hain, 
-    // toh aap ye bhi use kar sakte hain: const latestBooks = [...booksData].reverse();
-
-    // 3. Pehle ensure karte hain ki Detail view hide ho aur List view show ho
     showListView();
-
-    // 4. Descending order wali books ko screen par render kar dete hain
     renderBookList(latestBooks);
 
-    // 5. (Optional) Filter tabs ko deselect karna, kyunki ab hum latest view me hain
     const tabs = ['all', 'genre', 'author', 'title'];
     tabs.forEach(t => {
         const el = document.getElementById(`tab-${t}`);
@@ -1443,11 +1466,20 @@ function showLatestSummaries() {
         }
     });
     
-    // Dropdown bhi hide kar dete hain
     const dropdownContainer = document.getElementById('dynamic-select-container');
     if(dropdownContainer) dropdownContainer.classList.add('hidden');
     
-    // Search bar empty kar dete hain
     const searchInput = document.getElementById('realtime-search');
     if(searchInput) searchInput.value = '';
 }
+
+window.addEventListener('popstate', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookSlug = urlParams.get('book'); // NEW: Update book param
+    
+    if (bookSlug) {
+        showBookDetail(bookSlug); // NEW: parseInt hata diya
+    } else {
+        showListView();
+    }
+});
