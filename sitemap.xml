@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://5minssummary.com/</loc>
   <lastmod>2026-05-27T06:52:36+00:00</lastmod>
@@ -102,7 +96,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://5minssummary.com/summary.html?bookId=mans-search-for-meaning</loc>
+  <loc>https://5minssummary.com/summary.html?bookId=man%27s-search-for-meaning</loc>
   <lastmod>2026-05-29</lastmod>
   <priority>0.80</priority>
 </url>
