@@ -155,39 +155,16 @@
         </div>
     </section>
 
-    <!-- TRENDING BOOKS SECTION -->
-    <section class="py-20 bg-slate-50 border-t border-slate-100">
+<!-- LATEST BOOKS SECTION -->
+    <section class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-serif font-bold text-slate-800 mb-4">Trending Book Summaries</h2>
-            <p class="text-slate-500 mb-10">Discover the most popular reads this week.</p>
+            <h2 class="text-3xl font-serif font-bold text-slate-800 mb-4">Latest Book Summaries</h2>
+            <p class="text-slate-500 mb-10">Freshly added summaries for you to read.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Book 1: Atomic Habits (ID: 1) -->
-                <a href="summary.html?bookId=1" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                        <img src="image/atomic-habit.webp" alt="Atomic Habits Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Atomic Habits</span>
-                    <span class="text-xs text-slate-400 mt-1">James Clear</span>
-                </a>
-                
-                <!-- Book 2: Psychology of Money (ID: 2) -->
-                <a href="summary.html?bookId=2" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                        <img src="image/pshychology-of-money.jpg" alt="Psychology of Money Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Psychology of Money</span>
-                    <span class="text-xs text-slate-400 mt-1">Morgan Housel</span>
-                </a>
-                
-                <!-- Book 3: Deep Work (ID: 3) -->
-                <a href="summary.html?bookId=3" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                        <img src="image/deep-work.jpg" alt="Deep Work Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <span class="text-slate-800 font-bold text-lg group-hover:text-emerald-600 transition-colors">Deep Work</span>
-                    <span class="text-xs text-slate-400 mt-1">Cal Newport</span>
-                </a>
+            <!-- JS dynamically is container ke andar 3 latest books insert karega -->
+            <div id="latest-books-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Loading text jab tak JSON fetch na ho -->
+                <p class="text-slate-400 col-span-3">Loading latest books...</p>
             </div>
             
             <div class="mt-12">
@@ -238,6 +215,62 @@
             </div>
         </div>
     </section>
+    <section class="py-16 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <div class="text-center mb-12 flex flex-col items-center">
+            <span class="bg-emerald-100 text-emerald-700 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest mb-3 animate-pulse">
+                <i class="fa-solid fa-sparkles mr-1"></i> New
+            </span>
+            <h2 class="text-3xl font-serif font-bold text-slate-800">Quotes of the Day</h2>
+            <p class="text-slate-500 mt-2">Daily wisdom from the world's greatest authors.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100 relative group hover:shadow-lg transition-all duration-300">
+                <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-slate-200 opacity-50 group-hover:text-emerald-100 transition-colors"></i>
+                
+                <div class="relative z-10 flex flex-col h-full justify-between pt-4">
+                    <p class="text-xl md:text-2xl font-serif text-slate-700 italic leading-relaxed mb-8">
+                        "You do not rise to the level of your goals. You fall to the level of your systems."
+                    </p>
+                    
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-5">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            JC
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 font-bold">James Clear</h4>
+                            <p class="text-xs text-slate-500 font-medium tracking-wide">Atomic Habits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100 relative group hover:shadow-lg transition-all duration-300">
+                <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-slate-200 opacity-50 group-hover:text-emerald-100 transition-colors"></i>
+                
+                <div class="relative z-10 flex flex-col h-full justify-between pt-4">
+                    <p class="text-xl md:text-2xl font-serif text-slate-700 italic leading-relaxed mb-8">
+                        "Doing well with money has a little to do with how smart you are and a lot to do with how you behave."
+                    </p>
+                    
+                    <div class="flex items-center gap-4 border-t border-slate-200 pt-5">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            MH
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 font-bold">Morgan Housel</h4>
+                            <p class="text-xs text-slate-500 font-medium tracking-wide">The Psychology of Money</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- FOOTER WITH NEW LOGO -->
     <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-emerald-500">
@@ -288,7 +321,49 @@
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         }
+        
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById('latest-books-container');
+    
+    try {
+        // Check kar rahe hain ki booksData exist karta hai ya nahi
+        if (typeof booksData === 'undefined') {
+            console.error("booksData variable nahi mila. Check karein ki script.js link hai ya nahi.");
+            if(container) container.innerHTML = '<p class="text-red-500 col-span-3">Data load nahi hua. Check console.</p>';
+            return;
+        }
+
+        // booksData ko sort karein (latest ID pehle) aur top 3 nikal lein
+        const latestBooks = [...booksData].sort((a, b) => b.id - a.id).slice(0, 3);
+        
+        // Container ko khali karein
+        if(container) container.innerHTML = '';
+        
+        // Har book ke liye HTML card banayein aur container me append karein
+        latestBooks.forEach(book => {
+            // DHYAN DEIN: Yahan 'href' lagaya hai jo aapko summary.html par le jayega
+            // aur URL me '?book=slug' pass karega jo aapki script.js aaram se pakad legi.
+            const bookCard = `
+                <a href="summary.html?book=${book.slug}" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
+                    <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
+                        <img src="${book.image}" alt="${book.en.title} Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-slate-800 font-bold text-lg text-center group-hover:text-emerald-600 transition-colors">${book.en.title}</span>
+                    <span class="text-xs text-slate-400 mt-1">${book.en.author}</span>
+                </a>
+            `;
+            container.innerHTML += bookCard;
+        });
+        
+    } catch (error) {
+        console.error("Error displaying latest books:", error);
+    }
+});
+
        
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
