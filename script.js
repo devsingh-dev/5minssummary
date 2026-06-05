@@ -2246,7 +2246,54 @@
                 "वर्तमान क्षण को अपनाएं: खुशी का रहस्य दुनिया के सभी चमत्कारों को देखना है, और चम्मच पर तेल की बूंदों को कभी नहीं भूलना है। अपने बड़े लक्ष्यों का पीछा करने और वर्तमान दिन की सराहना करने के बीच संतुलन बनाएं।"
             ]
         }
+    },
+    
+    {
+        "id": 51,
+        "slug": "habits-how-small-changes",
+        "image": "image/habits.webp",
+        "links": {
+            "amazon": "https://amzn.in/d/09w7Q0ib",
+            "flipkart": "https://dl.flipkart.com/dl/habits/p/itma3386be5c4b2d?pid=9781907326370&lid=LSTBOK9781907326370FSMJNL&marketplace=FLIPKART&q=habit+book+by+hasson&store=bks&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=07d3891f-b482-4e5b-92d4-abaef8e9dfb7.9781907326370.SEARCH&ppt=sp&ppn=sp&ssid=lutl0pa5s00000001780652606307&qH=609f31c1ec21564c&ov_redirect=true&ov_redirect=true&_refId=&_appId=CL"
+        },
+        "en": {
+            "title": "Habits: How Small Changes Make a Big Difference",
+            "author": "Gill Hasson",
+            "genre": "Self-Help & Personal Development",
+            "summary": "Habits: How Small Changes Make a Big Difference by Gill Hasson (published by John Wiley & Sons) is a highly practical and actionable guide focused on understanding, building, and sustaining positive routines while breaking free from negative behavioral loops. The book revolves around the idea that massive life changes do not come from giant, overnight overhauls, but rather from the compounding effect of tiny, manageable adjustments to our daily routines. Hasson introduces the critical concept of 'foundational habits'—core behaviors related to sleep, diet, and physical movement that create a strong baseline for overall health. When these foundational habits are solid, it becomes exponentially easier to build other complex habits on top of them.\n\nThe book provides a systematic approach to turning intentions into actions. It heavily emphasizes the strategy of 'starting small to grow big,' preventing the burnout and failure that usually follow overly ambitious goal-setting. Hasson explains the power of 'habit chains' (often known as habit stacking), where you link a new desired behavior to an already established routine to ensure consistency. Furthermore, the book addresses the psychological aspects of behavior change, such as the role of identity and the massive influence that our physical environment and social circles have on our choices.\n\nIn its later sections, Habits tackles the modern challenges of breaking deeply ingrained bad habits—such as excessive screen time, mindless snacking, and impulse shopping. Hasson provides clear, relatable strategies to overcome these obstacles, helping readers to identify their triggers and regain control. It is an essential read for anyone tired of slipping into unhealthy routines and looking for sustainable, realistic steps to live a life with more intention and well-being.",
+            "points": [
+                "Foundational Habits: Start by establishing core routines related to sleep, nutrition, and exercise. A strong foundation makes it significantly easier to build and sustain all other habits in your life.",
+                "Start Small to Grow Big: Avoid the trap of setting overly ambitious goals. Break your desired habit down into the smallest, easiest possible step to minimize resistance and guarantee consistency.",
+                "The Power of Habit Chains: Link your new habit to an existing routine. For example, if you want to start meditating, do it immediately after your established daily habit of brushing your teeth.",
+                "Design Your Environment: Willpower is unreliable. Alter your physical surroundings to make good habits easy and bad habits difficult (e.g., keep healthy snacks visible and hide the junk food).",
+                "Address Modern Distractions: Actively work to break contemporary bad habits like mindless screen scrolling and impulse shopping by introducing intentional friction into these activities.",
+                "Identity-Based Change: True behavior change happens when you shift how you see yourself. Don't just aim to read a book; aim to become a 'reader'. Your identity drives your long-term actions.",
+                "Focus on Enjoyment and Rewards: Habits only stick if the brain perceives a reward. Ensure that you celebrate your small wins and find ways to make the habit-building process enjoyable.",
+                "The Influence of People: You absorb the habits of the people around you. Surround yourself with individuals who model the positive behaviors and lifestyle you want to achieve.",
+                "Reflect and Adjust: Don't expect perfection. Regularly review your progress, identify what is causing you to stumble, and adjust your approach without harsh self-judgment or guilt.",
+                "Turn Intentions into Actions: Stop waiting for the 'perfect time' or endless motivation. Make a specific plan (when, where, and how) and take immediate, tiny actions to build unstoppable momentum."
+            ]
+        },
+        "hi": {
+            "title": "हैबिट्स: हाउ स्मॉल चेंजेस मेक अ बिग डिफरेंस",
+            "author": "गिल हासन",
+            "genre": "सेल्फ-हेल्प और व्यक्तिगत विकास",
+            "summary": "जॉन विली एंड संस (John Wiley & Sons) द्वारा प्रकाशित और गिल हासन द्वारा लिखित 'हैबिट्स: हाउ स्मॉल चेंजेस मेक अ बिग डिफरेंस' (Habits: How Small Changes Make a Big Difference) एक अत्यधिक व्यावहारिक मार्गदर्शिका है। यह सकारात्मक दिनचर्या को समझने, बनाने और बनाए रखने के साथ-साथ नकारात्मक व्यवहार के चक्र से मुक्त होने पर केंद्रित है। पुस्तक इस विचार के इर्द-गिर्द घूमती है कि जीवन में बड़े बदलाव रातों-रात किए गए विशाल परिवर्तनों से नहीं आते हैं, बल्कि हमारी दैनिक दिनचर्या में किए गए छोटे, प्रबंधनीय समायोजनों के चक्रवृद्धि (compounding) प्रभाव से आते हैं। हासन 'बुनियादी आदतों' (Foundational Habits) की महत्वपूर्ण अवधारणा पेश करती हैं—नींद, आहार और शारीरिक गति से जुड़े मुख्य व्यवहार जो समग्र स्वास्थ्य के लिए एक मजबूत आधार बनाते हैं। जब ये बुनियादी आदतें ठोस होती हैं, तो उनके ऊपर अन्य जटिल आदतों का निर्माण करना काफी आसान हो जाता है।\n\nपुस्तक इरादों को कार्यों में बदलने के लिए एक व्यवस्थित दृष्टिकोण प्रदान करती है। यह 'बड़ा बनने के लिए छोटी शुरुआत करने' की रणनीति पर बहुत जोर देती है, जिससे उस थकावट और विफलता को रोका जा सके जो आमतौर पर अत्यधिक महत्वाकांक्षी लक्ष्य-निर्धारण के बाद होती है। हासन 'आदत श्रृंखलाओं' (Habit Chains) की शक्ति की व्याख्या करती हैं, जहां आप स्थिरता सुनिश्चित करने के लिए एक नए वांछित व्यवहार को पहले से स्थापित दिनचर्या से जोड़ते हैं। इसके अलावा, पुस्तक व्यवहार परिवर्तन के मनोवैज्ञानिक पहलुओं को संबोधित करती है, जैसे पहचान (Identity) की भूमिका और हमारे विकल्पों पर हमारे भौतिक वातावरण और सामाजिक मंडलियों का भारी प्रभाव।\n\nअपने बाद के खंडों में, यह पुस्तक गहराई से अंतर्निहित बुरी आदतों—जैसे अत्यधिक स्क्रीन समय, बिना सोचे-समझे स्नैकिंग, और आवेगपूर्ण खरीदारी—को तोड़ने की आधुनिक चुनौतियों से निपटती है। हासन इन बाधाओं को दूर करने के लिए स्पष्ट और यथार्थवादी रणनीतियाँ प्रदान करती हैं, जिससे पाठकों को अपने ट्रिगर्स को पहचानने और नियंत्रण हासिल करने में मदद मिलती है। यह उन लोगों के लिए एक आवश्यक पठन है जो अस्वस्थ दिनचर्या में फिसलने से थक गए हैं और अधिक इरादे (Intention) और कल्याण के साथ जीवन जीने के लिए यथार्थवादी कदम तलाश रहे हैं।",
+            "points": [
+                "बुनियादी आदतें (Foundational Habits): नींद, पोषण और व्यायाम से संबंधित मुख्य दिनचर्या स्थापित करके शुरुआत करें। एक मजबूत आधार आपके जीवन में अन्य सभी आदतों को बनाना और बनाए रखना काफी आसान बना देता है।",
+                "बड़ा बनने के लिए छोटी शुरुआत करें: अत्यधिक महत्वाकांक्षी लक्ष्य निर्धारित करने के जाल से बचें। अपनी वांछित आदत को सबसे छोटे, सबसे आसान संभव कदम में तोड़ दें ताकि प्रतिरोध कम हो सके।",
+                "आदत श्रृंखलाओं (Habit Chains) की शक्ति: अपनी नई आदत को मौजूदा दिनचर्या से जोड़ें। उदाहरण के लिए, यदि आप ध्यान (Meditation) शुरू करना चाहते हैं, तो दांतों को ब्रश करने की अपनी स्थापित आदत के तुरंत बाद इसे करें।",
+                "अपने पर्यावरण को डिज़ाइन करें: इच्छाशक्ति अविश्वसनीय है। अच्छी आदतों को आसान और बुरी आदतों को कठिन बनाने के लिए अपने भौतिक परिवेश को बदलें (जैसे, स्वस्थ स्नैक्स को दृश्यमान रखें और जंक फूड को छिपाएं)।",
+                "आधुनिक विकर्षणों को संबोधित करें: बिना सोचे-समझे स्क्रीन स्क्रॉल करने और खरीदारी जैसी समकालीन बुरी आदतों को तोड़ने के लिए जानबूझकर इन गतिविधियों में घर्षण (friction) पैदा करें और सक्रिय रूप से काम करें।",
+                "पहचान-आधारित परिवर्तन: सच्चा व्यवहार परिवर्तन तब होता है जब आप खुद को देखने का नजरिया बदलते हैं। सिर्फ किताब पढ़ने का लक्ष्य न रखें; 'पाठक' (Reader) बनने का लक्ष्य रखें। आपकी पहचान आपके कार्यों को संचालित करती है।",
+                "आनंद और पुरस्कारों पर ध्यान दें: आदतें तभी टिकती हैं जब मस्तिष्क को कोई इनाम (Reward) मिलता है। सुनिश्चित करें कि आप अपनी छोटी जीतों का जश्न मनाएं और आदत बनाने की प्रक्रिया को सुखद बनाने के तरीके खोजें।",
+                "लोगों का प्रभाव: आप अपने आस-पास के लोगों की आदतों को अवशोषित (absorb) करते हैं। अपने आप को ऐसे व्यक्तियों से घेरें जो उस सकारात्मक व्यवहार और जीवनशैली का मॉडल पेश करते हैं जिसे आप प्राप्त करना चाहते हैं।",
+                "चिंतन करें और समायोजित करें: पूर्णता (Perfection) की अपेक्षा न करें। नियमित रूप से अपनी प्रगति की समीक्षा करें, यह पहचानें कि किस वजह से आप लड़खड़ा रहे हैं, और कठोर आत्म-निर्णय के बिना अपने दृष्टिकोण को समायोजित करें।",
+                "इरादों को कार्यों में बदलें: 'सही समय' या अंतहीन प्रेरणा की प्रतीक्षा करना बंद करें। एक विशिष्ट योजना (कब, कहां और कैसे) बनाएं और गति (Momentum) बनाने के लिए तत्काल, छोटे-छोटे कदम उठाएं।"
+            ]
+        }
     }
+
 
 
 
