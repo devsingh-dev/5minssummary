@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Generator for Book Summaries</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; color: #333; }
+        textarea { width: 100%; height: 250px; padding: 10px; font-family: monospace; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; }
+        button { padding: 12px 30px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin: 15px 0; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+        .success-msg { color: #28a745; font-weight: bold; margin-top: 5px; display: none; }
+    </style>
+</head>
+<body>
+
+    <h2>🔥 Website Custom Sitemap Generator</h2>
+    <p>Aapka JSON Array format me hai, ye tool usi ke hisab se design kiya gaya hai.</p>
+    
+    <p><b>1. Apni saari books ka JSON code (Ctrl+A karke) yahan paste karein:</b></p>
+    <textarea id="jsonInput" placeholder="[{ 'id': 1, 'slug': 'atomic-habits', ... }]"></textarea>
+
+    <button onclick="generateSitemap()">Generate Sitemap.xml</button>
+    <span id="statusMessage" class="success-msg">✅ Sitemap successfully generate ho gaya!</span>
+
+    <p><b>2. Ye raha aapka complete sitemap code! Ise copy karke apni sitemap.xml file me save kar lein:</b></p>
+    <textarea id="xmlOutput" placeholder="Aapka dynamic sitemap yahan generate hoga..." readonly></textarea>
+
+    <script>
+        function generateSitemap() {
+            const outputBox = document.getElementById("xmlOutput");
+            const statusMsg = document.getElementById("statusMessage");
+            
+            try {
+                let jsonText = document.getElementById("jsonInput").value.trim();
+                
+                if(!jsonText) {
+                    outputBox.style.color = "red";
+                    outputBox.value = "Error: Kripya pehle upar wale box me apna JSON data paste karein!";
+                    statusMsg.style.display = "none";
+                    return;
+                }
+
+                let booksArray = JSON.parse(jsonText); 
+                let today = new Date().toISOString().split('T')[0]; 
+
+                // 1. Sitemap ka Header aur aapke saare 13 static pages me se main pages
+                let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+                
+                // Static Pages Links
+                xml += `  <url>\n    <loc>https://5minssummary.com/</loc>\n    <priority>1.0</priority>\n  </url>\n`;
+                xml += `  <url>\n    <loc>https://5minssummary.com/index.html</loc>\n    <priority>0.90</priority>\n  </url>\n`;
+                xml += `  <url>\n    <loc>https://5minssummary.com/privacy.html</loc>\n    <priority>0.5</priority>\n  </url>\n`;
+                xml += `  <url>\n    <loc>https://5minssummary.com/terms.html</loc>\n    <priority>0.5</priority>\n  </url>\n`;
+                xml += `  <url>\n    <loc>https://5minssummary.com/contact.html</loc>\n    <priority>0.5</priority>\n  </url>\n`;
+                xml += `  <url>\n    <loc>https://5minssummary.com/affiliate-disclosure.html</loc>\n    <priority>0.5</priority>\n  </url>\n`;
+
+                // 2. Loop jo Array ke andar jaakar har book ka "slug" nikalega
+                if (Array.isArray(booksArray)) {
+                    booksArray.forEach(book => {
+                        if (book.slug) {
+                            xml += `  <url>\n    <loc>https://5minssummary.com/summary.html?bookId=${book.slug}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>0.80</priority>\n  </url>\n`;
+                        }
+                    });
+                } else {
+                    throw new Error("Pasted data ek Array nahi hai. Kripya check karein ki shuruat [ aur khatam ] se ho raha hai.");
+                }
+                
+                xml += `</urlset>`;
+                
+                // Output box me data set karna
+                outputBox.value = xml;
+                outputBox.style.color = "black";
+                statusMsg.style.display = "inline";
+                
+            } catch (error) {
+                outputBox.style.color = "red";
+                outputBox.value = `❌ Error Aaya Hai:\n\n${error.message}\n\nSujhav: Check karein ki JSON copy karte waqt koi bracket ya comma chuta toh nahi hai.`;
+                statusMsg.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

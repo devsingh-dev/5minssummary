@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Summaries | 5 Mins Summary</title>
+    <meta property="og:title" content="Read Top Book Summaries | 5 Mins Summary">
+    <meta property="og:description" content="Read 5-minute summaries of the world's best books. Boost your knowledge without wasting hours!">
+
+    <meta property="og:image" content="https://devsingh-dev.github.io/5minssummary/image/master-banner.jpg">
+    <meta property="og:url" content="https://devsingh-dev.github.io/5minssummary/summary.html">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fdfdfd; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -4px; left: 0; background-color: #10b981;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after { width: 100%; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
+    </style>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R997595DVT');
+    </script>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+
+    <!-- TOP DISCLAIMER -->
+    <div class="bg-slate-900 text-white text-[11px] md:text-xs py-2 px-4 text-center font-medium tracking-wide">
+        <i class="fa-solid fa-circle-info mr-2 text-emerald-400"></i>
+        Disclaimer: This website contains affiliate links. We may earn a commission from purchases made through these links at no extra cost to you.
+    </div>
+
+    <!-- NAVBAR WITH NEW LOGO -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGO -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer group gap-2" onclick="window.location.href='index.html'">
+                    <div class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white p-2 rounded-xl shadow-lg group-hover:shadow-emerald-200 transition-all transform group-hover:-rotate-12">
+                        <i class="fa-solid fa-hourglass-half text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-serif font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                        5 Mins <span class="text-emerald-500">Summary</span>
+                    </span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium text-slate-600 hover:text-slate-900">Home</a>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-medium text-slate-600 hover:text-emerald-600 transition-colors py-2">
+                            <span>Browse Categories</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] pt-1 group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-56 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-2 py-3 z-50">
+                            <button onclick="setFilterType('genre')" class="w-full text-left block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-layer-group mr-3 w-4"></i> By Genre
+                            </button>
+                            <button onclick="setFilterType('author')" class="w-full text-left block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-user-pen mr-3 w-4"></i> By Author
+                            </button>
+                            <button onclick="setFilterType('title')" class="w-full text-left block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                                <i class="fa-solid fa-book mr-3 w-4"></i> By Book Title
+                            </button>
+                        </div>
+                    </div>
+                    <a href="#" onclick="showLatestSummaries(); return false;" class="nav-link font-medium text-emerald-600 hover:text-emerald-700">Latest Summaries</a>
+                    <a href="index.html#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
+                        Subscribe Free
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:text-emerald-600 focus:outline-none" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-50 px-4 py-6 space-y-4 shadow-inner absolute w-full z-40">
+            <a href="index.html" class="block text-slate-700 font-medium hover:text-emerald-600">Home</a>
+            <div class="space-y-2 pt-2 border-t border-slate-50">
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Categories</p>
+                <button onclick="setFilterType('genre')" class="block text-slate-600 pl-2 hover:text-emerald-600">By Genre</button>
+                <button onclick="setFilterType('author')" class="block text-slate-600 pl-2 hover:text-emerald-600">By Author</button>
+                <button onclick="setFilterType('title')" class="block text-slate-600 pl-2 hover:text-emerald-600">By Book Title</button>
+            </div>
+            <a href="#" onclick="showLatestSummaries(); toggleMobileMenu(); return false;">Latest Summaries</a>
+            <br><br>
+            <a href="index.html#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
+                Subscribe Free
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- LANGUAGE & CONTROLS BAR (Search Bar) -->
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8 pb-4 border-b border-slate-100">
+            
+            <div class="relative w-full md:w-72 order-first md:order-none">
+                <input type="text" id="realtime-search" placeholder="Search book or author..." 
+                       class="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 shadow-sm transition-all text-slate-700 font-medium">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
+            </div>
+
+            <div class="flex bg-slate-100 p-1 rounded-xl" id="filter-tabs">
+                <button onclick="setFilterType('all')" id="tab-all" class="px-4 py-2 rounded-lg text-sm font-medium transition-all bg-white text-slate-900 shadow-sm">All</button>
+                <button onclick="setFilterType('genre')" id="tab-genre" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 hover:text-slate-900">Genre</button>
+                <button onclick="setFilterType('author')" id="tab-author" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 hover:text-slate-900">Author</button>
+                <button onclick="setFilterType('title')" id="tab-title" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 hover:text-slate-900">Title</button>
+            </div>
+
+            <div id="dynamic-select-container" class="hidden">
+                <select id="dynamic-select" onchange="applyDropdownFilter(this.value)" class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-sm font-medium text-slate-700 shadow-sm focus:outline-none focus:border-emerald-500">
+                </select>
+            </div>
+            
+            <!-- Language toggle button yahan se abhi hata diya gaya hai kyuki cards generate hokar aayenge -->
+            <div></div>
+        </div>
+
+        <!-- VIEW 1: BOOK LIST / GRID (Yahan script cards inject karegi) -->
+        <div id="book-list-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <a href="books/non-fiction/self-help/thibaut-meurisse/dopamine-detox.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="dopamine detox: a short guide to remove distractions" data-author="thibaut meurisse" data-genre="Productivity & Focus">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/dopamine-detox.webp" alt="Dopamine Detox: A Short Guide to Remove Distractions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Focus
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Dopamine Detox: A Short Guide to Remove Distractions
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Thibaut Meurisse</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/gill-hasson/habits-how-small-changes.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="habits: how small changes make a big difference" data-author="gill hasson" data-genre="Self-Help & Personal Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/habits.webp" alt="Habits: How Small Changes Make a Big Difference" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self-Help & Personal Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Habits: How Small Changes Make a Big Difference
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Gill Hasson</p>
+        </a>
+    
+        <a href="books/fiction/literary-fiction/paulo-coelho/the-alchemist.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the alchemist" data-author="paulo coelho" data-genre="Fiction & Inspiration">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-alchemist.webp" alt="The Alchemist" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Fiction & Inspiration
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Alchemist
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Paulo Coelho</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/alex-banayan/the-third-door.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the third door" data-author="alex banayan" data-genre="Business & Career Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-third-door.webp" alt="The Third Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Career Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Third Door
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Alex Banayan</p>
+        </a>
+    
+        <a href="books/non-fiction/biography-and-memoir/nikola-tesla/tesla-my-inventions.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="my inventions: the autobiography of nikola tesla" data-author="nikola tesla" data-genre="Biography & Technology">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/tesla.webp" alt="My Inventions: The Autobiography of Nikola Tesla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Biography & Technology
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                My Inventions: The Autobiography of Nikola Tesla
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Nikola Tesla</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/dr-spencer-johnson/who-moved-my-cheese.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="who moved my cheese?" data-author="dr. spencer johnson" data-genre="Business & Self-Help">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/who-moved-my-cheese.webp" alt="Who Moved My Cheese?" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Self-Help
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Who Moved My Cheese?
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Dr. Spencer Johnson</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/hector-garcia-and-francesc-miralles/ikigai.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="ikigai: the japanese secret to a long and happy life" data-author="héctor garcía and francesc miralles" data-genre="Self-Help & Wellness">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/ikigai.webp" alt="Ikigai: The Japanese Secret to a Long and Happy Life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self-Help & Wellness
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Ikigai: The Japanese Secret to a Long and Happy Life
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Héctor García and Francesc Miralles</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/ali-abdaal/feel-good-productivity.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="feel-good productivity" data-author="ali abdaal" data-genre="Productivity & Mental Health">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/feel-good-productivity.webp" alt="Feel-Good Productivity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Mental Health
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Feel-Good Productivity
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Ali Abdaal</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/jake-knapp-and-john-zeratsky/make-time.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="make time" data-author="jake knapp & john zeratsky" data-genre="Productivity & Focus">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/make-time.webp" alt="Make Time" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Focus
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Make Time
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jake Knapp & John Zeratsky</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/nir-eyal/indistractable.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="indistractable" data-author="nir eyal" data-genre="Productivity & Focus">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/indistractable.webp" alt="Indistractable" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Focus
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Indistractable
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Nir Eyal</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/timothy-ferriss/the-4-hour-workweek.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the 4-hour workweek" data-author="timothy ferriss" data-genre="Productivity & Lifestyle Design">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-4-hour-workweek.webp" alt="The 4-Hour Workweek" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Lifestyle Design
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The 4-Hour Workweek
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Timothy Ferriss</p>
+        </a>
+    
+        <a href="books/non-fiction/spirituality-and-religion/eckhart-tolle/the-power-of-now.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the power of now" data-author="eckhart tolle" data-genre="Spirituality & Self-help">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-power-of-now.webp" alt="The Power of Now" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Spirituality & Self-help
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Power of Now
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Eckhart Tolle</p>
+        </a>
+    
+        <a href="books/non-fiction/spirituality-and-religion/don-miguel-ruiz/the-four-agreements.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the four agreements" data-author="don miguel ruiz" data-genre="Spirituality & Self-Help">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-four-agreements.webp" alt="The Four Agreements" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Spirituality & Self-Help
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Four Agreements
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Don Miguel Ruiz</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/ramit-sethi/i-will-teach-you-to-be-rich.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="i will teach you to be rich" data-author="ramit sethi" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/i-will-teach-you-to-be-rich.webp" alt="I Will Teach You to Be Rich" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                I Will Teach You to Be Rich
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Ramit Sethi</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/thomas-j-stanley-and-william-d-danko/the-millionaire-next-door.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the millionaire next door" data-author="thomas j. stanley & william d. danko" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-millionaire-next-door.webp" alt="The Millionaire Next Door" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Millionaire Next Door
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Thomas J. Stanley & William D. Danko</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/jordan-b-peterson/12-rules-for-life.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="12 rules for life: an antidote to chaos" data-author="jordan b. peterson" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/12-rules-for-life.webp" alt="12 Rules for Life: An Antidote to Chaos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                12 Rules for Life: An Antidote to Chaos
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jordan B. Peterson</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/leo-tolstoy/a-calendar-of-wisdom.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="a calendar of wisdom" data-author="leo tolstoy" data-genre="Philosophy & Spirituality">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/a-calender-of-wisdom.webp" alt="A Calendar of Wisdom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Philosophy & Spirituality
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                A Calendar of Wisdom
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Leo Tolstoy</p>
+        </a>
+    
+        <a href="books/non-fiction/biography-and-memoir/david-goggins/cant-hurt-me.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="can't hurt me" data-author="david goggins" data-genre="Biography & Personal Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/cant-hurt-me.webp" alt="Can't Hurt Me" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Biography & Personal Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Can't Hurt Me
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By David Goggins</p>
+        </a>
+    
+        <a href="books/non-fiction/spirituality-and-religion/jay-shetty/think-like-a-monk.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="think like a monk" data-author="jay shetty" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/Think-Like-A-Monk.webp" alt="Think Like a Monk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Think Like a Monk
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jay Shetty</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/brian-tracy/eat-that-frog.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="eat that frog!" data-author="brian tracy" data-genre="Productivity & Time Management">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/eat-that-frog.webp" alt="Eat That Frog!" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Productivity & Time Management
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Eat That Frog!
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Brian Tracy</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/jeff-keller/attitude-is-everything.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="attitude is everything" data-author="jeff keller" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/attitude-is-everything.webp" alt="Attitude is Everything" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Attitude is Everything
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jeff Keller</p>
+        </a>
+    
+        <a href="books/non-fiction/science-and-technology/nir-eyal/hooked-how-to-build-habit-forming-products.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="hooked: how to build habit-forming products" data-author="nir eyal" data-genre="Technology">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/hooked.webp" alt="Hooked: How to Build Habit-Forming Products" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Technology
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Hooked: How to Build Habit-Forming Products
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Nir Eyal</p>
+        </a>
+    
+        <a href="books/non-fiction/technology/walter-isaacson/the-innovators.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the innovators" data-author="walter isaacson" data-genre="Technology">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-innovators.webp" alt="The Innovators" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Technology
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Innovators
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Walter Isaacson</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/eric-jorgenson/the-almanack-of-naval-ravikant.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the almanack of naval ravikant" data-author="eric jorgenson" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-almanack-of-naval-ravikant.webp" alt="The Almanack of Naval Ravikant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Almanack of Naval Ravikant
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Eric Jorgenson</p>
+        </a>
+    
+        <a href="books/non-fiction/biography-and-memoir/ashlee-vance/elon-musk-tesla-spacex-and-the-quest-for-a-fantastic-future.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="elon musk: tesla, spacex, and the quest for a fantastic future" data-author="ashlee vance" data-genre="Biography & Memoir">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/elon-musk.webp" alt="Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Biography & Memoir
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Ashlee Vance</p>
+        </a>
+    
+        <a href="books/non-fiction/biography-and-memoir/walter-isaacson/steve-jobs.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="steve jobs" data-author="walter isaacson" data-genre="Biography & Memoir">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/steve-jobs.webp" alt="Steve Jobs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Biography & Memoir
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Steve Jobs
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Walter Isaacson</p>
+        </a>
+    
+        <a href="books/non-fiction/history/yuval-noah-harari/sapiens-a-brief-history-of-humankind.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="sapiens: a brief history of humankind" data-author="yuval noah harari" data-genre="History">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/sapiens.webp" alt="Sapiens: A Brief History of Humankind" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                History
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Sapiens: A Brief History of Humankind
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Yuval Noah Harari</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/malcolm-gladwell/outliers-the-story-of-success.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="outliers: the story of success" data-author="malcolm gladwell" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/outliers.webp" alt="Outliers: The Story of Success" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Outliers: The Story of Success
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Malcolm Gladwell</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/carol-s-dweck/mindset-the-new-psychology-of-success.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="mindset: the new psychology of success" data-author="carol s. dweck" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/mindset.webp" alt="Mindset: The New Psychology of Success" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Mindset: The New Psychology of Success
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Carol S. Dweck</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity-and-self-help/stephen-r-covey/the-7-habits-of-highly-effective-people.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the 7 habits of highly effective people" data-author="stephen r. covey" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/7habits.webp" alt="The 7 Habits of Highly Effective People" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The 7 Habits of Highly Effective People
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Stephen R. Covey</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/joseph-murphy/the-power-of-your-subconcious-mind.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the power of your subconscious mind" data-author="joseph murphy" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-power-of-your-subconcious-mind.webp" alt="The Power of Your Subconscious Mind" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Power of Your Subconscious Mind
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Joseph Murphy</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/ben-horowitz/the-hard-thing-about-the-hard-things.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the hard thing about hard things" data-author="ben horowitz" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-hard-thing-about-the-hard-things.webp" alt="The Hard Thing About Hard Things" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Hard Thing About Hard Things
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Ben Horowitz</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/wc-kim-and-r-mauborgne/blue-ocean-strategy.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="blue ocean strategy" data-author="w.c. kim & r. mauborgne" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/blue-ocean-strategy.webp" alt="Blue Ocean Strategy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Blue Ocean Strategy
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By W.C. Kim & R. Mauborgne</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/jason-fried-and-dh-hansson/rework.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="rework" data-author="jason fried & d.h. hansson" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/rework.webp" alt="Rework" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Rework
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jason Fried & D.H. Hansson</p>
+        </a>
+    
+        <a href="books/non-fiction/biography-and-memoir/phil-knight/shoe-dog.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="shoe dog" data-author="phil knight" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/shoe-dog.webp" alt="Shoe Dog" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Shoe Dog
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Phil Knight</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity/greg-mckeown/essentialism.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="essentialism" data-author="greg mckeown" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/essentialism.jpg" alt="Essentialism" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Essentialism
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Greg McKeown</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/ryan-holiday/ego-is-the-enemy.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="ego is the enemy" data-author="ryan holiday" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/ego-is-the-enemy.webp" alt="Ego is the Enemy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Ego is the Enemy
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Ryan Holiday</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/mark-manson/the-subtle-art-of-not-giving-a-fck.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the subtle art of not giving a f*ck" data-author="mark manson" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/The-Subtle-Art-of-Giving-a.jpg" alt="The Subtle Art of Not Giving a F*ck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Subtle Art of Not Giving a F*ck
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Mark Manson</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/viktor-e-frankl/man's-search-for-meaning.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="man's search for meaning" data-author="viktor e. frankl" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/man's-search-for-meaning.webp" alt="Man's Search for Meaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Man's Search for Meaning
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Viktor E. Frankl</p>
+        </a>
+    
+        <a href="books/non-fiction/psychology-and-philosophy/daniel-kahneman/thinking-fast-and-slow.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="thinking, fast and slow" data-author="daniel kahneman" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/Thinking-Fast-and-Slow.jpg" alt="Thinking, Fast and Slow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Thinking, Fast and Slow
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Daniel Kahneman</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/jim-collins/good-to-great.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="good to great" data-author="jim collins" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/good-to-great.webp" alt="Good to Great" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Good to Great
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Jim Collins</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/dale-carnegie/how-to-win-friends-and-influence-people.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="how to win friends and influence people" data-author="dale carnegie" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/How-to-Win-Friends-and-Influence-People.webp" alt="How to Win Friends and Influence People" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                How to Win Friends and Influence People
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Dale Carnegie</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/simon-sinek/start-with-why.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="start with why" data-author="simon sinek" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/start-with-why.jpg" alt="Start With Why" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Start With Why
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Simon Sinek</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/charles-duhigg/the-power-of-habit.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the power of habit" data-author="charles duhigg" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-power-of-habit.webp" alt="The Power of Habit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Power of Habit
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Charles Duhigg</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/napoleon-hill/think-and-grow-rich.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="think and grow rich" data-author="napoleon hill" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/think-and-grow-rich.jpg" alt="Think and Grow Rich" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Think and Grow Rich
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Napoleon Hill</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/robin-sharma/the-5-am-club.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the 5 am club" data-author="robin sharma" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-5-am-club.jpg" alt="The 5 AM Club" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The 5 AM Club
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Robin Sharma</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/robert-kiyosaki/rich-dad-poor-dad.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="rich dad poor dad" data-author="robert kiyosaki" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/rich-dad-poor-dad.jpg" alt="Rich Dad Poor Dad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Rich Dad Poor Dad
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Robert Kiyosaki</p>
+        </a>
+    
+        <a href="books/non-fiction/technology/peter-thiel/zero-to-one.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="zero to one" data-author="peter thiel" data-genre="Technology">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/zero-to-one.jpg" alt="Zero to One" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Technology
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Zero to One
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Peter Thiel</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/eric-ries/the-lean-startup.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="the lean startup" data-author="eric ries" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/the-lean-startup.webp" alt="The Lean Startup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                The Lean Startup
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Eric Ries</p>
+        </a>
+    
+        <a href="books/non-fiction/productivity/cal-newport/deep-work.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="deep work" data-author="cal newport" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/deep-work.jpg" alt="Deep Work" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Deep Work
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Cal Newport</p>
+        </a>
+    
+        <a href="books/non-fiction/business-and-finance/morgan-housel/psychology-of-money.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="psychology of money" data-author="morgan housel" data-genre="Business & Finance">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/pshychology-of-money.jpg" alt="Psychology of Money" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Business & Finance
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Psychology of Money
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By Morgan Housel</p>
+        </a>
+    
+        <a href="books/non-fiction/self-help/james-clear/atomic-habits.html" class="book-card bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all flex flex-col items-center text-center group transform hover:-translate-y-1" data-title="atomic habits" data-author="james clear" data-genre="Self Development">
+            <div class="w-36 md:w-44 aspect-[4/5] mb-5 overflow-hidden rounded-xl shadow-md border border-slate-100">
+                <img src="image/atomic-habit.webp" alt="Atomic Habits" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                Self Development
+            </span>
+            <h3 class="text-slate-900 font-bold text-lg group-hover:text-emerald-600 transition-colors">
+                Atomic Habits
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">By James Clear</p>
+        </a>
+    
+        </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-emerald-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="text-2xl font-serif font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-hourglass-half text-emerald-500"></i> 
+                        5 Mins <span class="text-emerald-500">Summary</span>
+                    </span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
+                        Empowering minds with bite-sized wisdom. We read the heavy books so you don't have to.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Library</h4>
+                   <ul class="space-y-3 text-sm text-slate-400">
+                    <li><a href="summary.html?type=genre&category=business" class="hover:text-emerald-400 transition-colors">Business & Finance</a></li>
+                    <li><a href="summary.html?type=genre&category=self-help" class="hover:text-emerald-400 transition-colors">Self Development</a></li>
+                    <li><a href="summary.html?type=genre&category=technology" class="hover:text-emerald-400 transition-colors">Technology</a></li>
+                </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="terms-and-condition/privacy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-and-condition/terms.html" class="hover:text-emerald-400 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="terms-and-condition/affiliate.html" class="hover:text-emerald-400 transition-colors">Affiliate Disclosure</a></li>
+                        <li><a href="terms-and-condition/contact.html" class="hover:text-emerald-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-xs text-slate-500 mb-4 md:mb-0">
+                    &copy; 2026 5 Mins Summary. All rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/5minssummary?igsh=MTFsZXcxZnFia25hZg==" class="text-slate-500 hover:text-emerald-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
