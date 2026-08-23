@@ -380,4 +380,34 @@
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
+  <url>
+       <loc>https://5minssummary.com/books/non-fiction/business/chris-voss/never-split-the-difference.html</loc>
+       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://5minssummary.com/books/non-fiction/psychology/ichiro-kishimi-fumitake-koga/the-courage-to-be-disliked.html</loc>
+       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://5minssummary.com/books/non-fiction/self-help/darren-hardy/the-compound-effect.html</loc>
+       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://5minssummary.com/books/non-fiction/business/ray-dalio/principles-life-and-work.html</loc>
+       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://5minssummary.com/books/non-fiction/self-help/austin-kleon/show-your-work.html</loc>
+       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
