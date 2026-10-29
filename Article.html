@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PAGE-SPECIFIC SEO META TAGS -->
+    <title>The Short Read: Articles & Ideas — 5minSummary</title>
+    <meta name="description" content="Fresh thoughts for your everyday curiosity. Short 5-minute articles on psychology, mindful living, clarity, and human behavior.">
+    <meta name="keywords" content="short reads, mindful living articles, psychology articles, better thinking, daily habits, 5minSummary articles">
+    <link rel="canonical" href="https://5minssummary.com/Article.html">
+
+    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="The Short Read: Articles & Ideas — 5minSummary">
+    <meta property="og:description" content="Fresh thoughts for your everyday curiosity. Short 5-minute articles on psychology, mindful living, clarity, and human behavior.">
+    <meta property="og:url" content="https://5minssummary.com/Article.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter / X Card Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Short Read: Articles & Ideas — 5minSummary">
+    <meta name="twitter:description" content="Fresh thoughts for your everyday curiosity. Short 5-minute articles on psychology, mindful living, clarity, and human behavior.">
+    <meta name="twitter:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- UNIVERSAL META & INLINE '5' FAVICON -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS CDN & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9',
+                        goldNum: '#C69249'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FBFBF8;
+            color: #191918;
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+        .book-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 4px 10px -3px rgba(0, 0, 0, 0.06);
+        }
+        input[type="range"] { accent-color: #134E3A; }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>The Short Read</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">Fresh Thoughts in 5 Minutes</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR (Same across all pages) -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Left: Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">
+                    5
+                </div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">
+                    5minSummary
+                </span>
+            </a>
+
+            <!-- Center: Global Search Input -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4">
+                <div class="relative w-full">
+                    <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="navbar-search"
+                        placeholder="Search articles, psychology, mindful living..." 
+                        class="w-full bg-bgInput/80 hover:bg-bgInput focus:bg-white text-sm text-textDark placeholder-textMuted rounded-lg py-2.5 pl-10 pr-14 border border-transparent focus:border-brandGreen/40 focus:outline-none transition"
+                    >
+                    <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-sans text-textMuted bg-white/80 px-1.5 py-0.5 rounded border border-borderLight">⌘ K</kbd>
+                </div>
+            </div>
+
+            <!-- Right: Navigation Links & Icons -->
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="Article.html" class="text-brandGreen font-semibold">Articles</a>
+                <a href="Tools.html" class="hover:text-brandGreen transition">Tools</a>
+                
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+
+                <!-- Bookmark Icon -->
+                <button id="saved-toggle-btn" onclick="toggleSavedFilter()" title="Filter Saved Articles" class="text-textDark hover:text-brandGreen transition relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                    </svg>
+                </button>
+
+                <!-- User Profile Initials -->
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold tracking-wider cursor-pointer hover:ring-2 hover:ring-brandGreen/30 transition">
+                    AK
+                </div>
+            </div>
+
+            <!-- Mobile Menu Trigger -->
+            <div class="flex items-center gap-3 lg:hidden">
+                <button id="mobile-menu-btn" class="p-2 rounded-lg text-textDark hover:bg-bgCard focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-3">
+            <div class="relative">
+                <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input 
+                    type="text" 
+                    id="mobile-navbar-search"
+                    placeholder="Search articles & ideas..." 
+                    class="w-full bg-bgInput text-sm text-textDark rounded-lg py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brandGreen"
+                >
+            </div>
+            <div class="flex flex-col space-y-2 pt-2 text-sm font-medium">
+                <a href="Books.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+                <a href="History.html" class="py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+                <a href="Science.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+                <a href="Article.html" class="py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Articles</a>
+                <a href="Tools.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Tools</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. MAIN ARTICLES CONTENT -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-10 pb-20">
+        
+        <!-- Section Header (Matches Figma Screenshot 4 Style) -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-brandGreen mb-2">
+                    FOR YOUR EVERYDAY CURIOSITY
+                </p>
+                <h1 class="font-serif text-4xl sm:text-5xl text-textDark tracking-tight leading-[1.12] mb-2">
+                    The short read
+                </h1>
+                <p class="text-textMuted text-base sm:text-lg">
+                    Fresh thoughts on psychology, mindful living, clarity, and human behavior.
+                </p>
+            </div>
+            <div class="text-xs font-medium text-textMuted self-start md:self-end">
+                <span id="total-count-badge">Showing all articles</span>
+            </div>
+        </div>
+
+        <!-- Search & Topic Filter Bar -->
+        <div class="bg-white border border-borderLight rounded-xl p-4 sm:p-5 mb-12 shadow-sm">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                
+                <!-- Search Input -->
+                <div class="relative w-full md:w-96">
+                    <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="page-search" 
+                        placeholder="Search by title, author, or topic..." 
+                        class="w-full bg-bgMain border border-borderLight rounded-lg py-2.5 pl-10 pr-9 text-sm text-textDark placeholder-textMuted focus:outline-none focus:border-brandGreen focus:ring-1 focus:ring-brandGreen transition"
+                    >
+                </div>
+
+                <!-- Topic Filter Pills -->
+                <div id="filter-pills" class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
+                    <button onclick="filterByTag('all')" data-tag="all" class="tag-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brandGreen text-white transition shrink-0">
+                        All Articles
+                    </button>
+                    <button onclick="filterByTag('mindful-living')" data-tag="mindful-living" class="tag-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-bgCard text-textMuted hover:text-textDark transition shrink-0">
+                        Mindful Living
+                    </button>
+                    <button onclick="filterByTag('psychology')" data-tag="psychology" class="tag-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-bgCard text-textMuted hover:text-textDark transition shrink-0">
+                        Psychology
+                    </button>
+                    <button onclick="filterByTag('better-thinking')" data-tag="better-thinking" class="tag-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-bgCard text-textMuted hover:text-textDark transition shrink-0">
+                        Better Thinking
+                    </button>
+                    <button onclick="filterByTag('behavior')" data-tag="behavior" class="tag-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-bgCard text-textMuted hover:text-textDark transition shrink-0">
+                        Behavior & Habits
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- 2-COLUMN LAYOUT: ARTICLES LIST + HABIT BOX (Figma Screenshot 4)   -->
+        <!-- ================================================================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- LEFT 8 COLS: The Short Read List (Auto-Updated by Node.js) -->
+            <div class="lg:col-span-8">
+                <div id="articles-list" class="divide-y divide-borderLight border-t border-b border-borderLight">
+                    <!-- NODE_ARTICLES_START -->
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-quiet-power-of-paying-attention" data-tag="mindful-living" data-search="the quiet power of paying attention in an economy designed to fracture your focus, choosing what you notice is the ultimate creative and rebellious act. editor mindful living mindful-living">
+                        <a href="posts/the-quiet-power-of-paying-attention.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop" alt="The quiet power of paying attention" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">MINDFUL LIVING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The quiet power of paying attention
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-quiet-power-of-paying-attention', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-psychology-of-enough-why-ambition-needs-a-finish-line" data-tag="psychology" data-search="the psychology of enough: why modern ambition rarely leads to peace how the hedonic treadmill and invisible social scoreboards keep high achievers perpetually restless—and how to define your own finish line. editor psychology & wealth psychology">
+                        <a href="posts/the-psychology-of-enough-why-ambition-needs-a-finish-line.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" alt="The psychology of enough: Why modern ambition rarely leads to peace" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">PSYCHOLOGY & WEALTH</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The psychology of enough: Why modern ambition rarely leads to peace
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">7 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-psychology-of-enough-why-ambition-needs-a-finish-line', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="how-ai-is-reshaping-deep-thinking-and-human-creativity" data-tag="technology" data-search="how artificial intelligence is reshaping deep thinking and human creativity when answers become instant and effortless, the real competitive advantage shifts from knowing facts to asking better questions. editor future & tech technology">
+                        <a href="posts/how-ai-is-reshaping-deep-thinking-and-human-creativity.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop" alt="How artificial intelligence is reshaping deep thinking and human creativity" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">FUTURE & TECH</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    How artificial intelligence is reshaping deep thinking and human creativity
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('how-ai-is-reshaping-deep-thinking-and-human-creativity', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-architecture-of-micro-habits-why-systems-beat-goals" data-tag="productivity" data-search="the architecture of micro-habits: why small daily systems beat grand goals motivation is a spark that fades by wednesday. behavioral design is the quiet engine that compounds over decades. editor better thinking productivity">
+                        <a href="posts/the-architecture-of-micro-habits-why-systems-beat-goals.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000&auto=format&fit=crop" alt="The architecture of micro-habits: Why small daily systems beat grand goals" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">BETTER THINKING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The architecture of micro-habits: Why small daily systems beat grand goals
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-architecture-of-micro-habits-why-systems-beat-goals', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="digital-minimalism-and-the-dopamine-reset" data-tag="mindful-living" data-search="digital minimalism and the dopamine reset: reclaiming your brain from infinite scroll why modern leisure leaves us more tired than work—and how to trade cheap digital stimulation for high-value analog satisfaction. editor digital wellness mindful-living">
+                        <a href="posts/digital-minimalism-and-the-dopamine-reset.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop" alt="Digital minimalism and the dopamine reset: Reclaiming your brain from infinite scroll" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">DIGITAL WELLNESS</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Digital minimalism and the dopamine reset: Reclaiming your brain from infinite scroll
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('digital-minimalism-and-the-dopamine-reset', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-polyglot-brain-how-learning-a-new-language-rewires-your-mind" data-tag="learning" data-search="the polyglot brain: how learning a new language rewires your mind at any age beyond career utility, acquiring a new script and vocabulary physically thickens the cerebral cortex and changes how you perceive reality. editor mind & language learning">
+                        <a href="posts/the-polyglot-brain-how-learning-a-new-language-rewires-your-mind.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1000&auto=format&fit=crop" alt="The polyglot brain: How learning a new language rewires your mind at any age" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">MIND & LANGUAGE</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The polyglot brain: How learning a new language rewires your mind at any age
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">7 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-polyglot-brain-how-learning-a-new-language-rewires-your-mind', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="mental-models-for-clearer-decisions-how-to-think-under-uncertainty" data-tag="better-thinking" data-search="mental models for clearer decisions: how to think when the future is uncertain smart people make terrible choices when they view every problem through a single lens. here is how to build a latticework of timeless thinking tools. editor decision making better-thinking">
+                        <a href="posts/mental-models-for-clearer-decisions-how-to-think-under-uncertainty.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1000&auto=format&fit=crop" alt="Mental models for clearer decisions: How to think when the future is uncertain" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">DECISION MAKING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Mental models for clearer decisions: How to think when the future is uncertain
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">7 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('mental-models-for-clearer-decisions-how-to-think-under-uncertainty', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-hidden-science-of-deep-rest-why-sleep-and-stillness-multiply-clarity" data-tag="wellness" data-search="the hidden science of deep rest: why sleep and stillness are your greatest cognitive multipliers what actually happens inside your brain at 2:00 am—and why seven types of rest are required to cure modern exhaustion. editor brain & health wellness">
+                        <a href="posts/the-hidden-science-of-deep-rest-why-sleep-and-stillness-multiply-clarity.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1511295742362-92c96b1cf484?q=80&w=1000&auto=format&fit=crop" alt="The hidden science of deep rest: Why sleep and stillness are your greatest cognitive multipliers" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">BRAIN & HEALTH</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The hidden science of deep rest: Why sleep and stillness are your greatest cognitive multipliers
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-hidden-science-of-deep-rest-why-sleep-and-stillness-multiply-clarity', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-art-of-slow-reading-how-to-actually-retain-what-you-learn" data-tag="learning" data-search="the art of slow reading in a high-speed world: how to actually retain what you learn finishing fifty books a year means nothing if you forget forty-nine of them by december. here is how great thinkers read for permanent understanding. editor deep reading learning">
+                        <a href="posts/the-art-of-slow-reading-how-to-actually-retain-what-you-learn.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1000&auto=format&fit=crop" alt="The art of slow reading in a high-speed world: How to actually retain what you learn" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">DEEP READING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The art of slow reading in a high-speed world: How to actually retain what you learn
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-art-of-slow-reading-how-to-actually-retain-what-you-learn', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="why-working-with-your-hands-is-the-antidote-to-screen-fatigue" data-tag="mindful-living" data-search="why working with your hands is the ultimate antidote to modern screen fatigue from tending a backyard vegetable garden to cooking from scratch—neuroscience explains why physical craft heals the digital mind. editor analog living mindful-living">
+                        <a href="posts/why-working-with-your-hands-is-the-antidote-to-screen-fatigue.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1000&auto=format&fit=crop" alt="Why working with your hands is the ultimate antidote to modern screen fatigue" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">ANALOG LIVING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Why working with your hands is the ultimate antidote to modern screen fatigue
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('why-working-with-your-hands-is-the-antidote-to-screen-fatigue', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="global-semiconductor-supply-chains-and-the-future-of-ai-hardware" data-tag="technology" data-search="global semiconductor supply chains: how advanced lithography is shaping the ai era from extreme ultraviolet machines to regional chip foundries, the physical bottleneck of artificial intelligence lies in silicon manufacturing. editor tech & economy technology">
+                        <a href="posts/global-semiconductor-supply-chains-and-the-future-of-ai-hardware.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop" alt="Global semiconductor supply chains: How advanced lithography is shaping the AI era" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">TECH & ECONOMY</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Global semiconductor supply chains: How advanced lithography is shaping the AI era
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('global-semiconductor-supply-chains-and-the-future-of-ai-hardware', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-global-shift-toward-grid-scale-battery-storage" data-tag="energy" data-search="the global shift toward grid-scale battery storage: solving the intermittency puzzle as solar and wind generation expand rapidly worldwide, lithium-iron-phosphate and iron-air batteries are emerging as the backbone of stable electrical grids. editor clean energy energy">
+                        <a href="posts/the-global-shift-toward-grid-scale-battery-storage.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1000&auto=format&fit=crop" alt="The global shift toward grid-scale battery storage: Solving the intermittency puzzle" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">CLEAN ENERGY</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The global shift toward grid-scale battery storage: Solving the intermittency puzzle
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-global-shift-toward-grid-scale-battery-storage', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="advances-in-synthetic-biology-and-industrial-biomanufacturing" data-tag="biotech" data-search="advances in synthetic biology: brewing materials, fuels, and medicines from engineered microbes by programming cellular dna like computer software, bioengineers are shifting manufacturing away from petrochemical extraction toward sustainable biological fermentation. editor biotechnology biotech">
+                        <a href="posts/advances-in-synthetic-biology-and-industrial-biomanufacturing.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1000&auto=format&fit=crop" alt="Advances in synthetic biology: Brewing materials, fuels, and medicines from engineered microbes" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">BIOTECHNOLOGY</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Advances in synthetic biology: Brewing materials, fuels, and medicines from engineered microbes
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('advances-in-synthetic-biology-and-industrial-biomanufacturing', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-evolution-of-autonomous-logistics-and-drone-delivery" data-tag="robotics" data-search="the evolution of autonomous logistics: how robotics are transforming last-mile delivery from automated warehouse fulfillment centers to aerial drone corridors, supply chains are cutting delivery times and reducing urban congestion. editor logistics & robotics robotics">
+                        <a href="posts/the-evolution-of-autonomous-logistics-and-drone-delivery.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop" alt="The evolution of autonomous logistics: How robotics are transforming last-mile delivery" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">LOGISTICS & ROBOTICS</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The evolution of autonomous logistics: How robotics are transforming last-mile delivery
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-evolution-of-autonomous-logistics-and-drone-delivery', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="global-water-security-and-desalination-innovations" data-tag="environment" data-search="global water security: next-generation desalination and atmospheric moisture harvesting as shifting precipitation patterns strain municipal reservoirs, advanced membrane filtration and solar-powered collectors offer fresh hope for arid regions. editor climate & water environment">
+                        <a href="posts/global-water-security-and-desalination-innovations.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?q=80&w=1000&auto=format&fit=crop" alt="Global water security: Next-generation desalination and atmospheric moisture harvesting" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">CLIMATE & WATER</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Global water security: Next-generation desalination and atmospheric moisture harvesting
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('global-water-security-and-desalination-innovations', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-rise-of-open-science-and-collaborative-research-platforms" data-tag="science" data-search="the rise of open science: how collaborative research platforms are accelerating discovery moving away from paywalled academic journals, open-access data repositories and decentralized peer review are transforming how global scientists share breakthroughs. editor science policy science">
+                        <a href="posts/the-rise-of-open-science-and-collaborative-research-platforms.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1000&auto=format&fit=crop" alt="The rise of open science: How collaborative research platforms are accelerating discovery" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">SCIENCE POLICY</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The rise of open science: How collaborative research platforms are accelerating discovery
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-rise-of-open-science-and-collaborative-research-platforms', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="urban-heat-resilience-and-biophilic-architecture" data-tag="urbanism" data-search="urban heat resilience: how biophilic architecture and cool roofs are cooling megacities as asphalt-heavy cities absorb solar radiation and trap heat islands, urban planners are turning to vertical forests, reflective coatings, and natural ventilation. editor urban design urbanism">
+                        <a href="posts/urban-heat-resilience-and-biophilic-architecture.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Urban heat resilience: How biophilic architecture and cool roofs are cooling megacities" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">URBAN DESIGN</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Urban heat resilience: How biophilic architecture and cool roofs are cooling megacities
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('urban-heat-resilience-and-biophilic-architecture', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-economics-of-recirculating-aquaculture-and-sustainable-oceans" data-tag="agriculture" data-search="sustainable aquaculture: how recirculating systems and ocean farming protect marine life with wild fish stocks facing overfishing pressure, land-based closed-loop fish farms and seaweed cultivation offer a blueprint for responsible seafood production. editor food security agriculture">
+                        <a href="posts/the-economics-of-recirculating-aquaculture-and-sustainable-oceans.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop" alt="Sustainable aquaculture: How recirculating systems and ocean farming protect marine life" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">FOOD SECURITY</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    Sustainable aquaculture: How recirculating systems and ocean farming protect marine life
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-economics-of-recirculating-aquaculture-and-sustainable-oceans', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-future-of-personalized-preventative-medicine" data-tag="health" data-search="the future of personalized medicine: multi-omic profiling and early disease detection shifting clinical healthcare from reactive symptom treatment to proactive molecular prevention through continuous wearable monitoring and genetic mapping. editor future medicine health">
+                        <a href="posts/the-future-of-personalized-preventative-medicine.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1000&auto=format&fit=crop" alt="The future of personalized medicine: Multi-omic profiling and early disease detection" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">FUTURE MEDICINE</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The future of personalized medicine: Multi-omic profiling and early disease detection
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-future-of-personalized-preventative-medicine', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-resilience-of-traditional-agroforestry-and-indigenous-wisdom" data-tag="ecology" data-search="the resilience of traditional agroforestry: blending indigenous knowledge with modern ecology how multi-tiered forest gardens and ancient water-harvesting techniques offer a masterclass in climate adaptation and soil restoration. editor ecological wisdom ecology">
+                        <a href="posts/the-resilience-of-traditional-agroforestry-and-indigenous-wisdom.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000&auto=format&fit=crop" alt="The resilience of traditional agroforestry: Blending indigenous knowledge with modern ecology" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">ECOLOGICAL WISDOM</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The resilience of traditional agroforestry: Blending indigenous knowledge with modern ecology
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-resilience-of-traditional-agroforestry-and-indigenous-wisdom', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+<!-- NODE_ARTICLES_END -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden bg-bgCard/50 border border-borderLight rounded-2xl py-16 px-4 text-center my-8">
+                    <p class="font-serif text-2xl text-textDark mb-2">No matching articles found</p>
+                    <p class="text-sm text-textMuted mb-6">Try searching with a different keyword or select "All Articles".</p>
+                    <button onclick="resetArticleFilters()" class="bg-brandGreen text-white text-xs font-semibold px-5 py-2.5 rounded-lg hover:bg-brandGreenHover transition">
+                        Show All Articles
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT 4 COLS: Sticky Green Habit Box (Exact Figma Screenshot 4) -->
+            <aside class="lg:col-span-4 lg:sticky lg:top-28">
+                <div class="bg-brandGreen text-white rounded-md p-8 sm:p-10 shadow-sm">
+                    <div class="mb-6 opacity-90">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-200 mb-3">
+                        MAKE CURIOSITY A HABIT
+                    </p>
+                    <h3 class="font-serif text-3xl sm:text-4xl leading-[1.15] mb-4">
+                        Five minutes.<br>
+                        A little wiser.<br>
+                        Every day.
+                    </h3>
+                    <p class="text-sm text-emerald-100/85 leading-relaxed mb-6">
+                        One worthwhile idea in your inbox. A small daily ritual for a more interesting life.
+                    </p>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to 5minSummary!'); this.reset();" class="relative mb-3">
+                        <input 
+                            type="email" 
+                            required
+                            placeholder="Your email address" 
+                            class="w-full bg-white text-textDark placeholder-textMuted text-sm rounded-md py-3.5 pl-4 pr-12 focus:outline-none"
+                        >
+                        <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-brandGreen hover:translate-x-0.5 transition p-1">
+                            →
+                        </button>
+                    </form>
+                    <p class="text-[11px] text-emerald-200/75">
+                        A thoughtful read. No noise. Unsubscribe anytime.
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- 4. FOOTER (Exact Figma Match) -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">
+                        5minSummary
+                    </a>
+                    <p class="text-textMuted text-sm">
+                        Less scrolling. More understanding.
+                    </p>
+                </div>
+
+             <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+    <a href="about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+    <a href="about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+    <a href="about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+    <a href="about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+</div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 5. JAVASCRIPT FOR LIVE TIME, BOOKMARKS & FILTERING -->
+    <script>
+        // A. Live Date & Time
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+            const timeStr = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // B. Search, Topic Filter & Saved Articles Logic
+        let activeTag = 'all';
+        let onlySaved = false;
+        let savedSlugs = JSON.parse(localStorage.getItem('5min_saved_articles') || '[]');
+
+        const pageSearch = document.getElementById('page-search');
+        const navbarSearch = document.getElementById('navbar-search');
+        const mobileNavbarSearch = document.getElementById('mobile-navbar-search');
+
+        function syncBookmarkIcons() {
+            document.querySelectorAll('.article-card').forEach(card => {
+                const slug = card.getAttribute('data-slug');
+                const svg = card.querySelector('.bookmark-btn svg');
+                if (svg) {
+                    if (savedSlugs.includes(slug)) {
+                        svg.classList.add('fill-brandGreen', 'text-brandGreen');
+                    } else {
+                        svg.classList.remove('fill-brandGreen', 'text-brandGreen');
+                    }
+                }
+            });
+        }
+
+        function toggleBookmark(slug, btnEl) {
+            if (savedSlugs.includes(slug)) {
+                savedSlugs = savedSlugs.filter(s => s !== slug);
+            } else {
+                savedSlugs.push(slug);
+            }
+            localStorage.setItem('5min_saved_articles', JSON.stringify(savedSlugs));
+            syncBookmarkIcons();
+            applyFilters();
+        }
+
+        function toggleSavedFilter() {
+            onlySaved = !onlySaved;
+            const btn = document.getElementById('saved-toggle-btn');
+            btn.classList.toggle('text-brandGreen', onlySaved);
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = pageSearch.value.trim().toLowerCase();
+            const cards = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardTag = (card.getAttribute('data-tag') || '').toLowerCase();
+                const cardSlug = card.getAttribute('data-slug') || '';
+                const searchText = (card.getAttribute('data-search') || card.innerText || '').toLowerCase();
+
+                const matchesTag = activeTag === 'all' || cardTag === activeTag;
+                const matchesQuery = !query || searchText.includes(query);
+                const matchesSaved = !onlySaved || savedSlugs.includes(cardSlug);
+
+                if (matchesTag && matchesQuery && matchesSaved) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            document.getElementById('total-count-badge').textContent = `Showing ${visibleCount} of ${cards.length} articles`;
+            document.getElementById('no-results').classList.toggle('hidden', visibleCount > 0);
+        }
+
+        function filterByTag(tag) {
+            activeTag = tag;
+            document.querySelectorAll('.tag-pill').forEach(btn => {
+                if (btn.dataset.tag === tag) {
+                    btn.className = "tag-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brandGreen text-white transition shrink-0";
+                } else {
+                    btn.className = "tag-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-bgCard text-textMuted hover:text-textDark transition shrink-0";
+                }
+            });
+            applyFilters();
+        }
+
+        function resetArticleFilters() {
+            pageSearch.value = '';
+            navbarSearch.value = '';
+            onlySaved = false;
+            filterByTag('all');
+        }
+
+        pageSearch.addEventListener('input', applyFilters);
+        navbarSearch.addEventListener('input', (e) => {
+            pageSearch.value = e.target.value;
+            applyFilters();
+        });
+        mobileNavbarSearch.addEventListener('input', (e) => {
+            pageSearch.value = e.target.value;
+            applyFilters();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            syncBookmarkIcons();
+            applyFilters();
+        });
+    </script>
+</body>
+</html>

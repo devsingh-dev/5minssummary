@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>Chess — Free Online STRATEGY Tool | 5minSummary</title>
+    <meta name="description" content="Chess: दिमाग को तेज़ करने वाला शतरंज खेलें। Use this free interactive strategy utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/chess.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="Chess — Free Online STRATEGY Tool | 5minSummary">
+    <meta property="og:description" content="Chess: दिमाग को तेज़ करने वाला शतरंज खेलें। Use this free interactive strategy utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/chess.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chess — Free Online STRATEGY Tool | 5minSummary">
+    <meta name="twitter:description" content="Chess: दिमाग को तेज़ करने वाला शतरंज खेलें। Use this free interactive strategy utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Chess","url":"https://5minssummary.com/tools/chess.html","description":"Chess: दिमाग को तेज़ करने वाला शतरंज खेलें। Use this free interactive strategy utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>STRATEGY • Chess</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+
+  <!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/chess.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        STRATEGY & LOGIC
+                    </span>
+                    <span class="text-xs text-textMuted">• Smart AI & 2-Player Pass & Play</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    Classic Chess Game
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Sharpen your tactical foresight on the 64-square board. Play against our positional AI bot or challenge a friend in 2-player mode with legal move guides and move history.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE CHESS GAME WORKSPACE                           -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-5 sm:p-8 shadow-sm mb-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left 7 Cols: Chessboard Area -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    
+                    <!-- Opponent / Top Player Bar -->
+                    <div class="w-full max-w-[460px] flex items-center justify-between bg-bgMain border border-borderLight rounded-xl px-4 py-2.5 mb-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-[#191918] text-white flex items-center justify-center text-sm">♚</span>
+                            <div>
+                                <p id="chess-top-label" class="text-xs font-bold text-textDark">Black (AI Bot)</p>
+                                <div id="captured-by-black" class="text-xs leading-none min-h-[14px] text-textMuted"></div>
+                            </div>
+                        </div>
+                        <span id="black-adv-badge" class="text-xs font-semibold text-brandGreen"></span>
+                    </div>
+
+                    <!-- 8x8 Chessboard Grid -->
+                    <div class="w-full max-w-[460px] aspect-square p-2 sm:p-2.5 bg-[#3D352E] rounded-2xl shadow-md select-none">
+                        <div id="chess-board" class="w-full h-full grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden border border-[#26201B]">
+                            <!-- 64 Squares Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Bottom Player Bar -->
+                    <div class="w-full max-w-[460px] flex items-center justify-between bg-bgMain border border-borderLight rounded-xl px-4 py-2.5 mt-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-white border border-borderLight text-textDark flex items-center justify-center text-sm">♔</span>
+                            <div>
+                                <p class="text-xs font-bold text-textDark">White (You)</p>
+                                <div id="captured-by-white" class="text-xs leading-none min-h-[14px] text-textMuted"></div>
+                            </div>
+                        </div>
+                        <span id="white-adv-badge" class="text-xs font-semibold text-brandGreen"></span>
+                    </div>
+
+                </div>
+
+                <!-- Right 5 Cols: Game Controls, Status & Move Log -->
+                <div class="lg:col-span-5 bg-bgMain border border-borderLight rounded-2xl p-5 sm:p-6 space-y-5">
+                    
+                    <!-- Turn & Check Status Banner -->
+                    <div id="chess-status-banner" class="bg-white border border-borderLight rounded-xl p-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-brandGreen">MATCH STATUS</p>
+                            <p id="chess-turn-text" class="font-serif text-2xl text-textDark mt-0.5">White's Turn to Move</p>
+                        </div>
+                        <span id="chess-check-pill" class="hidden px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 animate-pulse">
+                            CHECK!
+                        </span>
+                    </div>
+
+                    <!-- Mode Switcher -->
+                    <div class="grid grid-cols-2 gap-2">
+                        <button id="mode-ai-btn" onclick="setChessMode('ai')" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-brandGreen text-white transition">
+                            🤖 Play vs Smart AI
+                        </button>
+                        <button id="mode-2p-btn" onclick="setChessMode('2p')" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-bgCard text-textMuted hover:text-textDark transition">
+                            👥 2-Player Pass & Play
+                        </button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="undoChessMove()" id="chess-undo-btn" class="py-2.5 px-3 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">
+                            ↶ Undo
+                        </button>
+                        <button onclick="flipChessBoard()" class="py-2.5 px-3 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">
+                            ⇅ Flip Board
+                        </button>
+                        <button onclick="initChessGame()" class="py-2.5 px-3 rounded-xl bg-[#0F2942] text-white text-xs font-semibold hover:opacity-95 transition">
+                            New Game ↻
+                        </button>
+                    </div>
+
+                    <!-- Move History Log -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Move History</span>
+                            <span id="chess-move-count" class="text-xs text-textMuted">0 moves</span>
+                        </div>
+                        <div id="chess-move-log" class="bg-white border border-borderLight rounded-xl p-3 h-48 overflow-y-auto font-mono text-xs text-textDark space-y-1">
+                            <p class="text-textMuted font-sans text-center py-14">Click any white piece to see legal moves and begin the match.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO PLAY & HOW AI EVALUATION WORKS (English Guide)      -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO PLAY CHESS</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Rules, Piece Movement & Strategy</h2>
+                <ul class="space-y-3 text-sm text-textDark/90 list-disc pl-5 leading-relaxed">
+                    <li><strong>Selecting & Moving Pieces:</strong> Click any of your pieces to highlight all legal destination squares in green. Click a highlighted square to execute your move.</li>
+                    <li><strong>Piece Movement Summary:</strong>
+                        <strong>Pawns</strong> move forward 1 square (or 2 from their starting rank) and capture diagonally;
+                        <strong>Knights</strong> jump in an L-shape ($2 \times 1$);
+                        <strong>Bishops</strong> glide diagonally;
+                        <strong>Rooks</strong> command ranks and files;
+                        <strong>Queens</strong> combine Rook and Bishop power;
+                        <strong>Kings</strong> step 1 square in any direction.
+                    </li>
+                    <li><strong>Check, Checkmate & Promotion:</strong> You cannot make a move that leaves your King under attack. Any Pawn reaching the 8th rank automatically promotes to a Queen.</li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">CHESS MATH & AI</p>
+                <h3 class="font-serif text-2xl text-textDark">How Material & AI Evaluation Work</h3>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    Standard chess theory assigns relative material point values to each piece: <strong>Pawn = 1</strong>, <strong>Knight = 3</strong>, <strong>Bishop = 3</strong>, <strong>Rook = 5</strong>, and <strong>Queen = 9</strong>.
+                </p>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    Our client-side AI evaluates candidate moves using a <strong>2-ply lookahead search</strong> combined with center-control bonuses, king-safety checks, and material balance—giving you a responsive opponent right in your browser.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED CHESS ENGINE JAVASCRIPT                           -->
+        <!-- ============================================================= -->
+        <script>
+            const PIECE_SYMBOLS = {
+                wK: '♔', wQ: '♕', wR: '♖', wB: '♗', wN: '♘', wP: '♙',
+                bK: '♚', bQ: '♛', bR: '♜', bB: '♝', bN: '♞', bP: '♟'
+            };
+            const PIECE_VALUES = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
+
+            let chessBoard = [];
+            let currentTurn = 'w';
+            let chessMode = 'ai'; // 'ai' or '2p'
+            let selectedSq = null;
+            let legalTargets = [];
+            let moveHistory = [];
+            let stateSnapshots = [];
+            let lastMoveSq = null;
+            let isFlipped = false;
+            let gameOver = false;
+
+            const boardEl = document.getElementById('chess-board');
+            const turnTextEl = document.getElementById('chess-turn-text');
+            const checkPillEl = document.getElementById('chess-check-pill');
+            const moveLogEl = document.getElementById('chess-move-log');
+
+            function initChessGame() {
+                chessBoard = [
+                    ['bR','bN','bB','bQ','bK','bB','bN','bR'],
+                    ['bP','bP','bP','bP','bP','bP','bP','bP'],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    ['wP','wP','wP','wP','wP','wP','wP','wP'],
+                    ['wR','wN','wB','wQ','wK','wB','wN','wR']
+                ];
+                currentTurn = 'w';
+                selectedSq = null;
+                legalTargets = [];
+                moveHistory = [];
+                stateSnapshots = [];
+                lastMoveSq = null;
+                gameOver = false;
+                renderChessUI();
+            }
+
+            function setChessMode(mode) {
+                chessMode = mode;
+                document.getElementById('mode-ai-btn').className = mode === 'ai'
+                    ? "py-2.5 px-3 rounded-xl text-xs font-semibold bg-brandGreen text-white transition"
+                    : "py-2.5 px-3 rounded-xl text-xs font-semibold bg-bgCard text-textMuted hover:text-textDark transition";
+                document.getElementById('mode-2p-btn').className = mode === '2p'
+                    ? "py-2.5 px-3 rounded-xl text-xs font-semibold bg-brandGreen text-white transition"
+                    : "py-2.5 px-3 rounded-xl text-xs font-semibold bg-bgCard text-textMuted hover:text-textDark transition";
+                document.getElementById('chess-top-label').textContent = mode === 'ai' ? 'Black (AI Bot)' : 'Black (Player 2)';
+                initChessGame();
+            }
+
+            function flipChessBoard() {
+                isFlipped = !isFlipped;
+                renderChessUI();
+            }
+
+            function inBounds(r, c) {
+                return r >= 0 && r < 8 && c >= 0 && c < 8;
+            }
+
+            function getPseudoMoves(board, r, c) {
+                const piece = board[r][c];
+                if (!piece) return [];
+                const color = piece[0];
+                const type = piece[1];
+                const moves = [];
+
+                if (type === 'P') {
+                    const dir = color === 'w' ? -1 : 1;
+                    const startRow = color === 'w' ? 6 : 1;
+                    if (inBounds(r + dir, c) && !board[r + dir][c]) {
+                        moves.push({ r: r + dir, c });
+                        if (r === startRow && !board[r + 2 * dir][c]) {
+                            moves.push({ r: r + 2 * dir, c });
+                        }
+                    }
+                    [-1, 1].forEach(dc => {
+                        if (inBounds(r + dir, c + dc) && board[r + dir][c + dc] && board[r + dir][c + dc][0] !== color) {
+                            moves.push({ r: r + dir, c: c + dc });
+                        }
+                    });
+                } else if (type === 'N') {
+                    [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]].forEach(([dr, dc]) => {
+                        const nr = r + dr, nc = c + dc;
+                        if (inBounds(nr, nc) && (!board[nr][nc] || board[nr][nc][0] !== color)) {
+                            moves.push({ r: nr, c: nc });
+                        }
+                    });
+                } else if (type === 'K') {
+                    [[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]].forEach(([dr, dc]) => {
+                        const nr = r + dr, nc = c + dc;
+                        if (inBounds(nr, nc) && (!board[nr][nc] || board[nr][nc][0] !== color)) {
+                            moves.push({ r: nr, c: nc });
+                        }
+                    });
+                } else {
+                    const dirs = [];
+                    if (type === 'R' || type === 'Q') dirs.push([-1,0],[1,0],[0,-1],[0,1]);
+                    if (type === 'B' || type === 'Q') dirs.push([-1,-1],[-1,1],[1,-1],[1,1]);
+
+                    dirs.forEach(([dr, dc]) => {
+                        let nr = r + dr, nc = c + dc;
+                        while (inBounds(nr, nc)) {
+                            if (!board[nr][nc]) {
+                                moves.push({ r: nr, c: nc });
+                            } else {
+                                if (board[nr][nc][0] !== color) moves.push({ r: nr, c: nc });
+                                break;
+                            }
+                            nr += dr;
+                            nc += dc;
+                        }
+                    });
+                }
+                return moves;
+            }
+
+            function simulateMove(board, fromR, fromC, toR, toC) {
+                const copy = board.map(row => [...row]);
+                let movingPiece = copy[fromR][fromC];
+                if (movingPiece === 'wP' && toR === 0) movingPiece = 'wQ';
+                if (movingPiece === 'bP' && toR === 7) movingPiece = 'bQ';
+                copy[toR][toC] = movingPiece;
+                copy[fromR][fromC] = null;
+                return copy;
+            }
+
+            function isKingInCheck(board, color) {
+                let kR = -1, kC = -1;
+                for (let r = 0; r < 8; r++) {
+                    for (let c = 0; c < 8; c++) {
+                        if (board[r][c] === color + 'K') { kR = r; kC = c; break; }
+                    }
+                }
+                if (kR === -1) return true;
+                const opp = color === 'w' ? 'b' : 'w';
+                for (let r = 0; r < 8; r++) {
+                    for (let c = 0; c < 8; c++) {
+                        if (board[r][c] && board[r][c][0] === opp) {
+                            const attacks = getPseudoMoves(board, r, c);
+                            if (attacks.some(m => m.r === kR && m.c === kC)) return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            function getLegalMovesForSquare(board, r, c) {
+                const piece = board[r][c];
+                if (!piece) return [];
+                const color = piece[0];
+                return getPseudoMoves(board, r, c).filter(m => {
+                    const nextBoard = simulateMove(board, r, c, m.r, m.c);
+                    return !isKingInCheck(nextBoard, color);
+                });
+            }
+
+            function getAllLegalMoves(board, color) {
+                const all = [];
+                for (let r = 0; r < 8; r++) {
+                    for (let c = 0; c < 8; c++) {
+                        if (board[r][c] && board[r][c][0] === color) {
+                            const targets = getLegalMovesForSquare(board, r, c);
+                            targets.forEach(t => all.push({ fromR: r, fromC: c, toR: t.r, toC: t.c }));
+                        }
+                    }
+                }
+                return all;
+            }
+
+            function sqNotation(r, c) {
+                return 'abcdefgh'[c] + (8 - r);
+            }
+
+            function handleSquareClick(r, c) {
+                if (gameOver) return;
+                if (chessMode === 'ai' && currentTurn === 'b') return;
+
+                const clickedTarget = legalTargets.find(t => t.r === r && t.c === c);
+                if (selectedSq && clickedTarget) {
+                    executeChessMove(selectedSq.r, selectedSq.c, r, c);
+                    return;
+                }
+
+                const piece = chessBoard[r][c];
+                if (piece && piece[0] === currentTurn) {
+                    selectedSq = { r, c };
+                    legalTargets = getLegalMovesForSquare(chessBoard, r, c);
+                } else {
+                    selectedSq = null;
+                    legalTargets = [];
+                }
+                renderChessUI();
+            }
+
+            function executeChessMove(fromR, fromC, toR, toC) {
+                stateSnapshots.push({
+                    board: chessBoard.map(row => [...row]),
+                    turn: currentTurn,
+                    history: [...moveHistory],
+                    lastMove: lastMoveSq
+                });
+
+                const piece = chessBoard[fromR][fromC];
+                const captured = chessBoard[toR][toC];
+                chessBoard = simulateMove(chessBoard, fromR, fromC, toR, toC);
+
+                const moveStr = `${PIECE_SYMBOLS[piece]} ${sqNotation(fromR, fromC)}${captured ? '×' : '→'}${sqNotation(toR, toC)}`;
+                moveHistory.push(moveStr);
+                lastMoveSq = { fromR, fromC, toR, toC };
+                selectedSq = null;
+                legalTargets = [];
+                currentTurn = currentTurn === 'w' ? 'b' : 'w';
+
+                checkEndState();
+                renderChessUI();
+
+                if (!gameOver && chessMode === 'ai' && currentTurn === 'b') {
+                    setTimeout(makeSmartAiMove, 320);
+                }
+            }
+
+            function evaluateBoard(board) {
+                let score = 0;
+                for (let r = 0; r < 8; r++) {
+                    for (let c = 0; c < 8; c++) {
+                        const p = board[r][c];
+                        if (!p) continue;
+                        const val = PIECE_VALUES[p[1]] * 10;
+                        const centerBonus = (r >= 2 && r <= 5 && c >= 2 && c <= 5) ? 2 : 0;
+                        if (p[0] === 'b') score += (val + centerBonus);
+                        else score -= (val + centerBonus);
+                    }
+                }
+                return score;
+            }
+
+            function makeSmartAiMove() {
+                const moves = getAllLegalMoves(chessBoard, 'b');
+                if (moves.length === 0) return;
+
+                let bestMove = moves[0];
+                let bestScore = -99999;
+
+                moves.forEach(m => {
+                    const b1 = simulateMove(chessBoard, m.fromR, m.fromC, m.toR, m.toC);
+                    // 1-ply opponent response check
+                    const whiteResponses = getAllLegalMoves(b1, 'w');
+                    let worstReplyScore = evaluateBoard(b1);
+                    if (whiteResponses.length > 0) {
+                        worstReplyScore = Math.min(...whiteResponses.slice(0, 12).map(wr => {
+                            const b2 = simulateMove(b1, wr.fromR, wr.fromC, wr.toR, wr.toC);
+                            return evaluateBoard(b2);
+                        }));
+                    }
+                    const jitter = (Math.random() - 0.5) * 1.5;
+                    if (worstReplyScore + jitter > bestScore) {
+                        bestScore = worstReplyScore + jitter;
+                        bestMove = m;
+                    }
+                });
+
+                executeChessMove(bestMove.fromR, bestMove.fromC, bestMove.toR, bestMove.toC);
+            }
+
+            function checkEndState() {
+                const legal = getAllLegalMoves(chessBoard, currentTurn);
+                const inCheck = isKingInCheck(chessBoard, currentTurn);
+                checkPillEl.classList.toggle('hidden', !inCheck);
+
+                if (legal.length === 0) {
+                    gameOver = true;
+                    if (inCheck) {
+                        const winner = currentTurn === 'w' ? 'Black' : 'White';
+                        turnTextEl.textContent = `Checkmate! ${winner} Wins! 🏆`;
+                    } else {
+                        turnTextEl.textContent = "Stalemate! Match Drawn.";
+                    }
+                } else {
+                    turnTextEl.textContent = currentTurn === 'w' ? "White's Turn to Move" : (chessMode === 'ai' ? "Black (AI) Thinking..." : "Black's Turn to Move");
+                }
+            }
+
+            function undoChessMove() {
+                if (stateSnapshots.length === 0) return;
+                const steps = (chessMode === 'ai' && currentTurn === 'w' && stateSnapshots.length >= 2) ? 2 : 1;
+                let restored = null;
+                for (let i = 0; i < steps; i++) {
+                    restored = stateSnapshots.pop();
+                }
+                if (restored) {
+                    chessBoard = restored.board;
+                    currentTurn = restored.turn;
+                    moveHistory = restored.history;
+                    lastMoveSq = restored.lastMove;
+                    selectedSq = null;
+                    legalTargets = [];
+                    gameOver = false;
+                    checkEndState();
+                    renderChessUI();
+                }
+            }
+
+            function updateCapturedMaterial() {
+                const startCounts = { wP:8, wN:2, wB:2, wR:2, wQ:1, bP:8, bN:2, bB:2, bR:2, bQ:1 };
+                const currentCounts = { wP:0, wN:0, wB:0, wR:0, wQ:0, bP:0, bN:0, bB:0, bR:0, bQ:0 };
+                let wScore = 0, bScore = 0;
+
+                for (let r = 0; r < 8; r++) {
+                    for (let c = 0; c < 8; c++) {
+                        const p = chessBoard[r][c];
+                        if (!p) continue;
+                        if (currentCounts[p] !== undefined) currentCounts[p]++;
+                        if (p[0] === 'w' && p[1] !== 'K') wScore += PIECE_VALUES[p[1]];
+                        if (p[0] === 'b' && p[1] !== 'K') bScore += PIECE_VALUES[p[1]];
+                    }
+                }
+
+                let capByWhite = '', capByBlack = '';
+                ['bQ','bR','bB','bN','bP'].forEach(k => {
+                    const diff = Math.max(0, startCounts[k] - currentCounts[k]);
+                    capByWhite += PIECE_SYMBOLS[k].repeat(diff);
+                });
+                ['wQ','wR','wB','wN','wP'].forEach(k => {
+                    const diff = Math.max(0, startCounts[k] - currentCounts[k]);
+                    capByBlack += PIECE_SYMBOLS[k].repeat(diff);
+                });
+
+                document.getElementById('captured-by-white').textContent = capByWhite || 'No captures yet';
+                document.getElementById('captured-by-black').textContent = capByBlack || 'No captures yet';
+                document.getElementById('white-adv-badge').textContent = wScore > bScore ? `+${wScore - bScore}` : '';
+                document.getElementById('black-adv-badge').textContent = bScore > wScore ? `+${bScore - wScore}` : '';
+            }
+
+            function renderChessUI() {
+                boardEl.innerHTML = '';
+                const rows = isFlipped ? [7,6,5,4,3,2,1,0] : [0,1,2,3,4,5,6,7];
+                const cols = isFlipped ? [7,6,5,4,3,2,1,0] : [0,1,2,3,4,5,6,7];
+
+                rows.forEach(r => {
+                    cols.forEach(c => {
+                        const isLight = (r + c) % 2 === 0;
+                        const piece = chessBoard[r][c];
+                        const isSelected = selectedSq && selectedSq.r === r && selectedSq.c === c;
+                        const isLegalTarget = legalTargets.some(t => t.r === r && t.c === c);
+                        const isLastMove = lastMoveSq && ((lastMoveSq.fromR === r && lastMoveSq.fromC === c) || (lastMoveSq.toR === r && lastMoveSq.toC === c));
+
+                        let bgClass = isLight ? 'bg-[#EFECE4]' : 'bg-[#7A9A8B]';
+                        if (isSelected) bgClass = 'bg-amber-300';
+                        else if (isLastMove) bgClass = isLight ? 'bg-[#DCE8D6]' : 'bg-[#648C78]';
+
+                        const sq = document.createElement('button');
+                        sq.type = 'button';
+                        sq.onclick = () => handleSquareClick(r, c);
+                        sq.className = `relative flex items-center justify-center text-3xl sm:text-4xl select-none transition-colors ${bgClass}`;
+
+                        if (piece) {
+                            const span = document.createElement('span');
+                            span.textContent = PIECE_SYMBOLS[piece];
+                            span.className = piece[0] === 'w'
+                                ? 'text-white drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.85)]'
+                                : 'text-[#191918] drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]';
+                            sq.appendChild(span);
+                        }
+
+                        if (isLegalTarget) {
+                            const dot = document.createElement('span');
+                            dot.className = piece
+                                ? 'absolute inset-1 rounded-full border-4 border-brandGreen/70 pointer-events-none'
+                                : 'w-3.5 h-3.5 rounded-full bg-brandGreen/75 pointer-events-none';
+                            sq.appendChild(dot);
+                        }
+
+                        boardEl.appendChild(sq);
+                    });
+                });
+
+                updateCapturedMaterial();
+                document.getElementById('chess-move-count').textContent = `${moveHistory.length} moves`;
+
+                if (moveHistory.length === 0) {
+                    moveLogEl.innerHTML = `<p class="text-textMuted font-sans text-center py-14">Click any white piece to see legal moves and begin the match.</p>`;
+                } else {
+                    const pairs = [];
+                    for (let i = 0; i < moveHistory.length; i += 2) {
+                        pairs.push(`<div class="flex justify-between py-1 px-2 rounded odd:bg-bgMain">
+                            <span class="text-textMuted w-8">${Math.floor(i/2)+1}.</span>
+                            <span class="flex-1 font-semibold">${moveHistory[i]}</span>
+                            <span class="flex-1 text-textMuted">${moveHistory[i+1] || ''}</span>
+                        </div>`);
+                    }
+                    moveLogEl.innerHTML = pairs.join('');
+                    moveLogEl.scrollTop = moveLogEl.scrollHeight;
+                }
+            }
+
+            initChessGame();
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

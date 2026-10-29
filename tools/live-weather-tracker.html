@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>Live Weather Tracker — Free Online UTILITY Tool | 5minSummary</title>
+    <meta name="description" content="Live Weather Tracker: किसी भी शहर का रियल-टाइम मौसम अपडेट। Use this free interactive utility utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/live-weather-tracker.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="Live Weather Tracker — Free Online UTILITY Tool | 5minSummary">
+    <meta property="og:description" content="Live Weather Tracker: किसी भी शहर का रियल-टाइम मौसम अपडेट। Use this free interactive utility utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/live-weather-tracker.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Weather Tracker — Free Online UTILITY Tool | 5minSummary">
+    <meta name="twitter:description" content="Live Weather Tracker: किसी भी शहर का रियल-टाइम मौसम अपडेट। Use this free interactive utility utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Live Weather Tracker","url":"https://5minssummary.com/tools/live-weather-tracker.html","description":"Live Weather Tracker: किसी भी शहर का रियल-टाइम मौसम अपडेट। Use this free interactive utility utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>UTILITY • Live Weather Tracker</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+
+<!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/live-weather-tracker.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        LIVE METEOROLOGY UTILITY
+                    </span>
+                    <span id="wx-live-indicator" class="text-xs text-brandGreen font-medium">• Real-Time Satellite Weather Feed</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    Live Weather Tracker
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Check real-time temperature, apparent "feels like" index, humidity, wind speed, surface pressure, UV index, and a 7-day forecast for any city worldwide.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE LIVE WEATHER TRACKER WORKSPACE                 -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-6 sm:p-10 shadow-sm mb-12 space-y-8">
+            
+            <!-- Top Search Bar, GPS Button & Unit Toggle -->
+            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+                
+                <form onsubmit="event.preventDefault(); searchWeatherCity();" class="flex-1 flex gap-2">
+                    <div class="relative flex-1">
+                        <input 
+                            type="text" 
+                            id="wx-city-input" 
+                            placeholder="Enter any city, town, or district (e.g., Raipur, Hyderabad, Mumbai, London)..." 
+                            class="w-full bg-bgMain border border-borderLight rounded-xl py-3 pl-4 pr-4 text-sm font-medium text-textDark placeholder-textMuted focus:outline-none focus:border-brandGreen"
+                        >
+                    </div>
+                    <button type="submit" class="bg-brandGreen hover:bg-brandGreenHover text-white text-xs sm:text-sm font-semibold px-5 py-3 rounded-xl transition shrink-0">
+                        Search Weather
+                    </button>
+                </form>
+
+                <div class="flex items-center gap-2.5">
+                    <button onclick="useMyGpsLocation()" class="px-4 py-3 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition flex items-center gap-1.5">
+                        <span>📍 My Location</span>
+                    </button>
+                    <div class="inline-flex rounded-xl bg-bgCard p-1 border border-borderLight">
+                        <button id="wx-unit-c" onclick="setWeatherUnit('C')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-brandGreen text-white transition">°C</button>
+                        <button id="wx-unit-f" onclick="setWeatherUnit('F')" class="px-3 py-1.5 rounded-lg text-xs font-bold text-textMuted hover:text-textDark transition">°F</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Quick City Chips -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1">
+                <span class="text-xs font-semibold text-textMuted shrink-0">Quick Cities:</span>
+                <button onclick="loadCityByCoords('New Delhi, India', 28.6139, 77.2090)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">New Delhi</button>
+                <button onclick="loadCityByCoords('Raipur, Chhattisgarh', 21.2514, 81.6296)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">Raipur</button>
+                <button onclick="loadCityByCoords('Hyderabad, Telangana', 17.3850, 78.4867)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">Hyderabad</button>
+                <button onclick="loadCityByCoords('Mumbai, Maharashtra', 19.0760, 72.8777)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">Mumbai</button>
+                <button onclick="loadCityByCoords('Bengaluru, Karnataka', 12.9716, 77.5946)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">Bengaluru</button>
+                <button onclick="loadCityByCoords('London, UK', 51.5074, -0.1278)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">London</button>
+                <button onclick="loadCityByCoords('New York, USA', 40.7128, -74.0060)" class="px-3 py-1 rounded-full bg-bgMain border border-borderLight hover:border-brandGreen text-xs font-medium shrink-0">New York</button>
+            </div>
+
+            <!-- Main Current Weather Hero & Metrics Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                
+                <!-- Left 5 Cols: Current Condition Card -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-[#134E3A] to-[#0B2E22] text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-white/15 text-emerald-200">CURRENT WEATHER</span>
+                            <span id="wx-coords-label" class="text-[11px] font-mono text-emerald-200/80">28.61°N, 77.21°E</span>
+                        </div>
+                        <h2 id="wx-city-title" class="font-serif text-3xl sm:text-4xl leading-tight">New Delhi, India</h2>
+                        <p id="wx-condition-desc" class="text-sm text-emerald-100/90 mt-1">Clear Sky</p>
+                    </div>
+
+                    <div class="my-8 flex items-center gap-5">
+                        <span id="wx-big-icon" class="text-6xl sm:text-7xl select-none">☀️</span>
+                        <div>
+                            <p id="wx-temp-main" class="font-serif text-5xl sm:text-6xl font-bold tracking-tight">29.4°C</p>
+                            <p id="wx-feels-like" class="text-xs sm:text-sm text-emerald-200 mt-1">Feels like 30.1°C</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/15 flex items-center justify-between text-xs text-emerald-100">
+                        <span id="wx-sunrise">🌅 Sunrise: 06:28 AM</span>
+                        <span id="wx-sunset">🌇 Sunset: 05:42 PM</span>
+                    </div>
+                </div>
+
+                <!-- Right 7 Cols: 6 Atmospheric Detail Cards -->
+                <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Relative Humidity</span>
+                        <div class="mt-3">
+                            <p id="wx-humidity" class="font-serif text-3xl font-bold text-textDark">48%</p>
+                            <p class="text-xs text-textMuted mt-1">Atmospheric moisture</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Wind Speed</span>
+                        <div class="mt-3">
+                            <p id="wx-wind" class="font-serif text-3xl font-bold text-brandGreen">11.2 km/h</p>
+                            <p id="wx-wind-dir" class="text-xs text-textMuted mt-1">Direction: 290° NW</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Surface Pressure</span>
+                        <div class="mt-3">
+                            <p id="wx-pressure" class="font-serif text-3xl font-bold text-textDark">1013 hPa</p>
+                            <p class="text-xs text-textMuted mt-1">Barometric level</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Max / Min Today</span>
+                        <div class="mt-3">
+                            <p id="wx-hi-lo" class="font-serif text-2xl sm:text-3xl font-bold text-textDark">32° / 19°</p>
+                            <p class="text-xs text-textMuted mt-1">24-hour temperature range</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Peak UV Index</span>
+                        <div class="mt-3">
+                            <p id="wx-uv" class="font-serif text-3xl font-bold text-[#FF6B00]">6.2</p>
+                            <p id="wx-uv-sub" class="text-xs text-textMuted mt-1">Moderate-High sun exposure</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-bgMain border border-borderLight rounded-2xl p-5 flex flex-col justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Precipitation</span>
+                        <div class="mt-3">
+                            <p id="wx-precip" class="font-serif text-3xl font-bold text-textDark">0.0 mm</p>
+                            <p class="text-xs text-textMuted mt-1">Current rainfall accumulation</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 7-Day Forecast Strip -->
+            <div class="pt-4 border-t border-borderLight">
+                <div class="mb-4">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-brandGreen">EXTENDED OUTLOOK</p>
+                    <h3 class="font-serif text-2xl text-textDark">7-Day Weather Forecast</h3>
+                </div>
+                <div id="wx-forecast-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3"></div>
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO USE & HOW IT WORKS (English Guide)                  -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO USE THIS TRACKER</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Checking Local & Global Weather Conditions</h2>
+                <ol class="space-y-3 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
+                    <li><strong>Search Any City or Town:</strong> Type the name of your city, district, or international destination in the search bar and click <strong>Search Weather</strong>.</li>
+                    <li><strong>One-Click GPS Detection:</strong> Click <strong>📍 My Location</strong> to let your browser fetch hyper-local meteorological data for your exact latitude and longitude.</li>
+                    <li><strong>Switch Units (°C / °F):</strong> Toggle between Celsius (<code>°C</code>) and Fahrenheit (<code>°F</code>) at the top-right to convert all current and 7-day forecast temperatures immediately.</li>
+                </ol>
+            </div>
+
+            <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">METEOROLOGICAL DATA</p>
+                <h3 class="font-serif text-2xl text-textDark">How We Calculate Weather Metrics</h3>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    Live atmospheric observations are powered by the open-source <strong>Open-Meteo</strong> global numerical weather prediction models, combining national weather service radar and satellite feeds.
+                </p>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    <strong>Apparent ("Feels Like") Temperature</strong> is computed using the Steadman heat-index and wind-chill model, factoring in air temperature, relative humidity vapor pressure, and wind speed at $10\text{ meters}$ elevation.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED LIVE WEATHER TRACKER JAVASCRIPT                   -->
+        <!-- ============================================================= -->
+        <script>
+            let wxUnit = 'C'; // 'C' or 'F'
+            let lastWeatherData = null;
+            let currentCityName = 'New Delhi, India';
+
+            const WMO_CODES = {
+                0:  { label: 'Clear Sky', icon: '☀️' },
+                1:  { label: 'Mainly Clear', icon: '🌤️' },
+                2:  { label: 'Partly Cloudy', icon: '⛅' },
+                3:  { label: 'Overcast Clouds', icon: '☁️' },
+                45: { label: 'Misty Fog', icon: '🌫️' },
+                48: { label: 'Rime Fog', icon: '🌫️' },
+                51: { label: 'Light Drizzle', icon: '🌦️' },
+                53: { label: 'Moderate Drizzle', icon: '🌦️' },
+                55: { label: 'Dense Drizzle', icon: '🌧️' },
+                61: { label: 'Light Rain', icon: '🌧️' },
+                63: { label: 'Moderate Rain', icon: '🌧️' },
+                65: { label: 'Heavy Rain', icon: '⛈️' },
+                71: { label: 'Light Snowfall', icon: '🌨️' },
+                73: { label: 'Moderate Snow', icon: '❄️' },
+                75: { label: 'Heavy Snowfall', icon: '❄️' },
+                80: { label: 'Rain Showers', icon: '🌦️' },
+                81: { label: 'Heavy Showers', icon: '🌧️' },
+                95: { label: 'Thunderstorm', icon: '⛈️' }
+            };
+
+            function formatTemp(celsius) {
+                if (wxUnit === 'F') {
+                    return `${((celsius * 9 / 5) + 32).toFixed(1)}°F`;
+                }
+                return `${celsius.toFixed(1)}°C`;
+            }
+
+            function formatTempShort(celsius) {
+                if (wxUnit === 'F') {
+                    return `${Math.round((celsius * 9 / 5) + 32)}°`;
+                }
+                return `${Math.round(celsius)}°`;
+            }
+
+            function setWeatherUnit(u) {
+                wxUnit = u;
+                document.getElementById('wx-unit-c').className = u === 'C'
+                    ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-brandGreen text-white transition"
+                    : "px-3 py-1.5 rounded-lg text-xs font-bold text-textMuted hover:text-textDark transition";
+                document.getElementById('wx-unit-f').className = u === 'F'
+                    ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-brandGreen text-white transition"
+                    : "px-3 py-1.5 rounded-lg text-xs font-bold text-textMuted hover:text-textDark transition";
+                if (lastWeatherData) renderWeatherDashboard(lastWeatherData);
+            }
+
+            async function searchWeatherCity() {
+                const q = document.getElementById('wx-city-input').value.trim();
+                if (!q) return;
+                document.getElementById('wx-live-indicator').textContent = '• Searching city coordinates...';
+
+                try {
+                    const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=1&language=en&format=json`);
+                    const geoData = await geoRes.json();
+                    if (!geoData.results || geoData.results.length === 0) {
+                        alert(`Could not find location "${q}". Please try another city name.`);
+                        document.getElementById('wx-live-indicator').textContent = '• Real-Time Satellite Weather Feed';
+                        return;
+                    }
+                    const loc = geoData.results[0];
+                    const displayTitle = [loc.name, loc.admin1, loc.country].filter(Boolean).slice(0, 2).join(', ');
+                    loadCityByCoords(displayTitle, loc.latitude, loc.longitude);
+                } catch (err) {
+                    alert('Network error while searching city. Please check your internet connection.');
+                }
+            }
+
+            function useMyGpsLocation() {
+                if (!navigator.geolocation) {
+                    alert('Geolocation is not supported by your browser.');
+                    return;
+                }
+                document.getElementById('wx-live-indicator').textContent = '• Detecting GPS coordinates...';
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        loadCityByCoords('My Current Location', pos.coords.latitude, pos.coords.longitude);
+                    },
+                    () => {
+                        alert('Location permission denied. Using city search instead.');
+                        document.getElementById('wx-live-indicator').textContent = '• Real-Time Satellite Weather Feed';
+                    }
+                );
+            }
+
+            async function loadCityByCoords(cityName, lat, lon) {
+                currentCityName = cityName;
+                document.getElementById('wx-live-indicator').textContent = '• Fetching live satellite telemetry...';
+
+                try {
+                    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,surface_pressure,wind_speed_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&timezone=auto`;
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    lastWeatherData = data;
+                    document.getElementById('wx-live-indicator').textContent = '• Live Telemetry Updated';
+                    renderWeatherDashboard(data);
+                } catch (err) {
+                    document.getElementById('wx-live-indicator').textContent = '• Offline Demo Mode';
+                }
+            }
+
+            function getCompassDir(deg) {
+                const dirs = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+                return dirs[Math.round(deg / 45) % 8];
+            }
+
+            function renderWeatherDashboard(data) {
+                const cur = data.current;
+                const daily = data.daily;
+                const wmo = WMO_CODES[cur.weather_code] || { label: 'Partly Cloudy', icon: '⛅' };
+
+                document.getElementById('wx-city-title').textContent = currentCityName;
+                document.getElementById('wx-coords-label').textContent = `${data.latitude.toFixed(2)}°N, ${data.longitude.toFixed(2)}°E`;
+                document.getElementById('wx-condition-desc').textContent = wmo.label;
+                document.getElementById('wx-big-icon').textContent = wmo.icon;
+                document.getElementById('wx-temp-main').textContent = formatTemp(cur.temperature_2m);
+                document.getElementById('wx-feels-like').textContent = `Feels like ${formatTemp(cur.apparent_temperature)}`;
+
+                document.getElementById('wx-humidity').textContent = `${cur.relative_humidity_2m}%`;
+                document.getElementById('wx-wind').textContent = `${cur.wind_speed_10m} km/h`;
+                document.getElementById('wx-wind-dir').textContent = `Direction: ${cur.wind_direction_10m}° ${getCompassDir(cur.wind_direction_10m)}`;
+                document.getElementById('wx-pressure').textContent = `${Math.round(cur.surface_pressure)} hPa`;
+                document.getElementById('wx-precip').textContent = `${cur.precipitation.toFixed(1)} mm`;
+
+                if (daily && daily.time && daily.time.length > 0) {
+                    document.getElementById('wx-hi-lo').textContent = `${formatTempShort(daily.temperature_2m_max[0])} / ${formatTempShort(daily.temperature_2m_min[0])}`;
+                    const uv = daily.uv_index_max[0] || 0;
+                    document.getElementById('wx-uv').textContent = uv.toFixed(1);
+                    document.getElementById('wx-uv-sub').textContent = uv >= 7 ? 'High UV — Wear sunscreen' : (uv >= 3 ? 'Moderate UV exposure' : 'Low UV index');
+
+                    const sr = new Date(daily.sunrise[0]).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const ss = new Date(daily.sunset[0]).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    document.getElementById('wx-sunrise').textContent = `🌅 Sunrise: ${sr}`;
+                    document.getElementById('wx-sunset').textContent = `🌇 Sunset: ${ss}`;
+
+                    // Render 7-Day Forecast
+                    const forecastGrid = document.getElementById('wx-forecast-grid');
+                    forecastGrid.innerHTML = daily.time.slice(0, 7).map((dateStr, idx) => {
+                        const dObj = new Date(dateStr + 'T00:00:00');
+                        const dayName = idx === 0 ? 'Today' : dObj.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric' });
+                        const dWmo = WMO_CODES[daily.weather_code[idx]] || { label: 'Cloudy', icon: '⛅' };
+                        return `<div class="bg-bgMain border border-borderLight rounded-xl p-3.5 text-center space-y-1.5">
+                            <p class="text-xs font-bold text-textDark">${dayName}</p>
+                            <p class="text-3xl py-1">${dWmo.icon}</p>
+                            <p class="text-[11px] text-textMuted truncate">${dWmo.label}</p>
+                            <p class="font-mono text-xs font-bold text-brandGreen">
+                                ${formatTempShort(daily.temperature_2m_max[idx])} <span class="text-textMuted font-normal">/ ${formatTempShort(daily.temperature_2m_min[idx])}</span>
+                            </p>
+                        </div>`;
+                    }).join('');
+                }
+            }
+
+            // Load Default City on Startup
+            loadCityByCoords('New Delhi, India', 28.6139, 77.2090);
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

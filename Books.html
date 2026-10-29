@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PAGE-SPECIFIC SEO META TAGS -->
+    <title>Book Summaries in English & Hindi — 5minSummary</title>
+    <meta name="description" content="Explore 57+ bestselling non-fiction and self-help book summaries in English and Hindi. Read key takeaways in just 5 minutes.">
+    <meta name="keywords" content="book summaries, Hindi book summary, English book summary, Atomic Habits summary, Psychology of Money summary, 5minSummary books">
+    <link rel="canonical" href="https://5minssummary.com/Books.html">
+
+    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="Book Summaries in English & Hindi — 5minSummary">
+    <meta property="og:description" content="Explore 57+ bestselling non-fiction and self-help book summaries in English and Hindi. Read key takeaways in just 5 minutes.">
+    <meta property="og:url" content="https://5minssummary.com/Books.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter / X Card Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Summaries in English & Hindi — 5minSummary">
+    <meta name="twitter:description" content="Explore 57+ bestselling non-fiction and self-help book summaries in English and Hindi. Read key takeaways in just 5 minutes.">
+    <meta name="twitter:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- UNIVERSAL META & INLINE '5' FAVICON -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS CDN & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9',
+                        goldNum: '#C69249'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FBFBF8;
+            color: #191918;
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+        .book-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 4px 10px -3px rgba(0, 0, 0, 0.06);
+        }
+        input[type="range"] { accent-color: #134E3A; }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span id="books-counter-badge">57 Books Library</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">Read in 5 Minutes</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR (Exact Figma Design) -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Left: Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">
+                    5
+                </div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">
+                    5minSummary
+                </span>
+            </a>
+
+            <!-- Center: Global Search Input -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4">
+                <div class="relative w-full">
+                    <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="navbar-search"
+                        placeholder="Search books, ideas, stories & more" 
+                        class="w-full bg-bgInput/80 hover:bg-bgInput focus:bg-white text-sm text-textDark placeholder-textMuted rounded-lg py-2.5 pl-10 pr-14 border border-transparent focus:border-brandGreen/40 focus:outline-none transition"
+                    >
+                    <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-sans text-textMuted bg-white/80 px-1.5 py-0.5 rounded border border-borderLight">⌘ K</kbd>
+                </div>
+            </div>
+
+            <!-- Right: Navigation Links & Icons -->
+                        <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="Tools.html" class="hover:text-brandGreen transition">Tools</a>
+                
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+
+                <!-- Bookmark Filter Button -->
+                <button id="bookmark-filter-btn" title="Show Saved Books" class="text-textDark hover:text-brandGreen transition relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                    </svg>
+                    <span id="bookmark-count" class="hidden absolute -top-1.5 -right-2 bg-brandGreen text-white text-[10px] w-4 h-4 rounded-full items-center justify-center font-bold">0</span>
+                </button>
+
+                <!-- User Profile Initials -->
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold tracking-wider cursor-pointer hover:ring-2 hover:ring-brandGreen/30 transition">
+                    DS
+                </div>
+            </div>
+
+            <!-- Mobile Menu Trigger -->
+            <div class="flex items-center gap-3 lg:hidden">
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="p-2 rounded-lg text-textDark hover:bg-bgCard focus:outline-none">
+                    <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-3">
+            <div class="relative">
+                <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input 
+                    type="text" 
+                    id="mobile-navbar-search"
+                    placeholder="Search books, ideas, stories..." 
+                    class="w-full bg-bgInput text-sm text-textDark rounded-lg py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brandGreen"
+                >
+            </div>
+            <div class="flex flex-col space-y-2 pt-2 text-sm font-medium">
+                <a href="Books.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+                <a href="History.html" class="py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+                <a href="Science.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+                <a href="Article.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+                <a href="Tools.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Tools</a>
+            </div>
+        </div>
+    </header>
+    <!-- 3. MAIN BOOKS SECTION -->
+    <main id="books-section" class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-10 pb-20">
+        
+        <!-- Section Heading (Matches Figma Screenshot 2) -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-borderLight gap-4">
+            <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.14em] text-brandGreen mb-2">FOR THE ENDLESSLY CURIOUS</p>
+                <h1 class="font-serif text-4xl sm:text-5xl text-textDark tracking-tight leading-[1.12] mb-2">
+                    Good books. Great ideas. Less time.
+                </h1>
+                <p class="text-textMuted text-base sm:text-lg font-normal">
+                    The essential insights from books worth knowing.
+                </p>
+            </div>
+
+            <!-- Language Switcher (English / Hindi) -->
+            <div class="flex items-center gap-2 self-start md:self-end bg-bgCard p-1 rounded-lg border border-borderLight">
+                <button id="lang-en" onclick="setLanguage('en')" class="px-3.5 py-1.5 rounded-md text-xs font-semibold transition bg-brandGreen text-white shadow-sm">
+                    English (EN)
+                </button>
+                <button id="lang-hi" onclick="setLanguage('hi')" class="px-3.5 py-1.5 rounded-md text-xs font-semibold transition text-textMuted hover:text-textDark">
+                    हिंदी (HI)
+                </button>
+            </div>
+        </div>
+
+        <!-- Search, Filters & SubCategory Pills Bar -->
+        <div class="bg-white border border-borderLight rounded-xl p-4 sm:p-5 mb-10 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                
+                <!-- Main Book Search Input -->
+                <div class="md:col-span-5 relative">
+                    <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="book-search" 
+                        placeholder="Search by book title, author, or key idea..." 
+                        class="w-full bg-bgMain border border-borderLight rounded-lg py-2.5 pl-10 pr-9 text-sm text-textDark placeholder-textMuted focus:outline-none focus:border-brandGreen focus:ring-1 focus:ring-brandGreen transition"
+                    >
+                    <button id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-textMuted hover:text-textDark">
+                        ✕
+                    </button>
+                </div>
+
+                <!-- Category Dropdown -->
+                <div class="md:col-span-3">
+                    <select id="category-filter" class="w-full bg-bgMain border border-borderLight rounded-lg py-2.5 px-3.5 text-sm text-textDark focus:outline-none focus:border-brandGreen cursor-pointer">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <!-- SubCategory / Genre Dropdown -->
+                <div class="md:col-span-3">
+                    <select id="subcategory-filter" class="w-full bg-bgMain border border-borderLight rounded-lg py-2.5 px-3.5 text-sm text-textDark focus:outline-none focus:border-brandGreen cursor-pointer">
+                        <option value="all">All Genres / Topics</option>
+                    </select>
+                </div>
+
+                <!-- Reset Button -->
+                <div class="md:col-span-1 flex justify-end">
+                    <button id="reset-filters" title="Reset Filters" class="w-full md:w-auto px-3 py-2.5 text-xs font-medium text-textMuted hover:text-brandGreen border border-borderLight rounded-lg hover:bg-bgMain transition">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Filter Pills & Result Count -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3 border-t border-borderLight/70 text-xs">
+                <div id="genre-pills" class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+                    <!-- Dynamic Quick Pills injected by JS -->
+                </div>
+                <div class="text-textMuted font-medium shrink-0" id="results-count">
+                    Showing all books
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading-state" class="py-20 text-center">
+            <div class="inline-block w-10 h-10 border-4 border-brandGreen/20 border-t-brandGreen rounded-full animate-spin mb-4"></div>
+            <p class="font-serif text-xl text-textDark">Loading your library from <code class="text-brandGreen font-sans text-base">data/</code> folder...</p>
+        </div>
+
+        <!-- Books Grid (5 Columns on Desktop matching Figma Screenshot 2) -->
+        <div id="books-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-10 hidden">
+            <!-- Dynamic Book Cards Injected Here -->
+        </div>
+
+        <!-- Empty / No Results State -->
+        <div id="no-results" class="hidden bg-bgCard/50 border border-borderLight rounded-2xl py-16 px-4 text-center max-w-lg mx-auto my-8">
+            <p class="font-serif text-2xl text-textDark mb-2">No matching books found</p>
+            <p class="text-sm text-textMuted mb-6">Try searching with a different title, author name, or clear your active filters.</p>
+            <button onclick="resetAllFilters()" class="bg-brandGreen text-white text-xs font-semibold px-5 py-2.5 rounded-lg hover:bg-brandGreenHover transition">
+                Show All Books
+            </button>
+        </div>
+
+    </main>
+
+    <!-- 4. BOOK SUMMARY MODAL / READER DRAWER -->
+    <div id="book-modal" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop -->
+        <div id="modal-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+            <div class="w-screen max-w-3xl bg-bgMain shadow-2xl flex flex-col justify-between overflow-y-auto">
+                
+                <!-- Sticky Modal Top Header -->
+                <div class="sticky top-0 z-20 bg-bgMain/95 backdrop-blur border-b border-borderLight px-6 py-4 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span id="modal-category-badge" class="text-[11px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded bg-brandGreen/10 text-brandGreen">
+                            SELF-HELP
+                        </span>
+                        <span class="text-xs text-textMuted flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            5 min read
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <!-- Modal Language Toggle -->
+                        <div class="flex bg-bgCard p-0.5 rounded-md border border-borderLight text-xs font-semibold">
+                            <button id="modal-lang-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded bg-brandGreen text-white">EN</button>
+                            <button id="modal-lang-hi" onclick="setLanguage('hi')" class="px-2.5 py-1 rounded text-textMuted">HI</button>
+                        </div>
+
+                        <button id="close-modal-btn" class="p-2 rounded-full hover:bg-bgCard text-textDark transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 sm:p-10 space-y-8 flex-grow">
+                    <!-- Book Top Info -->
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div id="modal-cover-box" class="w-36 sm:w-40 shrink-0 bg-bgCard p-4 rounded-lg border border-borderLight self-center sm:self-start">
+                            <img id="modal-book-img" src="" alt="Book Cover" class="w-full h-48 object-cover rounded book-shadow">
+                        </div>
+                        <div class="space-y-3 flex-1">
+                            <p id="modal-book-genre" class="text-xs font-semibold uppercase tracking-wider text-brandGreen"></p>
+                            <h2 id="modal-book-title" class="font-serif text-3xl sm:text-4xl text-textDark leading-tight"></h2>
+                            <p id="modal-book-author" class="text-base text-textMuted font-medium"></p>
+                            
+                            <!-- Buy Links (Amazon & Flipkart) -->
+                            <div id="modal-buy-links" class="pt-3 flex flex-wrap gap-3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Key Points (10 Takeaways) -->
+                    <div class="bg-bgCard/60 border border-borderLight rounded-xl p-6">
+                        <h3 id="modal-points-heading" class="font-serif text-2xl text-textDark mb-4">Key Takeaways</h3>
+                        <ol id="modal-book-points" class="space-y-3.5 text-sm sm:text-[15px] text-textDark leading-relaxed list-decimal list-inside"></ol>
+                    </div>
+
+                    <!-- Full 5-Minute Summary -->
+                    <div>
+                        <h3 id="modal-summary-heading" class="font-serif text-2xl text-textDark mb-4">5-Minute Summary</h3>
+                        <div id="modal-book-summary" class="space-y-4 text-base text-textDark/90 leading-relaxed whitespace-pre-line"></div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="border-t border-borderLight px-6 py-4 bg-bgCard/40 flex justify-between items-center text-xs text-textMuted">
+                    <span>5minSummary • Essential Book Briefing</span>
+                    <button onclick="closeBookModal()" class="font-semibold text-brandGreen hover:underline">Close Reader ✕</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. FOOTER (Exact Figma Design matching Screenshot 6) -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="#" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">
+                        5minSummary
+                    </a>
+                    <p class="text-textMuted text-sm">
+                        Less scrolling. More understanding.
+                    </p>
+                </div>
+
+             <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+    <a href="about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+    <a href="about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+    <a href="about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+    <a href="about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+</div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 6. COMPLETE JAVASCRIPT LOGIC -->
+    <script>
+        // ==========================================
+        // A. LIVE DATE & TIME BAR
+        // ==========================================
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+            const timeStr = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        // ==========================================
+        // B. FALLBACK BOOK DATA (If tested without server)
+        // ==========================================
+        const fallbackBook = {
+            "id": 1,
+            "slug": "atomic-habits",
+            "category": "non-fiction",
+            "subCategory": "self-help",
+            "authorSlug": "james-clear",
+            "image": "image/atomic-habit.webp",
+            "links": {
+                "amazon": "https://www.amazon.in/dp/1847941834",
+                "flipkart": "https://dl.flipkart.com/s/L7ylPNuuuN"
+            },
+            "en": {
+                "title": "Atomic Habits",
+                "author": "James Clear",
+                "genre": "Self Development",
+                "summary": "Atomic Habits by James Clear is a definitive manual for building good habits and breaking bad ones. At its core, the book challenges the conventional wisdom that massive success requires massive, transformative action. Instead, Clear advocates for the power of small, incremental, and almost imperceptible changes—the 'atomic' habits. If you can get just 1 percent better each day for one year, you will end up 37 times better by the time you are done.\n\nA central thesis of the book is that our focus is often entirely wrong. We fixate on setting ambitious goals. However, goals are about the results you want to achieve, while systems are about the processes that lead to those results.",
+                "points": [
+                    "The Power of 1% Improvements: Getting 1% better every day for a year results in being 37 times better at the end.",
+                    "Systems Over Goals: Focus entirely on optimizing your daily routines instead of stressing over goals.",
+                    "Identity-Based Habits: True behavior change is identity change. Become a reader, not just someone who reads.",
+                    "Law 1 - Make it Obvious: Use 'Habit Stacking' by tying a new habit to an existing daily routine.",
+                    "Law 2 - Make it Attractive: Pair an action you need to do with one you want to do.",
+                    "Law 3 - Make it Easy: Utilize the 'Two-Minute Rule' so any new habit takes under two minutes to start.",
+                    "Law 4 - Make it Satisfying: Give yourself an immediate reward when you complete a habit."
+                ]
+            },
+            "hi": {
+                "title": "एटोमिक हैबिट्स",
+                "author": "जेम्स क्लियर",
+                "genre": "आत्म-विकास",
+                "summary": "जेम्स क्लियर द्वारा लिखित 'एटोमिक हैबिट्स' (Atomic Habits) अच्छी आदतें बनाने और बुरी आदतों को छोड़ने के लिए एक अत्यंत व्यावहारिक और वैज्ञानिक मार्गदर्शिका है। यदि आप हर दिन स्वयं में केवल 1% का सुधार करते हैं, तो एक वर्ष के अंत में आप 37 गुना बेहतर बन जाएंगे।\n\nलक्ष्यों की चिंता करने के बजाय एक मजबूत डेली रूटीन और सिस्टम बनाने पर ध्यान केंद्रित करना चाहिए।",
+                "points": [
+                    "1% सुधार की शक्ति: हर दिन केवल 1% बेहतर होने से आप साल भर में 37 गुना बेहतर हो जाते हैं।",
+                    "लक्ष्य भूल जाएं, सिस्टम पर ध्यान दें: अपनी दैनिक प्रक्रियाओं (सिस्टम) को सुधारने पर ध्यान केंद्रित करें।",
+                    "पहचान आधारित आदतें: असली बदलाव तब होता है जब आपकी पहचान बदलती है।",
+                    "नियम 1 - इसे स्पष्ट बनाएं: 'हैबिट स्टैकिंग' का उपयोग करें।",
+                    "नियम 2 - इसे आकर्षक बनाएं: ऐसे लोगों के समूह का हिस्सा बनें जहाँ वह आदत सामान्य हो।",
+                    "नियम 3 - इसे आसान बनाएं: '2 मिनट के नियम' का इस्तेमाल करें।",
+                    "नियम 4 - इसे संतोषजनक बनाएं: अच्छी आदत पूरी करने के बाद खुद को तुरंत एक छोटा सा इनाम दें।"
+                ]
+            }
+        };
+
+       // ==========================================
+        // C. YOUR COMPLETE 1 TO 57 JSON FILES LIST
+        // ==========================================
+        const knownJsonFiles = [
+            // 1 se 20 tak ki files
+            "1-atomic-habits.json",
+            "2-psychology-of-money.json",
+            "3-deep-work.json",
+            "4-the-lean-startup.json",
+            "5-zero-to-one.json",
+            "6-rich-dad-poor-dad.json",
+            "7-the-5-am-club.json",
+            "8-think-and-grow-rich.json",
+            "9-the-power-of-habit.json",
+            "10-start-with-why.json",
+            "11-how-to-win-friends-and-influence-people.json",
+            "12-good-to-great.json",
+            "13-thinking-fast-and-slow.json",
+            "14-man's-search-for-meaning.json",
+            "15-the-subtle-art-of-not-giving-a-fck.json",
+            "16-ego-is-the-enemy.json",
+            "17-essentialism.json",
+            "18-shoe-dog.json",
+            "19-rework.json",
+            "20-blue-ocean-strategy.json",
+
+            // 21 se 41 tak ki files
+            "21-the-hard-thing-about-the-hard-things.json",
+            "22-the-power-of-your-subconcious-mind.json",
+            "23-the-7-habits-of-highly-effective-people.json",
+            "24-mindset-the-new-psychology-of-success.json",
+            "25-outliers-the-story-of-success.json",
+            "26-sapiens-a-brief-history-of-humankind.json",
+            "27-steve-jobs.json",
+            "28-elon-musk-tesla-spacex-and-the-quest-for-a-fantastic-future.json",
+            "29-the-almanack-of-naval-ravikant.json",
+            "30-the-innovators.json",
+            "31-hooked-how-to-build-habit-forming-products.json",
+            "32-attitude-is-everything.json",
+            "33-eat-that-frog.json",
+            "34-think-like-a-monk.json",
+            "35-cant-hurt-me.json",
+            "36-a-calendar-of-wisdom.json",
+            "37-12-rules-for-life.json",
+            "38-the-millionaire-next-door.json",
+            "39-i-will-teach-you-to-be-rich.json",
+            "40-the-four-agreements.json",
+            "41-the-power-of-now.json",
+
+            // 42 se 57 tak ki files
+            "42-the-4-hour-workweek.json",
+            "43-indistractable.json",
+            "44-make-time.json",
+            "45-feel-good-productivity.json",
+            "46-ikigai.json",
+            "47-who-moved-my-cheese.json",
+            "48-tesla-my-inventions.json",
+            "49-the-third-door.json",
+            "50-the-alchemist.json",
+            "51-habits-how-small-changes.json",
+            "52-dopamine-detox.json",
+            "53-never-split-the-difference.json",
+            "54-the-courage-to-be-disliked.json",
+            "55-the-compound-effect.json",
+            "56-principles-life-and-work.json",
+            "57-show-your-work.json"
+        ];
+
+        // State Variables
+        let allBooks = [];
+        let currentLang = 'en';
+        let activeBookInModal = null;
+        let savedBookIds = JSON.parse(localStorage.getItem('5min_saved_books') || '[]');
+        let showOnlySaved = false;
+
+        // Aesthetic Cover Palette for Fallback Covers (like Figma Screenshot 2)
+        const coverPalettes = [
+            { bg: '#EFECE6', card: '#F4EFE6', text: '#8C583A' },
+            { bg: '#EFECE6', card: '#1E4638', text: '#E6F0EC' },
+            { bg: '#EFECE6', card: '#F5F2EB', text: '#B04A33' },
+            { bg: '#EFECE6', card: '#C85A3B', text: '#FFF8F5' },
+            { bg: '#EFECE6', card: '#EAE6DF', text: '#2B2B2A' }
+        ];
+
+        // ==========================================
+        // D. SMART LOADER FOR ALL 57 JSON FILES
+        // ==========================================
+        async function loadAllBooks() {
+            const loadingEl = document.getElementById('loading-state');
+            const gridEl = document.getElementById('books-grid');
+            let filesToFetch = new Set(knownJsonFiles);
+
+            // Step 1: Try Auto-Scanning 'data/' directory (Works automatically on Live Server / Python http.server)
+            try {
+                const dirRes = await fetch('data/');
+                if (dirRes.ok) {
+                    const dirText = await dirRes.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(dirText, 'text/html');
+                    const links = Array.from(doc.querySelectorAll('a'));
+                    links.forEach(a => {
+                        const href = a.getAttribute('href') || '';
+                        const fileName = decodeURIComponent(href.split('/').pop());
+                        if (fileName && fileName.endsWith('.json')) {
+                            filesToFetch.add(fileName);
+                        }
+                    });
+                }
+            } catch (e) {
+                // Directory listing not supported, will use knownJsonFiles array
+            }
+
+            // Step 2: Fetch all discovered JSON files in parallel
+            const fetchPromises = Array.from(filesToFetch).map(fileName =>
+                fetch(`data/${fileName}`)
+                    .then(res => (res.ok ? res.json() : null))
+                    .catch(() => null)
+            );
+
+            const results = await Promise.all(fetchPromises);
+            const validBooks = results.filter(item => item && item.en && item.en.title);
+
+            // Remove duplicates by book ID or slug
+            const uniqueMap = new Map();
+            validBooks.forEach(b => uniqueMap.set(b.slug || b.id, b));
+            allBooks = Array.from(uniqueMap.values()).sort((a, b) => (a.id || 0) - (b.id || 0));
+
+            // Step 3: If opened directly via file:// without server, show fallback book so UI still works
+            if (allBooks.length === 0) {
+                allBooks = [fallbackBook];
+            }
+
+            document.getElementById('books-counter-badge').textContent = `${allBooks.length} Books Loaded`;
+            populateDynamicFilters();
+            loadingEl.classList.add('hidden');
+            gridEl.classList.remove('hidden');
+            updateBookmarkBadge();
+            renderBooks();
+        }
+
+        // ==========================================
+        // E. POPULATE CATEGORIES & GENRE PILLS
+        // ==========================================
+        function populateDynamicFilters() {
+            const catSelect = document.getElementById('category-filter');
+            const subCatSelect = document.getElementById('subcategory-filter');
+            const pillsContainer = document.getElementById('genre-pills');
+
+            const categories = [...new Set(allBooks.map(b => b.category).filter(Boolean))];
+            const subCategories = [...new Set(allBooks.map(b => b.subCategory).filter(Boolean))];
+
+            catSelect.innerHTML = `<option value="all">All Categories (${allBooks.length})</option>` +
+                categories.map(c => `<option value="${c}">${formatLabel(c)}</option>`).join('');
+
+            subCatSelect.innerHTML = `<option value="all">All Topics / Sub-Categories</option>` +
+                subCategories.map(sc => `<option value="${sc}">${formatLabel(sc)}</option>`).join('');
+
+            // Quick Pills
+            pillsContainer.innerHTML = `
+                <button onclick="selectQuickSubCat('all')" data-pill="all" class="pill-btn px-3 py-1 rounded-full bg-brandGreen text-white font-medium transition shrink-0">
+                    All Books
+                </button>
+            ` + subCategories.map(sc => `
+                <button onclick="selectQuickSubCat('${sc}')" data-pill="${sc}" class="pill-btn px-3 py-1 rounded-full bg-bgCard text-textMuted hover:text-textDark font-medium transition shrink-0">
+                    ${formatLabel(sc)}
+                </button>
+            `).join('');
+        }
+
+        function formatLabel(str) {
+            return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+
+        function selectQuickSubCat(subCat) {
+            document.getElementById('subcategory-filter').value = subCat;
+            document.querySelectorAll('.pill-btn').forEach(btn => {
+                if (btn.dataset.pill === subCat) {
+                    btn.className = "pill-btn px-3 py-1 rounded-full bg-brandGreen text-white font-medium transition shrink-0";
+                } else {
+                    btn.className = "pill-btn px-3 py-1 rounded-full bg-bgCard text-textMuted hover:text-textDark font-medium transition shrink-0";
+                }
+            });
+            renderBooks();
+        }
+
+        // ==========================================
+        // F. RENDER BOOKS GRID (Exact Figma Card UI)
+        // ==========================================
+        function renderBooks() {
+            const grid = document.getElementById('books-grid');
+            const noResults = document.getElementById('no-results');
+            const searchVal = document.getElementById('book-search').value.trim().toLowerCase();
+            const selectedCat = document.getElementById('category-filter').value;
+            const selectedSubCat = document.getElementById('subcategory-filter').value;
+
+            document.getElementById('clear-search').classList.toggle('hidden', !searchVal);
+
+            const filtered = allBooks.filter(book => {
+                const langObj = book[currentLang] || book.en;
+                const enObj = book.en || {};
+
+                const matchesSearch = !searchVal ||
+                    (langObj.title && langObj.title.toLowerCase().includes(searchVal)) ||
+                    (langObj.author && langObj.author.toLowerCase().includes(searchVal)) ||
+                    (langObj.genre && langObj.genre.toLowerCase().includes(searchVal)) ||
+                    (enObj.title && enObj.title.toLowerCase().includes(searchVal)) ||
+                    (enObj.author && enObj.author.toLowerCase().includes(searchVal)) ||
+                    (book.subCategory && book.subCategory.toLowerCase().includes(searchVal));
+
+                const matchesCat = selectedCat === 'all' || book.category === selectedCat;
+                const matchesSubCat = selectedSubCat === 'all' || book.subCategory === selectedSubCat;
+                const matchesSaved = !showOnlySaved || savedBookIds.includes(book.id);
+
+                return matchesSearch && matchesCat && matchesSubCat && matchesSaved;
+            });
+
+            document.getElementById('results-count').textContent = 
+                `Showing ${filtered.length} of ${allBooks.length} books`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+
+            grid.innerHTML = filtered.map((book, idx) => {
+                const data = book[currentLang] || book.en;
+                const palette = coverPalettes[idx % coverPalettes.length];
+                const isSaved = savedBookIds.includes(book.id);
+
+                return `
+                    <article class="group flex flex-col cursor-pointer" onclick="openBookModal(${book.id})">
+                        <!-- Outer Beige Card Frame matching Figma Screenshot 2 -->
+                        <div class="bg-bgCard rounded-sm p-6 sm:p-7 mb-3 relative flex items-center justify-center aspect-[4/4.6] overflow-hidden transition duration-300 group-hover:bg-[#E7E3D8]">
+                            
+                            <!-- Bookmark Button on Card -->
+                            <button 
+                                onclick="event.stopPropagation(); toggleSaveBook(${book.id})" 
+                                title="Save Book"
+                                class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-textDark shadow-sm transition"
+                            >
+                                <svg class="w-4 h-4 ${isSaved ? 'fill-brandGreen text-brandGreen' : 'text-textMuted'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Inner Book Cover with Fallback Typographic Cover -->
+                            <div class="w-[76%] h-[88%] relative book-shadow rounded-[2px] overflow-hidden transition-transform duration-500 group-hover:-translate-y-1.5" style="background-color: ${palette.card}; color: ${palette.text}">
+                                <img 
+                                    src="${book.image}" 
+                                    alt="${data.title}" 
+                                    class="w-full h-full object-cover relative z-10"
+                                    onerror="this.style.display='none'"
+                                >
+                                <!-- Fallback Minimalist Book Cover (Visible if image path isn't found) -->
+                                <div class="absolute inset-0 p-4 flex flex-col justify-between border border-black/5">
+                                    <div class="font-serif text-lg sm:text-xl leading-snug font-normal line-clamp-3">
+                                        ${data.title}
+                                    </div>
+                                    <div class="w-12 h-12 rounded-full border border-current opacity-50 mx-auto my-auto"></div>
+                                    <div class="text-[9px] uppercase tracking-[0.16em] text-center font-semibold opacity-80 truncate">
+                                        ${data.author}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Line (Figma Exact Match) -->
+                        <div class="w-full h-[3px] bg-borderLight mb-2 overflow-hidden">
+                            <div class="h-full bg-brandGreen w-0 group-hover:w-full transition-all duration-500"></div>
+                        </div>
+
+                        <!-- Meta Row: Start Reading & 5 min -->
+                        <div class="flex justify-between items-center text-[11px] text-textMuted mb-1.5">
+                            <span class="group-hover:text-brandGreen font-medium transition">
+                                ${currentLang === 'hi' ? 'पढ़ना शुरू करें' : 'Start reading'}
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                5 min
+                            </span>
+                        </div>
+
+                        <!-- Book Title & Author -->
+                        <h2 class="font-serif text-xl text-textDark group-hover:text-brandGreen transition leading-snug mb-0.5">
+                            ${data.title}
+                        </h2>
+                        <p class="text-xs text-textMuted">
+                            ${data.author}
+                        </p>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // ==========================================
+        // G. MODAL READER FUNCTIONS
+        // ==========================================
+        function openBookModal(bookId) {
+            const book = allBooks.find(b => b.id === bookId);
+            if (!book) return;
+            activeBookInModal = book;
+            updateModalContent();
+            document.getElementById('book-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalContent() {
+            if (!activeBookInModal) return;
+            const data = activeBookInModal[currentLang] || activeBookInModal.en;
+
+            document.getElementById('modal-category-badge').textContent = formatLabel(activeBookInModal.subCategory || activeBookInModal.category || 'Book');
+            document.getElementById('modal-book-genre').textContent = data.genre || '';
+            document.getElementById('modal-book-title').textContent = data.title;
+            document.getElementById('modal-book-author').textContent = `By ${data.author}`;
+            
+            const imgEl = document.getElementById('modal-book-img');
+            imgEl.style.display = 'block';
+            imgEl.src = activeBookInModal.image || '';
+            imgEl.onerror = function() {
+                this.src = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=400&auto=format&fit=crop';
+            };
+
+            // Headings translation
+            document.getElementById('modal-points-heading').textContent = currentLang === 'hi' ? 'मुख्य बातें (Key Takeaways)' : 'Key Takeaways';
+            document.getElementById('modal-summary-heading').textContent = currentLang === 'hi' ? '5-मिनट सारांश (Summary)' : '5-Minute Summary';
+
+            // Points
+            const pointsList = document.getElementById('modal-book-points');
+            pointsList.innerHTML = (data.points || []).map(pt => `<li class="pl-1">${pt}</li>`).join('');
+
+            // Summary
+            document.getElementById('modal-book-summary').textContent = data.summary || '';
+
+            // Amazon / Flipkart Links
+            const linksDiv = document.getElementById('modal-buy-links');
+            const amz = activeBookInModal.links?.amazon;
+            const flp = activeBookInModal.links?.flipkart;
+            linksDiv.innerHTML = `
+                ${amz ? `<a href="${amz}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-brandGreen text-white px-4 py-2 rounded-md hover:bg-brandGreenHover transition">Buy on Amazon ↗</a>` : ''}
+                ${flp ? `<a href="${flp}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-white border border-borderLight text-textDark px-4 py-2 rounded-md hover:bg-bgCard transition">Buy on Flipkart ↗</a>` : ''}
+            `;
+        }
+
+        function closeBookModal() {
+            document.getElementById('book-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+            activeBookInModal = null;
+        }
+
+        // ==========================================
+        // H. LANGUAGE, BOOKMARKS & FILTER EVENTS
+        // ==========================================
+        function setLanguage(lang) {
+            currentLang = lang;
+            const isEn = lang === 'en';
+
+            // Main page buttons
+            document.getElementById('lang-en').className = isEn
+                ? "px-3.5 py-1.5 rounded-md text-xs font-semibold transition bg-brandGreen text-white shadow-sm"
+                : "px-3.5 py-1.5 rounded-md text-xs font-semibold transition text-textMuted hover:text-textDark";
+            document.getElementById('lang-hi').className = !isEn
+                ? "px-3.5 py-1.5 rounded-md text-xs font-semibold transition bg-brandGreen text-white shadow-sm"
+                : "px-3.5 py-1.5 rounded-md text-xs font-semibold transition text-textMuted hover:text-textDark";
+
+            // Modal buttons
+            document.getElementById('modal-lang-en').className = isEn ? "px-2.5 py-1 rounded bg-brandGreen text-white" : "px-2.5 py-1 rounded text-textMuted";
+            document.getElementById('modal-lang-hi').className = !isEn ? "px-2.5 py-1 rounded bg-brandGreen text-white" : "px-2.5 py-1 rounded text-textMuted";
+
+            renderBooks();
+            if (activeBookInModal) updateModalContent();
+        }
+
+        function toggleSaveBook(bookId) {
+            if (savedBookIds.includes(bookId)) {
+                savedBookIds = savedBookIds.filter(id => id !== bookId);
+            } else {
+                savedBookIds.push(bookId);
+            }
+            localStorage.setItem('5min_saved_books', JSON.stringify(savedBookIds));
+            updateBookmarkBadge();
+            renderBooks();
+        }
+
+        function updateBookmarkBadge() {
+            const badge = document.getElementById('bookmark-count');
+            if (savedBookIds.length > 0) {
+                badge.textContent = savedBookIds.length;
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+            } else {
+                badge.classList.add('hidden');
+                badge.classList.remove('flex');
+            }
+        }
+
+        function resetAllFilters() {
+            document.getElementById('book-search').value = '';
+            document.getElementById('navbar-search').value = '';
+            document.getElementById('category-filter').value = 'all';
+            document.getElementById('subcategory-filter').value = 'all';
+            showOnlySaved = false;
+            selectQuickSubCat('all');
+        }
+
+        // Event Listeners Setup
+        document.getElementById('book-search').addEventListener('input', renderBooks);
+        document.getElementById('navbar-search').addEventListener('input', (e) => {
+            document.getElementById('book-search').value = e.target.value;
+            renderBooks();
+        });
+        document.getElementById('mobile-navbar-search').addEventListener('input', (e) => {
+            document.getElementById('book-search').value = e.target.value;
+            renderBooks();
+        });
+        document.getElementById('clear-search').addEventListener('click', () => {
+            document.getElementById('book-search').value = '';
+            renderBooks();
+        });
+        document.getElementById('category-filter').addEventListener('change', renderBooks);
+        document.getElementById('subcategory-filter').addEventListener('change', (e) => {
+            selectQuickSubCat(e.target.value);
+        });
+        document.getElementById('reset-filters').addEventListener('click', resetAllFilters);
+
+        document.getElementById('bookmark-filter-btn').addEventListener('click', () => {
+            showOnlySaved = !showOnlySaved;
+            renderBooks();
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal Close Events
+        document.getElementById('close-modal-btn').addEventListener('click', closeBookModal);
+        document.getElementById('modal-backdrop').addEventListener('click', closeBookModal);
+
+        // Keyboard Shortcuts (⌘K / Ctrl+K for Search, Esc for Modal)
+        window.addEventListener('keydown', (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                document.getElementById('book-search').focus();
+            }
+            if (e.key === 'Escape') {
+                closeBookModal();
+            }
+        });
+
+        // Start Loading Books on Page Load
+        window.addEventListener('DOMContentLoaded', loadAllBooks);
+    </script>
+</body>
+</html>

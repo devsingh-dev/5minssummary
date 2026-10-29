@@ -1,48 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
- <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5 Mins Summary | Knowledge Simplified</title>
+    <!-- PAGE-SPECIFIC SEO META TAGS -->
+    <title>5minSummary — A little time. A wider world.</title>
+    <meta name="description" content="Read 5-minute book summaries in English & Hindi, simple history and science explainers, weekly current affairs, and free interactive tools.">
+    <meta name="keywords" content="5minSummary, book summaries in Hindi, book summaries in English, 5 minute reads, history explainers, science explainers, online calculators">
+    <link rel="canonical" href="https://5minssummary.com/">
 
-<link rel="canonical" href="https://5minssummary.com/" />
+    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="5minSummary — A little time. A wider world.">
+    <meta property="og:description" content="Read 5-minute book summaries in English & Hindi, simple history and science explainers, weekly current affairs, and free interactive tools.">
+    <meta property="og:url" content="https://5minssummary.com/">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
 
-<meta property="og:site_name" content="5 Mins Summary">
-<script type="application/ld+json">
-{
-  "@context" : "https://schema.org",
-  "@type" : "WebSite",
-  "name" : "5 Mins Summary",
-  "url" : "https://5minssummary.com/"
-}
-</script>
+    <!-- Twitter / X Card Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="5minSummary — A little time. A wider world.">
+    <meta name="twitter:description" content="Read 5-minute book summaries in English & Hindi, simple history and science explainers, weekly current affairs, and free interactive tools.">
+    <meta name="twitter:image" content="https://5minssummary.com/image/og-cover.jpg">
 
-<meta property="og:title" content="Read Top Book Summaries | 5 Mins Summary">
-<meta property="og:description" content="Read 5-minute summaries of the world's best books. Boost your knowledge without wasting hours!">
+    <!-- UNIVERSAL META & INLINE '5' FAVICON -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
 
-<meta property="og:image" content="https://5minssummary.com/image/master-banner.jpg">
-<meta property="og:url" content="https://5minssummary.com/index.html">
-<meta property="og:type" content="website">
+    <!-- Tailwind CSS CDN & Google Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9',
+                        goldNum: '#C69249'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fdfdfd; }
-        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
-        .nav-link { position: relative; transition: color 0.3s; }
-        .nav-link::after {
-            content: ''; position: absolute; width: 0; height: 2px;
-            bottom: -4px; left: 0; background-color: #10b981;
-            transition: width 0.3s ease-in-out;
+        body {
+            background-color: #FBFBF8;
+            color: #191918;
+            font-family: 'Inter', sans-serif;
         }
-        .nav-link:hover::after { width: 100%; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+        .book-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 4px 10px -3px rgba(0, 0, 0, 0.06);
+        }
+        input[type="range"] { accent-color: #134E3A; }
     </style>
-    <link rel="icon" type="image/png" href="image/logo.png">
- <!-- Google tag (gtag.js) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "5minSummary",
+      "url": "https://5minssummary.com/",
+      "description": "Read 5-minute book summaries in English & Hindi, simple history and science explainers, weekly current affairs, and free interactive tools."
+    }
+    </script>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -53,358 +94,890 @@
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
      crossorigin="anonymous"></script></head>
-<body class="text-slate-800">
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
 
-    <!-- TOP DISCLAIMER -->
-    <div class="bg-slate-900 text-white text-[11px] md:text-xs py-2 px-4 text-center font-medium tracking-wide">
-        <i class="fa-solid fa-circle-info mr-2 text-emerald-400"></i>
-        Disclaimer: This website contains affiliate links. We may earn a commission from purchases made through these links at no extra cost to you.
+    <!-- 1. TOP LIVE DATE & TIME BAR (Same as Books.html) -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>Daily 5-Minute Briefings</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">For Curious Minds</span>
+            </div>
+        </div>
     </div>
 
-    <!-- NAVBAR WITH NEW LOGO -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <!-- LOGO -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer group gap-2" onclick="window.location.href='index.html'">
-                    <div class="bg-gradient-to-br from-emerald-400 to-emerald-600 text-white p-2 rounded-xl shadow-lg group-hover:shadow-emerald-200 transition-all transform group-hover:-rotate-12">
-                        <i class="fa-solid fa-hourglass-half text-xl"></i>
-                    </div>
-                    <span class="text-2xl font-serif font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                        5 Mins <span class="text-emerald-500">Summary</span>
-                    </span>
-                </div>
-
-                <!-- DESKTOP MENU -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link font-medium text-slate-900">Home</a>
-                    
-                    <div class="relative group">
-                        <button class="flex items-center space-x-1 font-medium text-slate-600 hover:text-emerald-600 transition-colors py-2">
-                            <span>Browse Categories</span>
-                            <i class="fa-solid fa-chevron-down text-[10px] pt-1 group-hover:rotate-180 transition-transform duration-300"></i>
-                        </button>
-                        
-                        <div class="absolute left-0 mt-0 w-56 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-2 py-3 z-50">
-                            <a href="summary.html?type=genre" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
-                                <i class="fa-solid fa-layer-group mr-3 w-4"></i> By Genre
-                            </a>
-                            <a href="summary.html?type=author" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
-                                <i class="fa-solid fa-user-pen mr-3 w-4"></i> By Author
-                            </a>
-                            <a href="summary.html?type=title" class="block px-6 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
-                                <i class="fa-solid fa-book mr-3 w-4"></i> By Book Title
-                            </a>
-                        </div>
-                    </div>
-
-                    <a href="summary.html" class="nav-link font-medium text-slate-600 hover:text-slate-900">Latest Summaries</a>
-                    <a href="#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
-                        Subscribe Free
-                    </a>
-                </div>
-
-                <!-- MOBILE MENU BUTTON (Fixed Toggle) -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-slate-600 hover:text-emerald-600 focus:outline-none" onclick="toggleMobileMenu()">
-                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- MOBILE MENU CONTENT -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-50 px-4 py-6 space-y-4 shadow-inner absolute w-full z-40">
-            <a href="index.html" class="block text-slate-900 font-medium hover:text-emerald-600">Home</a>
-            <div class="space-y-2 pt-2 border-t border-slate-50">
-                <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Categories</p>
-                <a href="summary.html?type=genre" class="block text-slate-600 pl-2 hover:text-emerald-600">By Genre</a>
-                <a href="summary.html?type=author" class="block text-slate-600 pl-2 hover:text-emerald-600">By Author</a>
-                <a href="summary.html?type=title" class="block text-slate-600 pl-2 hover:text-emerald-600">By Book Title</a>
-            </div>
-            <a href="summary.html" class="block text-slate-700 font-medium hover:text-emerald-600">Latest Summaries</a>
-        
-        <br>
-             <a href="#subscribe" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-emerald-200">
-                        Subscribe Free
-                    </a>
-</div>
-    </nav>
-  
-
-    <!-- HERO SECTION -->
-    <section class="relative bg-white pt-16 pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+    <!-- 2. NAVBAR (Same as Books.html) -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
             
-            <div class="w-full md:w-1/2 text-center md:text-left z-10">
-                <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6 border border-emerald-200">
-                    Smarter Learning
+            <!-- Left: Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">
+                    5
+                </div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">
+                    5minSummary
                 </span>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-slate-900 leading-tight mb-6">
-                    We read for hours, so you can learn in <span class="text-emerald-500 italic">minutes.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
-                    Welcome to 5 Mins Summary. We distill the world's best non-fiction, business, and self-help books into quick, actionable summaries. Extract the core ideas, save your time, and level up your knowledge instantly.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button onclick="window.location.href='summary.html'" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl flex items-center justify-center">
-                        Explore Summaries <i class="fa-solid fa-arrow-right ml-3"></i>
-                    </button>
+            </a>
+
+            <!-- Center: Global Search Input -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4">
+                <div class="relative w-full">
+                    <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="global-search-input"
+                        placeholder="Search books, ideas, stories & more" 
+                        class="w-full bg-bgInput/80 hover:bg-bgInput focus:bg-white text-sm text-textDark placeholder-textMuted rounded-lg py-2.5 pl-10 pr-14 border border-transparent focus:border-brandGreen/40 focus:outline-none transition"
+                    >
+                    <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-sans text-textMuted bg-white/80 px-1.5 py-0.5 rounded border border-borderLight">⌘ K</kbd>
                 </div>
             </div>
 
-            <div class="w-full md:w-1/2 mt-16 md:mt-0 relative flex justify-center">
-                <div class="absolute w-[120%] h-[120%] bg-emerald-50 rounded-full -top-10 -right-20 z-0 opacity-50 blur-3xl"></div>
+            <!-- Right: Navigation Links & Icons -->
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="Tools.html" class="hover:text-brandGreen transition">Tools</a>
                 
-                <div class="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Person reading a book with coffee" 
-                         class="w-full h-full object-cover">
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+
+                <!-- Bookmark Icon -->
+                <a href="Books.html" title="Saved Books" class="text-textDark hover:text-brandGreen transition relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                    </svg>
+                </a>
+
+                <!-- User Profile Initials -->
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold tracking-wider cursor-pointer hover:ring-2 hover:ring-brandGreen/30 transition">
+                    AK
                 </div>
             </div>
-        </div>
-    </section>
 
-<!-- LATEST BOOKS SECTION -->
-    <section class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-serif font-bold text-slate-800 mb-4">Latest Book Summaries</h2>
-            <p class="text-slate-500 mb-10">Freshly added summaries for you to read.</p>
-            
-            <!-- Generate.js dynamically yahan 3 books daalega -->
-            <div id="latest-books-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-        <a href="books/non-fiction/self-help/austin-kleon/show-your-work.html" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-            <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                <img src="image/show-your-work.webp" alt="Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            </div>
-            <span class="text-slate-800 font-bold text-lg text-center group-hover:text-emerald-600 transition-colors">Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered</span>
-            <span class="text-xs text-slate-400 mt-1">By Austin Kleon</span>
-        </a>
-    
-        <a href="books/non-fiction/business/ray-dalio/principles-life-and-work.html" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-            <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                <img src="image/principles-life-and-work.webp" alt="Principles: Life and Work Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            </div>
-            <span class="text-slate-800 font-bold text-lg text-center group-hover:text-emerald-600 transition-colors">Principles: Life and Work</span>
-            <span class="text-xs text-slate-400 mt-1">By Ray Dalio</span>
-        </a>
-    
-        <a href="books/non-fiction/self-help/darren-hardy/the-compound-effect.html" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center hover:shadow-xl hover:border-emerald-200 transition-all group cursor-pointer transform hover:-translate-y-1">
-            <div class="w-32 md:w-40 aspect-[4/5] mb-5 overflow-hidden rounded-lg shadow-md border border-slate-100">
-                <img src="image/the-compound-effect.webp" alt="The Compound Effect: Jumpstart Your Income, Your Life, Your Success Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            </div>
-            <span class="text-slate-800 font-bold text-lg text-center group-hover:text-emerald-600 transition-colors">The Compound Effect: Jumpstart Your Income, Your Life, Your Success</span>
-            <span class="text-xs text-slate-400 mt-1">By Darren Hardy</span>
-        </a>
-    
-            </div>
-            
-            <div class="mt-12">
-                <button onclick="window.location.href='summary.html'" class="text-emerald-600 font-bold hover:text-emerald-700 flex items-center justify-center mx-auto transition-colors">
-                    View All Summaries <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            <!-- Mobile Menu Trigger -->
+            <div class="flex items-center gap-3 lg:hidden">
+                <button id="mobile-menu-btn" class="p-2 rounded-lg text-textDark hover:bg-bgCard focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
         </div>
-    </section>
 
-    <!-- NEWSLETTER / SUBSCRIBE SECTION -->
-    <section id="subscribe" class="bg-white py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl shadow-xl overflow-hidden relative">
-                <div class="absolute top-0 right-0 -mt-16 -mr-16 text-emerald-400 opacity-20 transform rotate-12 transition-transform hover:rotate-0 duration-500">
-                    <i class="fa-solid fa-bell text-[250px]"></i>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-3">
+            <div class="relative">
+                <svg class="w-4 h-4 text-textMuted absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input 
+                    type="text" 
+                    id="mobile-search-input"
+                    placeholder="Search books, ideas, stories..." 
+                    class="w-full bg-bgInput text-sm text-textDark rounded-lg py-2.5 pl-10 pr-4 focus:outline-none focus:ring-1 focus:ring-brandGreen"
+                >
+            </div>
+            <div class="flex flex-col space-y-2 pt-2 text-sm font-medium">
+                <a href="Books.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+                <a href="History.html" class="py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+                <a href="Science.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+                <a href="Article.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+                <a href="Tools.html" class="py-2 px-3 rounded-md hover:bg-bgCard">Tools</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8">
+
+        <!-- ================================================================= -->
+        <!-- 3. HERO SECTION & TRENDING TODAY (Figma Screenshot 1 & 2)         -->
+        <!-- ================================================================= -->
+        <section class="pt-10 pb-14 border-b border-borderLight">
+            
+            <!-- Top Hero Headline Row -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 mb-10 border-b border-borderLight">
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-brandGreen mb-2.5">
+                        FOR THE ENDLESSLY CURIOUS
+                    </p>
+                    <h1 class="font-serif text-4xl sm:text-6xl text-textDark tracking-tight leading-[1.08]">
+                        A little time. A wider world.
+                    </h1>
                 </div>
+                <p class="text-textMuted text-base sm:text-[17px] max-w-sm leading-relaxed lg:mb-1">
+                    Big ideas, remarkable stories, fresh perspectives. All in five minutes.
+                </p>
+            </div>
+
+            <!-- Hero Grid: Left (Weekly Roundup) + Right (Trending Today) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 
-                <div class="relative px-6 py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20 z-10">
-                    <div class="lg:w-0 lg:flex-1">
-                        <h2 class="text-3xl font-serif font-bold tracking-tight text-white sm:text-4xl">
-                            Never Miss a New Book!
-                            <span class="block text-xl sm:text-2xl mt-2 text-emerald-200 font-sans font-semibold tracking-normal">
-                                (Coming Soon 🚀)
+                <!-- LEFT 8 COLS: Weekly Current Affairs Roundup -->
+                <div class="lg:col-span-8 lg:pr-4">
+                    <!-- NODE_WEEKLY_START -->
+                    <article class="group">
+                        <a href="posts/global-semiconductor-supply-chains-and-the-future-of-ai-hardware.html" class="block relative overflow-hidden rounded-sm mb-5 bg-bgCard aspect-[16/9] sm:aspect-[16/8.6]">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop" alt="Global semiconductor supply chains: How advanced lithography is shaping the AI era" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-brandGreen text-[10px] font-semibold uppercase tracking-[0.14em] px-3 py-1.5 rounded-sm shadow-sm">
+                                THE WEEK IN PERSPECTIVE
                             </span>
+                        </a>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="font-semibold uppercase tracking-[0.12em] text-brandGreen">TECH & ECONOMY</span>
+                            <span class="text-textMuted flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                6 min read
+                            </span>
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl text-textDark group-hover:text-brandGreen transition mb-3 leading-tight">
+                            <a href="posts/global-semiconductor-supply-chains-and-the-future-of-ai-hardware.html">Global semiconductor supply chains: How advanced lithography is shaping the AI era</a>
                         </h2>
-                        <p class="mt-4 max-w-3xl text-lg text-emerald-50">
-                            We are working on a new feature! Soon, you will be able to subscribe to get instant alerts whenever we add new books and summaries to the platform. Stay tuned!
+                        <p class="text-textMuted text-base leading-relaxed mb-7 max-w-3xl">
+                            From extreme ultraviolet machines to regional chip foundries, the physical bottleneck of artificial intelligence lies in silicon manufacturing.
                         </p>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-2">
+                            <a href="posts/global-semiconductor-supply-chains-and-the-future-of-ai-hardware.html" class="inline-flex items-center justify-center gap-2.5 bg-brandGreen hover:bg-brandGreenHover text-white text-sm font-medium px-6 py-3 rounded-md transition w-fit">
+                                <span>Read the roundup</span>
+                                <span>→</span>
+                            </a>
+                            <div class="w-full sm:w-72">
+                                <div class="flex justify-between text-[10px] uppercase tracking-wider font-semibold text-textMuted mb-1.5">
+                                    <span>YOUR 5-MINUTE BRIEFING</span>
+                                    <span class="text-brandGreen">0 — 5 min</span>
+                                </div>
+                                <div class="grid grid-cols-5 gap-1.5">
+                                    <div class="h-1 bg-brandGreen rounded-full"></div>
+                                    <div class="h-1 bg-borderLight rounded-full"></div>
+                                    <div class="h-1 bg-borderLight rounded-full"></div>
+                                    <div class="h-1 bg-borderLight rounded-full"></div>
+                                    <div class="h-1 bg-borderLight rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+<!-- NODE_WEEKLY_END -->
+                </div>
+
+                <!-- RIGHT 4 COLS: Trending Today -->
+                <aside class="lg:col-span-4 lg:border-l lg:border-borderLight lg:pl-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <h2 class="font-serif text-2xl sm:text-[28px] text-textDark">Trending Today</h2>
+                            <svg class="w-5 h-5 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-textMuted mb-6">What curious minds are reading.</p>
+
+                        <!-- NODE_TRENDING_START -->
+                        <div class="divide-y divide-borderLight">
+                            <a href="posts/the-quiet-power-of-paying-attention.html" class="group py-4 flex gap-4 items-start block">
+                                <span class="font-serif text-2xl text-goldNum font-normal leading-none pt-0.5">01</span>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">MINDFUL LIVING</p>
+                                    <h3 class="font-serif text-lg text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                                        The quiet power of paying attention
+                                    </h3>
+                                    <span class="text-[11px] text-textMuted flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        6 min read
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="posts/the-psychology-of-enough-why-ambition-needs-a-finish-line.html" class="group py-4 flex gap-4 items-start block">
+                                <span class="font-serif text-2xl text-goldNum font-normal leading-none pt-0.5">02</span>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">PSYCHOLOGY & WEALTH</p>
+                                    <h3 class="font-serif text-lg text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                                        The psychology of enough: Why modern ambition rarely leads to peace
+                                    </h3>
+                                    <span class="text-[11px] text-textMuted flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        7 min read
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="posts/how-ai-is-reshaping-deep-thinking-and-human-creativity.html" class="group py-4 flex gap-4 items-start block">
+                                <span class="font-serif text-2xl text-goldNum font-normal leading-none pt-0.5">03</span>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">FUTURE & TECH</p>
+                                    <h3 class="font-serif text-lg text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                                        How artificial intelligence is reshaping deep thinking and human creativity
+                                    </h3>
+                                    <span class="text-[11px] text-textMuted flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        6 min read
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="posts/the-architecture-of-micro-habits-why-systems-beat-goals.html" class="group py-4 flex gap-4 items-start block">
+                                <span class="font-serif text-2xl text-goldNum font-normal leading-none pt-0.5">04</span>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">BETTER THINKING</p>
+                                    <h3 class="font-serif text-lg text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                                        The architecture of micro-habits: Why small daily systems beat grand goals
+                                    </h3>
+                                    <span class="text-[11px] text-textMuted flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        6 min read
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+<!-- NODE_TRENDING_END -->
                     </div>
-                    <div class="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
-                        <form class="sm:flex" onsubmit="event.preventDefault();">
-                            <label for="email-address" class="sr-only">Email address</label>
-                            <input id="email-address" name="email" type="email" disabled class="w-full rounded-xl border-transparent bg-emerald-50/50 px-5 py-4 text-slate-500 placeholder-slate-500 focus:outline-none shadow-sm cursor-not-allowed transition-all" placeholder="Feature arriving soon...">
-                            
-                            <button type="button" disabled class="mt-3 flex w-full items-center justify-center rounded-xl border border-transparent bg-slate-800/50 px-5 py-4 text-base font-bold text-slate-300 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 shadow-none cursor-not-allowed transition-all duration-300">
-                                Coming Soon <i class="fa-solid fa-clock ml-2"></i>
+
+                    <div class="pt-4 border-t border-borderLight mt-2">
+                        <a href="Article.html" class="inline-flex items-center gap-2 text-xs font-semibold text-brandGreen hover:underline">
+                            <span>Explore all stories</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 4. BOOKS SECTION (5 Books from Books Page - Figma Screenshot 2)   -->
+        <!-- ================================================================= -->
+        <section class="py-16 border-b border-borderLight">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="font-serif text-3xl sm:text-[42px] text-textDark tracking-tight leading-tight mb-2">
+                        Good books. Great ideas. Less time.
+                    </h2>
+                    <p class="text-textMuted text-base sm:text-lg">
+                        The essential insights from books worth knowing.
+                    </p>
+                </div>
+                <a href="Books.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brandGreen hover:underline shrink-0">
+                    <span>Browse all books</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+            <!-- 5 Books Grid (Populated dynamically from your data/ folder + fallback) -->
+            <div id="home-books-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- 5 Book Cards Injected by JS -->
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 5. HISTORY & SCIENCE SECTION (Figma Screenshot 3)                 -->
+        <!-- ================================================================= -->
+        <section class="py-16 border-b border-borderLight">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="font-serif text-3xl sm:text-[42px] text-textDark tracking-tight leading-tight mb-2">
+                        Across time. Beyond the ordinary.
+                    </h2>
+                    <p class="text-textMuted text-base sm:text-lg">
+                        History and science, made wonderfully simple.
+                    </p>
+                </div>
+                <div class="flex items-center gap-5 shrink-0">
+                    <a href="History.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brandGreen hover:underline">
+                        <span>Explore history & science</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NODE_HIST_SCI_START -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="posts/cracking-the-rosetta-stone-how-humanity-recovered-ancient-egypt.html" class="home-hs-card group block" data-tag="ancient" data-search="cracking the rosetta stone: how humanity unlocked 3,000 years of silent history for fourteen centuries, nobody on earth could read a single egyptian hieroglyph. then a broken slab of black granodiorite sparked the greatest linguistic detective story in history. ancient egypt ancient">
+                <div class="w-full aspect-[16/10] bg-bgCard rounded-sm overflow-hidden mb-3.5">
+                    <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=1000&auto=format&fit=crop" alt="Cracking the Rosetta Stone: How humanity unlocked 3,000 years of silent history" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex items-center justify-between text-[11px] mb-1.5">
+                    <span class="font-semibold uppercase tracking-[0.12em] text-brandGreen">HISTORY</span>
+                    <span class="text-textMuted flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        7 min read
+                    </span>
+                </div>
+                <h2 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                    Cracking the Rosetta Stone: How humanity unlocked 3,000 years of silent history
+                </h2>
+                <p class="text-xs text-textMuted leading-relaxed">
+                    For fourteen centuries, nobody on Earth could read a single Egyptian hieroglyph. Then a broken slab of black granodiorite sparked the greatest linguistic detective story in history.
+                </p>
+            </a>
+
+            <a href="posts/quantum-entanglement-and-the-hidden-architecture-of-reality.html" class="home-hs-card group block" data-tag="physics" data-search="quantum entanglement: why the universe is not locally real albert einstein called it spooky action at a distance and refused to believe it. half a century of experiments proved that separated particles really do share an instantaneous cosmic link. quantum physics physics">
+                <div class="w-full aspect-[16/10] bg-bgCard rounded-sm overflow-hidden mb-3.5">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop" alt="Quantum entanglement: Why the universe is not locally real" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex items-center justify-between text-[11px] mb-1.5">
+                    <span class="font-semibold uppercase tracking-[0.12em] text-brandGreen">SCIENCE</span>
+                    <span class="text-textMuted flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        7 min read
+                    </span>
+                </div>
+                <h2 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                    Quantum entanglement: Why the universe is not locally real
+                </h2>
+                <p class="text-xs text-textMuted leading-relaxed">
+                    Albert Einstein called it spooky action at a distance and refused to believe it. Half a century of experiments proved that separated particles really do share an instantaneous cosmic link.
+                </p>
+            </a>
+
+            <a href="posts/indus-valley-civilization-the-egalitarian-megacities-of-ancient-india.html" class="home-hs-card group block" data-tag="ancient" data-search="the indus valley mystery: how ancient india built egalitarian megacities without kings or wars while mesopotamia and egypt raised colossal tombs for god-kings, harappa and mohenjo-daro engineered indoor plumbing, standardized weights, and peaceful prosperity across a million square kilometers. ancient india ancient">
+                <div class="w-full aspect-[16/10] bg-bgCard rounded-sm overflow-hidden mb-3.5">
+                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1000&auto=format&fit=crop" alt="The Indus Valley mystery: How ancient India built egalitarian megacities without kings or wars" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex items-center justify-between text-[11px] mb-1.5">
+                    <span class="font-semibold uppercase tracking-[0.12em] text-brandGreen">HISTORY</span>
+                    <span class="text-textMuted flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        7 min read
+                    </span>
+                </div>
+                <h2 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                    The Indus Valley mystery: How ancient India built egalitarian megacities without kings or wars
+                </h2>
+                <p class="text-xs text-textMuted leading-relaxed">
+                    While Mesopotamia and Egypt raised colossal tombs for god-kings, Harappa and Mohenjo-daro engineered indoor plumbing, standardized weights, and peaceful prosperity across a million square kilometers.
+                </p>
+            </a>
+
+            <a href="posts/crispr-and-the-code-of-life-how-humanity-learned-to-edit-dna.html" class="home-hs-card group block" data-tag="biology" data-search="crispr and the code of life: how an ancient bacterial defense became a molecular word processor for four billion years, life evolved through random mutation and natural selection. now humanity possesses the scissors and pencil to rewrite the genome directly. genetics & biotech biology">
+                <div class="w-full aspect-[16/10] bg-bgCard rounded-sm overflow-hidden mb-3.5">
+                    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1000&auto=format&fit=crop" alt="CRISPR and the code of life: How an ancient bacterial defense became a molecular word processor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex items-center justify-between text-[11px] mb-1.5">
+                    <span class="font-semibold uppercase tracking-[0.12em] text-brandGreen">SCIENCE</span>
+                    <span class="text-textMuted flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        7 min read
+                    </span>
+                </div>
+                <h2 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
+                    CRISPR and the code of life: How an ancient bacterial defense became a molecular word processor
+                </h2>
+                <p class="text-xs text-textMuted leading-relaxed">
+                    For four billion years, life evolved through random mutation and natural selection. Now humanity possesses the scissors and pencil to rewrite the genome directly.
+                </p>
+            </a>
+            </div>
+<!-- NODE_HIST_SCI_END -->
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- 6. THE SHORT READ + NEWSLETTER BOX (Figma Screenshot 4)           -->
+        <!-- ================================================================= -->
+        <section class="py-16 border-b border-borderLight">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left 8 Cols: The Short Read List -->
+                <div class="lg:col-span-8">
+                    <div class="flex items-end justify-between mb-6 pb-2">
+                        <div>
+                            <h2 class="font-serif text-3xl sm:text-[40px] text-textDark tracking-tight leading-tight mb-1.5">
+                                The short read
+                            </h2>
+                            <p class="text-textMuted text-base">
+                                Fresh thoughts for your everyday curiosity.
+                            </p>
+                        </div>
+                        <a href="Article.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brandGreen hover:underline shrink-0">
+                            <span>All articles</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                    <!-- NODE_SHORT_READ_START -->
+                    <div class="divide-y divide-borderLight border-b border-borderLight">
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-quiet-power-of-paying-attention" data-tag="mindful-living" data-search="the quiet power of paying attention in an economy designed to fracture your focus, choosing what you notice is the ultimate creative and rebellious act. editor mindful living mindful-living">
+                        <a href="posts/the-quiet-power-of-paying-attention.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop" alt="The quiet power of paying attention" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">MINDFUL LIVING</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The quiet power of paying attention
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-quiet-power-of-paying-attention', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="the-psychology-of-enough-why-ambition-needs-a-finish-line" data-tag="psychology" data-search="the psychology of enough: why modern ambition rarely leads to peace how the hedonic treadmill and invisible social scoreboards keep high achievers perpetually restless—and how to define your own finish line. editor psychology & wealth psychology">
+                        <a href="posts/the-psychology-of-enough-why-ambition-needs-a-finish-line.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" alt="The psychology of enough: Why modern ambition rarely leads to peace" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">PSYCHOLOGY & WEALTH</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    The psychology of enough: Why modern ambition rarely leads to peace
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">7 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('the-psychology-of-enough-why-ambition-needs-a-finish-line', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="article-card py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" data-slug="how-ai-is-reshaping-deep-thinking-and-human-creativity" data-tag="technology" data-search="how artificial intelligence is reshaping deep thinking and human creativity when answers become instant and effortless, the real competitive advantage shifts from knowing facts to asking better questions. editor future & tech technology">
+                        <a href="posts/how-ai-is-reshaping-deep-thinking-and-human-creativity.html" class="flex items-start sm:items-center gap-5 flex-1">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop" alt="How artificial intelligence is reshaping deep thinking and human creativity" class="w-24 h-20 sm:w-28 sm:h-20 object-cover rounded-sm shrink-0 bg-bgCard">
+                            <div>
+                                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">FUTURE & TECH</p>
+                                <h2 class="font-serif text-xl sm:text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1">
+                                    How artificial intelligence is reshaping deep thinking and human creativity
+                                </h2>
+                                <p class="text-xs text-textMuted">By Editor · The short read</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 self-end sm:self-center shrink-0">
+                            <span class="text-xs bg-[#E8EFEA] text-brandGreen px-3 py-1 rounded-full font-medium">6 min read</span>
+                            <button onclick="if(typeof toggleBookmark === 'function') toggleBookmark('how-ai-is-reshaping-deep-thinking-and-human-creativity', this)" class="bookmark-btn text-textMuted hover:text-brandGreen p-1.5 rounded-full hover:bg-bgCard transition" title="Save Article">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
+                        </div>
+                    </article>
+                    </div>
+<!-- NODE_SHORT_READ_END -->
+                </div>
+
+                <!-- Right 4 Cols: Green Habit / Newsletter Box -->
+                <div class="lg:col-span-4">
+                    <div class="bg-brandGreen text-white rounded-md p-8 sm:p-10 shadow-sm">
+                        <div class="mb-6 opacity-90">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-200 mb-3">
+                            MAKE CURIOSITY A HABIT
+                        </p>
+                        <h3 class="font-serif text-3xl sm:text-4xl leading-[1.15] mb-4">
+                            Five minutes.<br>
+                            A little wiser.<br>
+                            Every day.
+                        </h3>
+                        <p class="text-sm text-emerald-100/85 leading-relaxed mb-6">
+                            One worthwhile idea in your inbox. A small daily ritual for a more interesting life.
+                        </p>
+                        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to 5minSummary!'); this.reset();" class="relative mb-3">
+                            <input 
+                                type="email" 
+                                required
+                                placeholder="Your email address" 
+                                class="w-full bg-white text-textDark placeholder-textMuted text-sm rounded-md py-3.5 pl-4 pr-12 focus:outline-none"
+                            >
+                            <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-brandGreen hover:translate-x-0.5 transition p-1">
+                                →
                             </button>
                         </form>
-                        <p class="mt-3 text-sm text-emerald-100">
-                            Our backend team is building this feature. Check back later!
+                        <p class="text-[11px] text-emerald-200/75">
+                            A thoughtful read. No noise. Unsubscribe anytime.
                         </p>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- QUOTES SECTION -->
-    <section class="py-16 bg-white border-t border-slate-100">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 flex flex-col items-center">
-            <span class="bg-emerald-100 text-emerald-700 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest mb-3 animate-pulse">
-                <i class="fa-solid fa-sparkles mr-1"></i> New
-            </span>
-            <h2 class="text-3xl font-serif font-bold text-slate-800">Quotes of the Day</h2>
-            <p class="text-slate-500 mt-2">Daily wisdom from the world's greatest authors.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100 relative group hover:shadow-lg transition-all duration-300">
-                <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-slate-200 opacity-50 group-hover:text-emerald-100 transition-colors"></i>
-                <div class="relative z-10 flex flex-col h-full justify-between pt-4">
-                    <p class="text-xl md:text-2xl font-serif text-slate-700 italic leading-relaxed mb-8">
-                        "Between stimulus and response there is a space. In that space is our power to choose our response."
-                    </p>
-                    <div class="flex items-center gap-4 border-t border-slate-200 pt-5">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                            VF
-                        </div>
-                        <div>
-                            <h4 class="text-slate-900 font-bold">Viktor E. Frankl</h4>
-                            <p class="text-xs text-slate-500 font-medium tracking-wide">Man's Search for Meaning</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100 relative group hover:shadow-lg transition-all duration-300">
-                <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-slate-200 opacity-50 group-hover:text-emerald-100 transition-colors"></i>
-                <div class="relative z-10 flex flex-col h-full justify-between pt-4">
-                    <p class="text-xl md:text-2xl font-serif text-slate-700 italic leading-relaxed mb-8">
-                        "The impediment to action advances action. What stands in the way becomes the way."
-                    </p>
-                    <div class="flex items-center gap-4 border-t border-slate-200 pt-5">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl flex-shrink-0">
-                            MA
-                        </div>
-                        <div>
-                            <h4 class="text-slate-900 font-bold">Marcus Aurelius</h4>
-                            <p class="text-xs text-slate-500 font-medium tracking-wide">Meditations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-<!-- AUDIOBOOK AFFILIATE SECTION -->
-<section class="py-16 bg-slate-800 border-t border-slate-700 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="text-center mb-12 flex flex-col items-center">
-            <span class="bg-emerald-500/20 text-emerald-400 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 flex items-center gap-2 border border-emerald-500/30">
-                <i class="fa-solid fa-headphones-simple"></i> Listen Anywhere
-            </span>
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Prefer Listening Over Reading?</h2>
-            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
-                Join these premium platforms to listen to authentic, full-length audiobooks and quick summaries in English and Hindi while commuting or working out.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <a href="https://www.audible.in/" target="_blank" class="bg-slate-700/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-600 hover:border-amber-400 hover:bg-slate-700 transition-all duration-300 group flex flex-col items-center text-center transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
-                <div class="w-16 h-16 rounded-2xl bg-amber-500 text-slate-900 flex items-center justify-center text-3xl mb-6 shadow-md group-hover:scale-110 transition-transform">
-                    <i class="fa-brands fa-amazon"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">Audible by Amazon</h3>
-                <span class="text-xs font-bold bg-slate-800 text-slate-300 px-2 py-1 rounded-md mb-3">Full Audiobooks</span>
-                <p class="text-sm text-slate-400 mb-6">The best platform for complete, unabridged audiobooks in English & Hindi. High-quality narration.</p>
-                <span class="mt-auto inline-block bg-amber-500/10 text-amber-400 font-bold px-6 py-2 rounded-lg text-sm group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors">
-                    Start 30-Day Free Trial <i class="fa-solid fa-arrow-right ml-1"></i>
-                </span>
-            </a>
-
-            <a href="https://www.storytel.com/" target="_blank" class="bg-slate-700/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-600 hover:border-orange-500 hover:bg-slate-700 transition-all duration-300 group flex flex-col items-center text-center transform hover:-translate-y-2 shadow-lg hover:shadow-orange-500/20">
-                <div class="w-16 h-16 rounded-2xl bg-orange-600 text-white flex items-center justify-center text-3xl mb-6 shadow-md group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-book-open-reader"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">Storytel</h3>
-                <span class="text-xs font-bold bg-slate-800 text-slate-300 px-2 py-1 rounded-md mb-3">Full Audiobooks</span>
-                <p class="text-sm text-slate-400 mb-6">Unlimited listening to proper, full-length audiobooks. Excellent collection of Hindi and regional literature.</p>
-                <span class="mt-auto inline-block bg-orange-500/10 text-orange-400 font-bold px-6 py-2 rounded-lg text-sm group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                    Explore Library <i class="fa-solid fa-arrow-right ml-1"></i>
-                </span>
-            </a>
-
-            <a href="https://www.kukufm.com/" target="_blank" class="bg-slate-700/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-600 hover:border-emerald-400 hover:bg-slate-700 transition-all duration-300 group flex flex-col items-center text-center transform hover:-translate-y-2 shadow-lg hover:shadow-emerald-500/20">
-                <div class="w-16 h-16 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-3xl mb-6 shadow-md group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">Kuku FM</h3>
-                <span class="text-xs font-bold bg-slate-800 text-emerald-400 border border-emerald-500/30 px-2 py-1 rounded-md mb-3">Quick Summaries Only</span>
-                <p class="text-sm text-slate-400 mb-6">Don't have time for a 10-hour book? Listen to 20-minute bite-sized book summaries exclusively in Hindi.</p>
-                <span class="mt-auto inline-block bg-emerald-500/10 text-emerald-400 font-bold px-6 py-2 rounded-lg text-sm group-hover:bg-emerald-500 group-hover:text-slate-900 transition-colors">
-                    Get 50% Off <i class="fa-solid fa-arrow-right ml-1"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-</section>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-emerald-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <!-- ================================================================= -->
+        <!-- 7. TAKE A BREAK: TOOLS & GAMES (Static - Figma Screenshot 5)      -->
+        <!-- ================================================================= -->
+        <section class="py-16">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
                 <div>
-                    <span class="text-2xl font-serif font-bold text-white mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-hourglass-half text-emerald-500"></i> 
-                        5 Mins <span class="text-emerald-500">Summary</span>
+                    <h2 class="font-serif text-3xl sm:text-[42px] text-textDark tracking-tight leading-tight mb-2">
+                        Take a Break: Tools & Games
+                    </h2>
+                    <p class="text-textMuted text-base sm:text-lg">
+                        A change of pace. Something useful. A little fun.
+                    </p>
+                </div>
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-brandGreen">
+                    <span>✨ Curiosity has a playful side.</span>
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Tool 1: EMI/Tax Calculator -->
+                <div class="bg-white border border-borderLight rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                           
+                             </div>
+                          <!-- 1. Basic & Scientific Calculator -->
+                <a href="tools/basic-scientific-calculator.html" class="tool-card group bg-white border border-borderLight hover:border-brandGreen rounded-2xl p-6 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-search="basic scientific calculator maths trigonometry logarithms bodmas">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-[#E3EFEA] text-brandGreen">MATHS</span>
+                            <span class="text-2xl">🧮</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition mb-2">Basic & Scientific Calculator</h3>
+                        <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                            Solve everyday arithmetic or complex trigonometric, logarithmic, factorial, and exponential equations with a live history tape.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen mt-5 group-hover:translate-x-1 transition-transform">
+                        Open Calculator →
                     </span>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-                        Empowering minds with bite-sized wisdom. We read the heavy books so you don't have to.
-                    </p>
+                </a>
+                        <span class="text-[11px] text-textMuted">Free to explore</span>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Library</h4>
-                  <ul class="space-y-3 text-sm text-slate-400">
-                    <li><a href="summary.html?type=genre&category=business" class="hover:text-emerald-400 transition-colors">Business & Finance</a></li>
-                    <li><a href="summary.html?type=genre&category=self-help" class="hover:text-emerald-400 transition-colors">Self Development</a></li>
-                    <li><a href="summary.html?type=genre&category=technology" class="hover:text-emerald-400 transition-colors">Technology</a></li>
-                </ul>
+
+                <!-- Tool 2: Memory Match Game -->
+                <div class="bg-white border border-borderLight rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div>
+                        <!-- 13. Modern UI Generators -->
+                <a href="tools/modern-ui-generators.html" class="tool-card group bg-white border border-borderLight hover:border-brandGreen rounded-2xl p-6 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-search="modern ui generators glassmorphism neumorphism buttons badges tailwind">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-[#FF6B00]/10 text-[#FF6B00]">INTERFACE</span>
+                            <span class="text-2xl">✨</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition mb-2">Modern UI Generators</h3>
+                        <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                            Design frosted Glassmorphism cards, Neumorphic surfaces, glowing CTA buttons, and status pills with copy-ready code.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen mt-5 group-hover:translate-x-1 transition-transform">
+                        Launch Tool →
+                    </span>
+                </a>
+                        <span class="text-[11px] text-textMuted">Free to explore</span>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
-                   <ul class="space-y-3 text-sm text-slate-400">
-                        <li><a href="terms-and-condition/privacy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms-and-condition/terms.html" class="hover:text-emerald-400 transition-colors">Terms & Conditions</a></li>
-                        <li><a href="terms-and-condition/affiliate.html" class="hover:text-emerald-400 transition-colors">Affiliate Disclosure</a></li>
-                        <li><a href="terms-and-condition/contact.html" class="hover:text-emerald-400 transition-colors">About & Contact Us</a></li>
-                    </ul>
+
+                <!-- Tool 3: Typing Speed Test -->
+                <div class="bg-white border border-borderLight rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div>
+                          <!-- 21. Chess -->
+                <a href="tools/chess.html" class="tool-card group bg-white border border-borderLight hover:border-brandGreen rounded-2xl p-6 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-search="chess game strategy board ai bot 2 player checkmate">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-bgCard text-textDark">GRAND STRATEGY</span>
+                            <span class="text-2xl">♟️</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition mb-2">Chess</h3>
+                        <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                            Play full 64-square chess against our positional AI bot or a friend with legal move highlights, check alerts, and move history.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen mt-5 group-hover:translate-x-1 transition-transform">
+                        Play Game →
+                    </span>
+                </a>
+                        <span class="text-[11px] text-textMuted">Free to explore</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. BOOK SUMMARY READER MODAL (For the 5 Home Books) -->
+    <div id="book-modal" class="fixed inset-0 z-50 hidden">
+        <div id="modal-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+            <div class="w-screen max-w-3xl bg-bgMain shadow-2xl flex flex-col justify-between overflow-y-auto">
+                <div class="sticky top-0 z-20 bg-bgMain/95 backdrop-blur border-b border-borderLight px-6 py-4 flex items-center justify-between gap-4">
+                    <span id="modal-category-badge" class="text-[11px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded bg-brandGreen/10 text-brandGreen">BOOK SUMMARY</span>
+                    <div class="flex items-center gap-3">
+                        <div class="flex bg-bgCard p-0.5 rounded-md border border-borderLight text-xs font-semibold">
+                            <button id="modal-lang-en" onclick="setModalLanguage('en')" class="px-2.5 py-1 rounded bg-brandGreen text-white">EN</button>
+                            <button id="modal-lang-hi" onclick="setModalLanguage('hi')" class="px-2.5 py-1 rounded text-textMuted">HI</button>
+                        </div>
+                        <button onclick="closeBookModal()" class="p-2 rounded-full hover:bg-bgCard text-textDark">✕</button>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-10 space-y-8 flex-grow">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-36 shrink-0 bg-bgCard p-3 rounded-lg border border-borderLight">
+                            <img id="modal-book-img" src="" alt="Cover" class="w-full h-44 object-cover rounded book-shadow">
+                        </div>
+                        <div class="space-y-2 flex-1">
+                            <p id="modal-book-genre" class="text-xs font-semibold uppercase tracking-wider text-brandGreen"></p>
+                            <h2 id="modal-book-title" class="font-serif text-3xl text-textDark"></h2>
+                            <p id="modal-book-author" class="text-sm text-textMuted font-medium"></p>
+                            <div id="modal-buy-links" class="pt-3 flex flex-wrap gap-3"></div>
+                        </div>
+                    </div>
+                    <div class="bg-bgCard/60 border border-borderLight rounded-xl p-6">
+                        <h3 class="font-serif text-2xl text-textDark mb-4">Key Takeaways</h3>
+                        <ol id="modal-book-points" class="space-y-3 text-sm sm:text-[15px] text-textDark leading-relaxed list-decimal list-inside"></ol>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-textDark mb-4">5-Minute Summary</h3>
+                        <div id="modal-book-summary" class="space-y-4 text-base text-textDark/90 leading-relaxed whitespace-pre-line"></div>
+                    </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 text-center flex flex-col md:flex-row justify-between items-center">
-                <p class="text-xs text-slate-500 mb-4 md:mb-0">
-                    &copy; 2026 5 Mins Summary. All rights reserved.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/5minssummary?igsh=MTFsZXcxZnFia25hZg==" class="text-slate-500 hover:text-emerald-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- 9. FOOTER (Exact Figma Design - Screenshot 6) -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">
+                        5minSummary
+                    </a>
+                    <p class="text-textMuted text-sm">
+                        Less scrolling. More understanding.
+                    </p>
                 </div>
+
+             <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+    <a href="about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+    <a href="about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+    <a href="about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+    <a href="about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+</div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MOBILE MENU JAVASCRIPT -->
+    <!-- 10. JAVASCRIPT LOGIC -->
     <script>
-        function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+        // A. Live Date & Time Bar
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            });
+            const timeStr = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
         }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Global Search Redirect to Books.html on Enter
+        document.getElementById('global-search-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.value.trim()) {
+                window.location.href = `Books.html?search=${encodeURIComponent(e.target.value.trim())}`;
+            }
+        });
+
+        // B. 5 Featured Books for Home Page (Loads from data/ folder + Fallback matching Screenshot 2)
+        const homeBookFiles = [
+            "1-atomic-habits.json",
+            "2-psychology-of-money.json",
+            "26-sapiens-a-brief-history-of-humankind.json",
+            "3-deep-work.json",
+            "57-show-your-work.json"
+        ];
+
+        const fallbackHomeBooks = [
+            {
+                id: 1,
+                image: "image/atomic-habit.webp",
+                progressText: "60% read",
+                progressWidth: "60%",
+                palette: { card: "#F2ECE1", text: "#8C583A" },
+                en: { title: "Atomic Habits", author: "James Clear", genre: "Self Development", summary: "Atomic Habits by James Clear is a definitive manual for building good habits and breaking bad ones. Getting 1% better every day for a year results in being 37 times better by the time you are done.", points: ["The Power of 1% Improvements", "Focus on Systems Over Goals", "Identity-Based Habits", "The Four Laws of Behavior Change"] },
+                hi: { title: "एटोमिक हैबिट्स", author: "जेम्स क्लियर", genre: "आत्म-विकास", summary: "जेम्स क्लियर द्वारा लिखित 'एटोमिक हैबिट्स' अच्छी आदतें बनाने और बुरी आदतों को छोड़ने के लिए एक व्यावहारिक मार्गदर्शिका है।", points: ["1% सुधार की शक्ति", "लक्ष्य भूल जाएं, सिस्टम पर ध्यान दें"] }
+            },
+            {
+                id: 2,
+                image: "image/psychology-of-money.webp",
+                progressText: "Start reading",
+                progressWidth: "0%",
+                palette: { card: "#1E4638", text: "#E6F0EC" },
+                en: { title: "The Psychology of Money", author: "Morgan Housel", genre: "Finance", summary: "Doing well with money isn't necessarily about what you know. It's about how you behave. And behavior is hard to teach, even to really smart people.", points: ["No one's crazy with money", "Luck & Risk play a massive role", "Compounding is the secret", "Getting wealthy vs. Staying wealthy"] }
+            },
+            {
+                id: 26,
+                image: "image/sapiens.webp",
+                progressText: "30% read",
+                progressWidth: "30%",
+                palette: { card: "#F4F1EA", text: "#B04A33" },
+                en: { title: "Sapiens", author: "Yuval Noah Harari", genre: "History", summary: "Sapiens explores how Homo sapiens came to dominate the planet through three major revolutions: the Cognitive, Agricultural, and Scientific Revolutions.", points: ["The Cognitive Revolution", "Shared myths and collective imagination", "The Agricultural Revolution", "The unification of humankind"] }
+            },
+            {
+                id: 3,
+                image: "image/deep-work.webp",
+                progressText: "Start reading",
+                progressWidth: "0%",
+                palette: { card: "#C85A3B", text: "#FFF8F5" },
+                en: { title: "Deep Work", author: "Cal Newport", genre: "Productivity", summary: "Deep work is the ability to focus without distraction on a cognitively demanding task. It's a skill that allows you to quickly master complicated information and produce better results in less time.", points: ["Deep Work is Rare and Valuable", "Embrace Boredom", "Quit Social Media distractions", "Drain the Shallows"] }
+            },
+            {
+                id: 57,
+                image: "image/creative-act.webp",
+                progressText: "Completed",
+                progressWidth: "100%",
+                palette: { card: "#EAE6DF", text: "#2B2B2A" },
+                en: { title: "The Creative Act", author: "Rick Rubin", genre: "Creativity", summary: "Creativity is not a rare ability reserved for a select few—it is a fundamental way of being in the world. Paying attention is the doorway to creative insight.", points: ["Everyone is a Creator", "Look for Clues and Pay Attention", "The Source of Creativity", "Tune in without judgment"] }
+            }
+        ];
+
+        let homeBooksList = [];
+        let activeModalBook = null;
+        let modalLang = 'en';
+
+        async function loadHomeBooks() {
+            const fetched = await Promise.all(
+                homeBookFiles.map(file =>
+                    fetch(`data/${file}`)
+                        .then(res => (res.ok ? res.json() : null))
+                        .catch(() => null)
+                )
+            );
+
+            homeBooksList = fallbackHomeBooks.map((fb, idx) => {
+                if (fetched[idx] && fetched[idx].en) {
+                    return {
+                        ...fetched[idx],
+                        progressText: fb.progressText,
+                        progressWidth: fb.progressWidth,
+                        palette: fb.palette
+                    };
+                }
+                return fb;
+            });
+
+            renderHomeBooks();
+        }
+
+        function renderHomeBooks() {
+            const container = document.getElementById('home-books-grid');
+            container.innerHTML = homeBooksList.map((book) => {
+                const data = book.en;
+                const isCompleted = book.progressText === 'Completed' || book.progressWidth !== '0%';
+                return `
+                    <article class="group flex flex-col cursor-pointer" onclick="openHomeBookModal(${book.id})">
+                        <!-- Outer Beige Frame matching Screenshot 2 -->
+                        <div class="bg-bgCard rounded-sm p-6 sm:p-7 mb-3 relative flex items-center justify-center aspect-[4/4.6] overflow-hidden transition duration-300 group-hover:bg-[#E7E3D8]">
+                            <div class="w-[76%] h-[88%] relative book-shadow rounded-[2px] overflow-hidden transition-transform duration-500 group-hover:-translate-y-1.5" style="background-color: ${book.palette.card}; color: ${book.palette.text}">
+                                <img 
+                                    src="${book.image}" 
+                                    alt="${data.title}" 
+                                    class="w-full h-full object-cover relative z-10"
+                                    onerror="this.style.display='none'"
+                                >
+                                <!-- Fallback Minimalist Book Cover matching Figma Screenshot 2 -->
+                                <div class="absolute inset-0 p-4 flex flex-col justify-between border border-black/5">
+                                    <div class="font-serif text-lg sm:text-xl leading-snug font-normal">
+                                        ${data.title}
+                                    </div>
+                                    <div class="w-12 h-12 rounded-full border border-current opacity-60 mx-auto my-auto"></div>
+                                    <div class="text-[9px] uppercase tracking-[0.16em] text-center font-semibold opacity-85 truncate">
+                                        ${data.author}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="w-full h-[3px] bg-borderLight mb-2 overflow-hidden">
+                            <div class="h-full bg-brandGreen transition-all duration-500" style="width: ${book.progressWidth}"></div>
+                        </div>
+
+                        <!-- Meta Row -->
+                        <div class="flex justify-between items-center text-[11px] mb-1.5">
+                            <span class="${isCompleted ? 'text-brandGreen font-medium' : 'text-textMuted'}">
+                                ${book.progressText}
+                            </span>
+                            <span class="text-textMuted flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                5 min
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-xl text-textDark group-hover:text-brandGreen transition leading-snug mb-0.5">
+                            ${data.title}
+                        </h3>
+                        <p class="text-xs text-textMuted">${data.author}</p>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function openHomeBookModal(id) {
+            activeModalBook = homeBooksList.find(b => b.id === id);
+            if (!activeModalBook) return;
+            populateHomeModal();
+            document.getElementById('book-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function populateHomeModal() {
+            if (!activeModalBook) return;
+            const d = activeModalBook[modalLang] || activeModalBook.en;
+            document.getElementById('modal-book-genre').textContent = d.genre || 'Book Summary';
+            document.getElementById('modal-book-title').textContent = d.title;
+            document.getElementById('modal-book-author').textContent = `By ${d.author}`;
+            const img = document.getElementById('modal-book-img');
+            img.src = activeModalBook.image;
+            img.onerror = function() {
+                this.src = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=400&auto=format&fit=crop';
+            };
+            document.getElementById('modal-book-points').innerHTML = (d.points || []).map(p => `<li>${p}</li>`).join('');
+            document.getElementById('modal-book-summary').textContent = d.summary || '';
+
+            const amz = activeModalBook.links?.amazon;
+            const flp = activeModalBook.links?.flipkart;
+            document.getElementById('modal-buy-links').innerHTML = `
+                ${amz ? `<a href="${amz}" target="_blank" class="text-xs font-semibold bg-brandGreen text-white px-4 py-2 rounded-md">Buy on Amazon ↗</a>` : ''}
+                ${flp ? `<a href="${flp}" target="_blank" class="text-xs font-semibold bg-white border border-borderLight text-textDark px-4 py-2 rounded-md">Buy on Flipkart ↗</a>` : ''}
+            `;
+        }
+
+        function setModalLanguage(lang) {
+            modalLang = lang;
+            document.getElementById('modal-lang-en').className = lang === 'en' ? "px-2.5 py-1 rounded bg-brandGreen text-white" : "px-2.5 py-1 rounded text-textMuted";
+            document.getElementById('modal-lang-hi').className = lang === 'hi' ? "px-2.5 py-1 rounded bg-brandGreen text-white" : "px-2.5 py-1 rounded text-textMuted";
+            populateHomeModal();
+        }
+
+        function closeBookModal() {
+            document.getElementById('book-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modal-backdrop').addEventListener('click', closeBookModal);
+
+        window.addEventListener('DOMContentLoaded', loadHomeBooks);
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

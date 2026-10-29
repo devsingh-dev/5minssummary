@@ -1,413 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-       <loc>https://5minssummary.com/</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
+    <loc>https://5minssummary.com/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=genre</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/Books.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=author</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/History.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=title</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/Science.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/Article.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/thibaut-meurisse/dopamine-detox.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/Tools.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/gill-hasson/habits-how-small-changes.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/a-beginners-guide-to-thinking-clearly.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/fiction/literary-fiction/paulo-coelho/the-alchemist.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/decoding-the-rosetta-stone.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=genre&amp;category=business</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/ghost-particles-neutrinos.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=genre&amp;category=self-help</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/how-neuroplasticity-rewires-your-brain.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/summary.html?type=genre&amp;category=technology</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/inside-the-silk-road.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/terms-and-condition/privacy.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/quantum-physics-explained.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/terms-and-condition/terms.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/the-art-of-doing-less-but-better.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/terms-and-condition/affiliate.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/the-indus-valley-mystery.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/terms-and-condition/contact.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://5minssummary.com/posts/the-quiet-power-of-paying-attention.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/alex-banayan/the-third-door.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/posts/the-roman-empire-in-5-mins.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/biography-and-memoir/nikola-tesla/tesla-my-inventions.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/posts/the-secret-life-of-forests.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/dr-spencer-johnson/who-moved-my-cheese.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/posts/weekly-current-affairs-roundup.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/hector-garcia-and-francesc-miralles/ikigai.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/posts/why-small-habits-make-a-big-difference.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/ali-abdaal/feel-good-productivity.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/posts/why-we-remember-stories-not-statistics.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/jake-knapp-and-john-zeratsky/make-time.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/2048.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/nir-eyal/indistractable.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/audio-editor-tool.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/timothy-ferriss/the-4-hour-workweek.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/basic-scientific-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/spirituality-and-religion/eckhart-tolle/the-power-of-now.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/bmi-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/spirituality-and-religion/don-miguel-ruiz/the-four-agreements.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/box-shadow-generator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/ramit-sethi/i-will-teach-you-to-be-rich.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/chess.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/thomas-j-stanley-and-william-d-danko/the-millionaire-next-door.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/color-picker-tool.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology-and-philosophy/jordan-b-peterson/12-rules-for-life.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/css-gradient-generator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology-and-philosophy/leo-tolstoy/a-calendar-of-wisdom.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/currency-converter.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/biography-and-memoir/david-goggins/cant-hurt-me.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/emi-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/spirituality-and-religion/jay-shetty/think-like-a-monk.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/exact-age-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/brian-tracy/eat-that-frog.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/flappy-bird.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/jeff-keller/attitude-is-everything.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/gst-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/science-and-technology/nir-eyal/hooked-how-to-build-habit-forming-products.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/image-compressor.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/technology/walter-isaacson/the-innovators.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/land-area-converter.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/eric-jorgenson/the-almanack-of-naval-ravikant.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/live-weather-tracker.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/biography-and-memoir/ashlee-vance/elon-musk-tesla-spacex-and-the-quest-for-a-fantastic-future.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/minesweeper.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/biography-and-memoir/walter-isaacson/steve-jobs.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/modern-ui-generators.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/history/yuval-noah-harari/sapiens-a-brief-history-of-humankind.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/online-pdf-editor.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology-and-philosophy/malcolm-gladwell/outliers-the-story-of-success.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/sip-calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology-and-philosophy/carol-s-dweck/mindset-the-new-psychology-of-success.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/snake-game.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity-and-self-help/stephen-r-covey/the-7-habits-of-highly-effective-people.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/sudoku.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/joseph-murphy/the-power-of-your-subconcious-mind.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/tetris.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/ben-horowitz/the-hard-thing-about-the-hard-things.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/tic-tac-toe.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/wc-kim-and-r-mauborgne/blue-ocean-strategy.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/tower-stacker.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/jason-fried-and-dh-hansson/rework.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/unit-converter.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/biography-and-memoir/phil-knight/shoe-dog.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/tools/video-editor-tool.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity/greg-mckeown/essentialism.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/about/contact.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/ryan-holiday/ego-is-the-enemy.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/about/editorial-approach.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/mark-manson/the-subtle-art-of-not-giving-a-fck.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/about/our-story.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology-and-philosophy/daniel-kahneman/thinking-fast-and-slow.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/jim-collins/good-to-great.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/dale-carnegie/how-to-win-friends-and-influence-people.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/simon-sinek/start-with-why.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/charles-duhigg/the-power-of-habit.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/napoleon-hill/think-and-grow-rich.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/robin-sharma/the-5-am-club.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/robert-kiyosaki/rich-dad-poor-dad.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/technology/peter-thiel/zero-to-one.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/eric-ries/the-lean-startup.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/productivity/cal-newport/deep-work.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business-and-finance/morgan-housel/psychology-of-money.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/james-clear/atomic-habits.html</loc>
-       <lastmod>2026-08-14T06:44:27+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business/chris-voss/never-split-the-difference.html</loc>
-       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/psychology/ichiro-kishimi-fumitake-koga/the-courage-to-be-disliked.html</loc>
-       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/darren-hardy/the-compound-effect.html</loc>
-       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/business/ray-dalio/principles-life-and-work.html</loc>
-       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://5minssummary.com/books/non-fiction/self-help/austin-kleon/show-your-work.html</loc>
-       <lastmod>2026-08-23T10:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://5minssummary.com/about/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

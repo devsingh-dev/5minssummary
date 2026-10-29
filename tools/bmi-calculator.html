@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>BMI Calculator — Free Online HEALTH Tool | 5minSummary</title>
+    <meta name="description" content="BMI Calculator: अपनी फिटनेस और वजन का स्तर जाँचें। Use this free interactive health utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/bmi-calculator.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="BMI Calculator — Free Online HEALTH Tool | 5minSummary">
+    <meta property="og:description" content="BMI Calculator: अपनी फिटनेस और वजन का स्तर जाँचें। Use this free interactive health utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/bmi-calculator.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BMI Calculator — Free Online HEALTH Tool | 5minSummary">
+    <meta name="twitter:description" content="BMI Calculator: अपनी फिटनेस और वजन का स्तर जाँचें। Use this free interactive health utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://5minssummary.com/tools/bmi-calculator.html","description":"BMI Calculator: अपनी फिटनेस और वजन का स्तर जाँचें। Use this free interactive health utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>HEALTH • BMI Calculator</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+
+<!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/bmi-calculator.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        HEALTH & FITNESS
+                    </span>
+                    <span class="text-xs text-textMuted">• Clinical Body Metrics</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    BMI & Body Metrics Calculator
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Calculate your Body Mass Index (BMI), healthy ideal weight range, Ponderal Index, and daily calorie needs (BMR & TDEE) using Metric or Imperial units.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE BMI CALCULATOR WORKSPACE                       -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-6 sm:p-10 shadow-sm mb-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left 6 Cols: User Inputs -->
+                <div class="lg:col-span-6 space-y-6">
+                    
+                    <!-- Unit & Gender Row -->
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="inline-flex rounded-xl bg-bgCard p-1 border border-borderLight">
+                            <button id="bmi-unit-metric" onclick="setBmiUnit('metric')" class="px-4 py-2 rounded-lg text-xs font-semibold bg-brandGreen text-white transition">
+                                Metric (kg / cm)
+                            </button>
+                            <button id="bmi-unit-imperial" onclick="setBmiUnit('imperial')" class="px-4 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition">
+                                Imperial (lbs / ft-in)
+                            </button>
+                        </div>
+
+                        <div class="inline-flex rounded-xl bg-bgCard p-1 border border-borderLight">
+                            <button id="bmi-gen-male" onclick="setBmiGender('male')" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-white text-textDark shadow-2xs transition">
+                                Male
+                            </button>
+                            <button id="bmi-gen-female" onclick="setBmiGender('female')" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition">
+                                Female
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Height Input (Metric cm) -->
+                    <div id="height-metric-box" class="bg-bgMain border border-borderLight rounded-xl p-4">
+                        <div class="flex justify-between text-sm font-medium mb-2">
+                            <span class="text-textMuted">Height (cm)</span>
+                            <span id="label-height-cm" class="font-bold text-textDark">170 cm (5' 7")</span>
+                        </div>
+                        <input type="range" id="slider-height-cm" min="100" max="230" step="1" value="170" class="w-full cursor-pointer">
+                    </div>
+
+                    <!-- Height Input (Imperial ft & in) -->
+                    <div id="height-imperial-box" class="hidden bg-bgMain border border-borderLight rounded-xl p-4">
+                        <label class="block text-sm font-medium text-textMuted mb-2">Height (Feet & Inches)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-textMuted">Feet (ft)</span>
+                                <input type="number" id="input-height-ft" min="3" max="7" value="5" class="w-full bg-white border border-borderLight rounded-lg px-3 py-2 text-base font-semibold text-textDark mt-1">
+                            </div>
+                            <div>
+                                <span class="text-xs text-textMuted">Inches (in)</span>
+                                <input type="number" id="input-height-in" min="0" max="11" value="7" class="w-full bg-white border border-borderLight rounded-lg px-3 py-2 text-base font-semibold text-textDark mt-1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weight Input -->
+                    <div class="bg-bgMain border border-borderLight rounded-xl p-4">
+                        <div class="flex justify-between text-sm font-medium mb-2">
+                            <span id="weight-title-label" class="text-textMuted">Weight (kg)</span>
+                            <span id="label-weight-val" class="font-bold text-textDark">68 kg</span>
+                        </div>
+                        <input type="range" id="slider-weight" min="25" max="200" step="0.5" value="68" class="w-full cursor-pointer">
+                    </div>
+
+                    <!-- Age & Activity Level -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-bgMain border border-borderLight rounded-xl p-4">
+                            <div class="flex justify-between text-xs font-semibold uppercase text-textMuted mb-2">
+                                <span>Age (Years)</span>
+                                <span id="label-age" class="text-textDark">28 yrs</span>
+                            </div>
+                            <input type="range" id="slider-age" min="10" max="90" step="1" value="28" class="w-full cursor-pointer">
+                        </div>
+
+                        <div class="bg-bgMain border border-borderLight rounded-xl p-4">
+                            <label class="block text-xs font-semibold uppercase text-textMuted mb-1.5">Activity Level</label>
+                            <select id="select-activity" class="w-full bg-white border border-borderLight rounded-lg px-3 py-2 text-xs font-semibold text-textDark focus:outline-none">
+                                <option value="1.2">Sedentary (Desk job, little exercise)</option>
+                                <option value="1.375" selected>Lightly Active (1–3 days/week)</option>
+                                <option value="1.55">Moderately Active (3–5 days/week)</option>
+                                <option value="1.725">Very Active (6–7 days/week)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right 6 Cols: Comprehensive BMI Results Dashboard -->
+                <div class="lg:col-span-6 bg-bgCard/60 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-6">
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-textMuted mb-1">Your Body Mass Index</p>
+                            <div class="flex items-baseline gap-3">
+                                <span id="bmi-score-display" class="font-serif text-5xl sm:text-6xl font-semibold text-brandGreen">23.5</span>
+                                <span class="text-xs text-textMuted">kg/m²</span>
+                            </div>
+                        </div>
+                        <span id="bmi-category-badge" class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
+                            Normal Weight
+                        </span>
+                    </div>
+
+                    <!-- Visual BMI Spectrum Bar -->
+                    <div class="space-y-2">
+                        <div class="relative h-3.5 w-full rounded-full overflow-hidden flex">
+                            <div class="w-[22%] bg-sky-400" title="Underweight (<18.5)"></div>
+                            <div class="w-[33%] bg-emerald-500" title="Normal (18.5 - 24.9)"></div>
+                            <div class="w-[23%] bg-amber-400" title="Overweight (25 - 29.9)"></div>
+                            <div class="w-[22%] bg-rose-500" title="Obese (30+)"></div>
+                        </div>
+                        <!-- Pointer Indicator -->
+                        <div class="relative h-4">
+                            <div id="bmi-gauge-pointer" class="absolute -top-1.5 transition-all duration-300" style="left: 42%;">
+                                <span class="block w-3 h-3 rotate-45 bg-textDark border-2 border-white shadow-sm"></span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between text-[10px] font-semibold text-textMuted uppercase">
+                            <span>15 (Under)</span>
+                            <span>18.5 (Normal)</span>
+                            <span>25 (Over)</span>
+                            <span>30+ (Obese)</span>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Banner -->
+                    <p id="bmi-advice-text" class="text-xs sm:text-sm text-textDark/90 bg-white border border-borderLight rounded-xl p-3.5 leading-relaxed">
+                        Great job! Your weight is within the healthy WHO range for your height.
+                    </p>
+
+                    <!-- Secondary Health Metrics Grid -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <div class="bg-white border border-borderLight rounded-xl p-3.5">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-textMuted">Healthy Weight Range</p>
+                            <p id="bmi-ideal-range" class="font-serif text-lg sm:text-xl font-semibold text-textDark mt-0.5">53.5 – 72.0 kg</p>
+                        </div>
+                        <div class="bg-white border border-borderLight rounded-xl p-3.5">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-textMuted">Ponderal Index (PI)</p>
+                            <p id="bmi-ponderal" class="font-serif text-lg sm:text-xl font-semibold text-textDark mt-0.5">13.8 kg/m³</p>
+                        </div>
+                        <div class="bg-white border border-borderLight rounded-xl p-3.5">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-textMuted">Basal Metabolic Rate</p>
+                            <p id="bmi-bmr" class="font-serif text-lg sm:text-xl font-semibold text-brandGreen mt-0.5">1,638 kcal/day</p>
+                        </div>
+                        <div class="bg-white border border-borderLight rounded-xl p-3.5">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-textMuted">Daily Calorie Needs</p>
+                            <p id="bmi-tdee" class="font-serif text-lg sm:text-xl font-semibold text-[#FF6B00] mt-0.5">2,252 kcal/day</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO USE & HOW WE CALCULATE (English Guide)              -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO USE THIS CALCULATOR</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Understanding Your Body Metrics</h2>
+                <ol class="space-y-3 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
+                    <li><strong>Select Units & Gender:</strong> Choose between <strong>Metric</strong> (kilograms and centimeters) or <strong>Imperial</strong> (pounds, feet, and inches) at the top.</li>
+                    <li><strong>Enter Height & Weight:</strong> Slide the height and weight controls to see your real-time BMI score and position on the color-coded WHO spectrum.</li>
+                    <li><strong>Check Ideal Weight & Calorie Goals:</strong> Set your age and weekly activity level to view your Basal Metabolic Rate (BMR) and Daily Maintenance Calories (TDEE).</li>
+                </ol>
+            </div>
+
+            <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">FORMULAS USED</p>
+                <h3 class="font-serif text-2xl text-textDark">How We Calculate BMI & BMR</h3>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    <strong>Body Mass Index (BMI)</strong> is calculated using the standard World Health Organization (WHO) equation: $\text{BMI} = \frac{\text{Weight (kg)}}{\text{Height (m)}^2}$.
+                </p>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    <strong>Healthy BMI Categories:</strong> Underweight ($< 18.5$), Normal weight ($18.5 – 24.9$), Overweight ($25.0 – 29.9$), and Obesity ($\ge 30.0$). Daily calorie expenditure is derived using the clinically validated <strong>Mifflin-St Jeor Equation</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED BMI CALCULATOR JAVASCRIPT                         -->
+        <!-- ============================================================= -->
+        <script>
+            let bmiUnit = 'metric';
+            let bmiGender = 'male';
+
+            const sliderHeightCm = document.getElementById('slider-height-cm');
+            const inputHeightFt = document.getElementById('input-height-ft');
+            const inputHeightIn = document.getElementById('input-height-in');
+            const sliderWeight = document.getElementById('slider-weight');
+            const sliderAge = document.getElementById('slider-age');
+            const selectActivity = document.getElementById('select-activity');
+
+            function setBmiUnit(unit) {
+                if (bmiUnit === unit) return;
+                bmiUnit = unit;
+
+                document.getElementById('bmi-unit-metric').className = unit === 'metric'
+                    ? "px-4 py-2 rounded-lg text-xs font-semibold bg-brandGreen text-white transition"
+                    : "px-4 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition";
+                document.getElementById('bmi-unit-imperial').className = unit === 'imperial'
+                    ? "px-4 py-2 rounded-lg text-xs font-semibold bg-brandGreen text-white transition"
+                    : "px-4 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition";
+
+                document.getElementById('height-metric-box').classList.toggle('hidden', unit !== 'metric');
+                document.getElementById('height-imperial-box').classList.toggle('hidden', unit !== 'imperial');
+
+                if (unit === 'imperial') {
+                    const currentKg = parseFloat(sliderWeight.value);
+                    sliderWeight.min = 55;
+                    sliderWeight.max = 440;
+                    sliderWeight.step = 1;
+                    sliderWeight.value = Math.round(currentKg * 2.20462);
+                    document.getElementById('weight-title-label').textContent = "Weight (lbs)";
+                } else {
+                    const currentLbs = parseFloat(sliderWeight.value);
+                    sliderWeight.min = 25;
+                    sliderWeight.max = 200;
+                    sliderWeight.step = 0.5;
+                    sliderWeight.value = (currentLbs / 2.20462).toFixed(1);
+                    document.getElementById('weight-title-label').textContent = "Weight (kg)";
+                }
+                calculateBmiMetrics();
+            }
+
+            function setBmiGender(gender) {
+                bmiGender = gender;
+                document.getElementById('bmi-gen-male').className = gender === 'male'
+                    ? "px-3.5 py-2 rounded-lg text-xs font-semibold bg-white text-textDark shadow-2xs transition"
+                    : "px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition";
+                document.getElementById('bmi-gen-female').className = gender === 'female'
+                    ? "px-3.5 py-2 rounded-lg text-xs font-semibold bg-white text-textDark shadow-2xs transition"
+                    : "px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition";
+                calculateBmiMetrics();
+            }
+
+            function calculateBmiMetrics() {
+                let heightCm = 170;
+                let weightKg = 68;
+
+                if (bmiUnit === 'metric') {
+                    heightCm = parseFloat(sliderHeightCm.value);
+                    weightKg = parseFloat(sliderWeight.value);
+                    const totalInches = Math.round(heightCm / 2.54);
+                    const ft = Math.floor(totalInches / 12);
+                    const inches = totalInches % 12;
+                    document.getElementById('label-height-cm').textContent = `${heightCm} cm (${ft}' ${inches}")`;
+                    document.getElementById('label-weight-val').textContent = `${weightKg} kg`;
+                } else {
+                    const ft = parseFloat(inputHeightFt.value) || 5;
+                    const inches = parseFloat(inputHeightIn.value) || 0;
+                    heightCm = ((ft * 12) + inches) * 2.54;
+                    const lbs = parseFloat(sliderWeight.value);
+                    weightKg = lbs / 2.20462;
+                    document.getElementById('label-weight-val').textContent = `${lbs} lbs (${weightKg.toFixed(1)} kg)`;
+                }
+
+                const age = parseInt(sliderAge.value, 10);
+                document.getElementById('label-age').textContent = `${age} yrs`;
+
+                const heightM = heightCm / 100;
+                const bmi = weightKg / (heightM * heightM);
+                const ponderal = weightKg / Math.pow(heightM, 3);
+
+                // Ideal weight range (BMI 18.5 to 24.9)
+                const minHealthyKg = 18.5 * heightM * heightM;
+                const maxHealthyKg = 24.9 * heightM * heightM;
+
+                // BMR (Mifflin-St Jeor)
+                let bmr = (10 * weightKg) + (6.25 * heightCm) - (5 * age);
+                bmr += (bmiGender === 'male') ? 5 : -161;
+                const tdee = bmr * parseFloat(selectActivity.value);
+
+                // Update UI
+                document.getElementById('bmi-score-display').textContent = bmi.toFixed(1);
+                document.getElementById('bmi-ponderal').textContent = `${ponderal.toFixed(1)} kg/m³`;
+                document.getElementById('bmi-bmr').textContent = `${Math.round(bmr).toLocaleString()} kcal/day`;
+                document.getElementById('bmi-tdee').textContent = `${Math.round(tdee).toLocaleString()} kcal/day`;
+
+                if (bmiUnit === 'metric') {
+                    document.getElementById('bmi-ideal-range').textContent = `${minHealthyKg.toFixed(1)} – ${maxHealthyKg.toFixed(1)} kg`;
+                } else {
+                    document.getElementById('bmi-ideal-range').textContent = `${Math.round(minHealthyKg * 2.20462)} – ${Math.round(maxHealthyKg * 2.20462)} lbs`;
+                }
+
+                // Category & Advice
+                const badgeEl = document.getElementById('bmi-category-badge');
+                const adviceEl = document.getElementById('bmi-advice-text');
+
+                if (bmi < 18.5) {
+                    badgeEl.textContent = "Underweight";
+                    badgeEl.className = "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-100 text-sky-800";
+                    const gainNeeded = (minHealthyKg - weightKg).toFixed(1);
+                    adviceEl.textContent = `You are currently below the standard weight range. Gaining approximately ${gainNeeded} kg will bring you to a BMI of 18.5.`;
+                } else if (bmi <= 24.9) {
+                    badgeEl.textContent = "Normal Weight";
+                    badgeEl.className = "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800";
+                    adviceEl.textContent = `Great job! Your BMI of ${bmi.toFixed(1)} falls squarely within the healthy WHO range for your height.`;
+                } else if (bmi <= 29.9) {
+                    badgeEl.textContent = "Overweight";
+                    badgeEl.className = "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800";
+                    const loseNeeded = (weightKg - maxHealthyKg).toFixed(1);
+                    adviceEl.textContent = `You are slightly above the ideal range. Losing around ${loseNeeded} kg will bring your BMI back under 24.9.`;
+                } else {
+                    badgeEl.textContent = "Obese";
+                    badgeEl.className = "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-100 text-rose-800";
+                    const loseNeeded = (weightKg - maxHealthyKg).toFixed(1);
+                    adviceEl.textContent = `For optimal cardiovascular and metabolic health, aiming to lose approximately ${loseNeeded} kg is recommended.`;
+                }
+
+                // Gauge Pointer Position (Scale from BMI 13 to 35)
+                const pct = Math.min(96, Math.max(2, ((bmi - 13) / (35 - 13)) * 100));
+                document.getElementById('bmi-gauge-pointer').style.left = `${pct}%`;
+            }
+
+            [sliderHeightCm, inputHeightFt, inputHeightIn, sliderWeight, sliderAge, selectActivity].forEach(el => {
+                el.addEventListener('input', calculateBmiMetrics);
+            });
+
+            calculateBmiMetrics();
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

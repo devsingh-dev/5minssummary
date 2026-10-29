@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>Minesweeper — Free Online LOGIC Tool | 5minSummary</title>
+    <meta name="description" content="Minesweeper: बिना बम फोड़े ग्रिड को क्लियर करें। Use this free interactive logic utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/minesweeper.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="Minesweeper — Free Online LOGIC Tool | 5minSummary">
+    <meta property="og:description" content="Minesweeper: बिना बम फोड़े ग्रिड को क्लियर करें। Use this free interactive logic utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/minesweeper.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Minesweeper — Free Online LOGIC Tool | 5minSummary">
+    <meta name="twitter:description" content="Minesweeper: बिना बम फोड़े ग्रिड को क्लियर करें। Use this free interactive logic utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Minesweeper","url":"https://5minssummary.com/tools/minesweeper.html","description":"Minesweeper: बिना बम फोड़े ग्रिड को क्लियर करें। Use this free interactive logic utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>LOGIC • Minesweeper</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+
+<!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/minesweeper.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        LOGIC & DEDUCTION
+                    </span>
+                    <span class="text-xs text-textMuted">• Guaranteed Safe First Click</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    Minesweeper Logic Grid
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Use numerical clues to deduce hidden mine locations and clear the board without triggering a detonation. Features mobile flag mode, safe first-click generation, and radar hints.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE MINESWEEPER WORKSPACE                          -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-5 sm:p-10 shadow-sm mb-12">
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                
+                <!-- Top Difficulty & Mode Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-borderLight">
+                    <div class="inline-flex rounded-xl bg-bgCard p-1 border border-borderLight">
+                        <button id="ms-diff-easy" onclick="setMinesweeperDiff('easy')" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-brandGreen text-white transition">
+                            Beginner (9×9)
+                        </button>
+                        <button id="ms-diff-medium" onclick="setMinesweeperDiff('medium')" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition">
+                            Intermediate (12×12)
+                        </button>
+                        <button id="ms-diff-hard" onclick="setMinesweeperDiff('hard')" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition">
+                            Expert (16×12)
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button id="ms-flag-toggle" onclick="toggleFlagMode()" class="px-3.5 py-2 rounded-xl border border-borderLight bg-bgMain text-xs font-semibold text-textDark hover:border-brandGreen transition flex items-center gap-1.5">
+                            <span>⛏️ Mode: Dig</span>
+                        </button>
+                        <button id="ms-hint-btn" onclick="useRadarHint()" class="px-3.5 py-2 rounded-xl border border-borderLight bg-[#E3EFEA] text-brandGreen text-xs font-semibold hover:opacity-90 transition">
+                            💡 Hint (3)
+                        </button>
+                        <button onclick="initMinesweeper()" class="px-4 py-2 rounded-xl bg-brandGreen hover:bg-brandGreenHover text-white text-xs font-semibold transition">
+                            New Grid ↻
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Telemetry HUD -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-bgMain border border-borderLight rounded-xl p-3 text-center">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Mines Remaining</span>
+                        <span id="ms-mines-left" class="font-mono text-2xl font-bold text-[#FF6B00]">10</span>
+                    </div>
+                    <div class="bg-bgMain border border-borderLight rounded-xl p-3 text-center">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Elapsed Time</span>
+                        <span id="ms-timer" class="font-mono text-2xl font-bold text-textDark">00:00</span>
+                    </div>
+                    <div class="bg-bgMain border border-borderLight rounded-xl p-3 text-center">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brandGreen block">Best Time</span>
+                        <span id="ms-best-time" class="font-mono text-2xl font-bold text-brandGreen">--:--</span>
+                    </div>
+                </div>
+
+                <!-- Status Banner -->
+                <div id="ms-status-bar" class="bg-bgCard/70 border border-borderLight rounded-xl px-4 py-2.5 flex items-center justify-between text-xs">
+                    <span id="ms-status-text" class="font-medium text-textDark">Click any square to begin. Your first click is always 100% safe!</span>
+                    <span class="text-textMuted hidden sm:inline">Right-click (or toggle Flag mode) to mark mines 🚩</span>
+                </div>
+
+                <!-- Minesweeper Grid Stage -->
+                <div class="overflow-x-auto pb-2 flex justify-center">
+                    <div id="ms-grid" class="inline-grid gap-1.5 bg-[#DED9CC] p-3 rounded-2xl border border-borderLight shadow-inner select-none">
+                        <!-- Cells Injected by JS -->
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO PLAY & DEDUCTION MATH (English Guide)               -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO PLAY MINESWEEPER</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Rules, Controls & Classic Patterns</h2>
+                <ol class="space-y-3 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
+                    <li><strong>Guaranteed Safe Opening:</strong> Click any tile on the grid. Mines are generated <em>after</em> your first click so your opening square and its immediate neighbors are always clear.</li>
+                    <li><strong>Read the Number Clues:</strong> Every revealed number ($1\text{ to }8$) tells you the exact count of mines hidden inside the $8$ surrounding squares (horizontally, vertically, and diagonally).</li>
+                    <li><strong>Flag Suspected Mines:</strong> On desktop, <strong>Right-Click</strong> a tile to place a red flag (🚩). On mobile or touchscreens, tap the <strong>⛏️ Mode: Dig / 🚩 Mode: Flag</strong> toggle button at the top.</li>
+                    <li><strong>Use Radar Hints:</strong> Stuck on a 50/50 guess? Click <strong>💡 Hint</strong> (up to 3 times per match) to safely reveal an unflagged safe square.</li>
+                </ol>
+            </div>
+
+            <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">ALGORITHMIC LOGIC</p>
+                <h3 class="font-serif text-2xl text-textDark">How Flood-Fill & Constraint Math Work</h3>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    When you uncover a square with $0$ adjacent mines, our engine runs a recursive <strong>Breadth-First Search (BFS) flood-fill algorithm</strong>—automatically expanding outward across all connected zero-value cells and their numbered borders.
+                </p>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    <strong>The 1–2–1 Pattern:</strong> Whenever you see a flat wall of unrevealed tiles bordered by <code>1 - 2 - 1</code>, logic dictates that the mines must sit directly beneath the two <code>1</code>s, leaving the square beneath the <code>2</code> completely safe.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED MINESWEEPER JAVASCRIPT                            -->
+        <!-- ============================================================= -->
+        <script>
+            const MS_CONFIGS = {
+                easy:   { rows: 9,  cols: 9,  mines: 10, cellSize: 'w-9 h-9 sm:w-11 sm:h-11 text-sm sm:text-base' },
+                medium: { rows: 12, cols: 12, mines: 22, cellSize: 'w-8 h-8 sm:w-9 sm:h-9 text-xs sm:text-sm' },
+                hard:   { rows: 12, cols: 16, mines: 38, cellSize: 'w-7 h-7 sm:w-8 sm:h-8 text-xs' }
+            };
+
+            const NUM_COLORS = {
+                1: 'text-blue-600',
+                2: 'text-emerald-700',
+                3: 'text-rose-600',
+                4: 'text-purple-700',
+                5: 'text-amber-800',
+                6: 'text-teal-700',
+                7: 'text-gray-900',
+                8: 'text-gray-500'
+            };
+
+            let msDiff = 'easy';
+            let msBoard = [];
+            let msFirstClick = true;
+            let msGameOver = false;
+            let msFlagMode = false;
+            let msFlagsPlaced = 0;
+            let msHintsLeft = 3;
+            let msSeconds = 0;
+            let msTimerId = null;
+
+            const msGridEl = document.getElementById('ms-grid');
+            const msMinesLeftEl = document.getElementById('ms-mines-left');
+            const msTimerEl = document.getElementById('ms-timer');
+            const msBestEl = document.getElementById('ms-best-time');
+            const msStatusText = document.getElementById('ms-status-text');
+            const msHintBtn = document.getElementById('ms-hint-btn');
+            const msFlagToggle = document.getElementById('ms-flag-toggle');
+
+            function formatMsTime(sec) {
+                const m = String(Math.floor(sec / 60)).padStart(2, '0');
+                const s = String(sec % 60).padStart(2, '0');
+                return `${m}:${s}`;
+            }
+
+            function setMinesweeperDiff(diff) {
+                msDiff = diff;
+                ['easy', 'medium', 'hard'].forEach(d => {
+                    document.getElementById(`ms-diff-${d}`).className = d === diff
+                        ? "px-3.5 py-2 rounded-lg text-xs font-semibold bg-brandGreen text-white transition"
+                        : "px-3.5 py-2 rounded-lg text-xs font-semibold text-textMuted hover:text-textDark transition";
+                });
+                initMinesweeper();
+            }
+
+            function toggleFlagMode() {
+                msFlagMode = !msFlagMode;
+                msFlagToggle.innerHTML = msFlagMode
+                    ? '<span class="text-rose-600">🚩 Mode: Flag</span>'
+                    : '<span>⛏️ Mode: Dig</span>';
+                msFlagToggle.className = msFlagMode
+                    ? "px-3.5 py-2 rounded-xl border border-rose-400 bg-rose-50 text-xs font-bold text-rose-700 transition flex items-center gap-1.5"
+                    : "px-3.5 py-2 rounded-xl border border-borderLight bg-bgMain text-xs font-semibold text-textDark hover:border-brandGreen transition flex items-center gap-1.5";
+            }
+
+            function initMinesweeper() {
+                if (msTimerId) clearInterval(msTimerId);
+                msTimerId = null;
+                msSeconds = 0;
+                msFirstClick = true;
+                msGameOver = false;
+                msFlagsPlaced = 0;
+                msHintsLeft = 3;
+
+                const cfg = MS_CONFIGS[msDiff];
+                msBoard = Array.from({ length: cfg.rows }, (_, r) =>
+                    Array.from({ length: cfg.cols }, (_, c) => ({
+                        r, c, mine: false, revealed: false, flagged: false, count: 0
+                    }))
+                );
+
+                msGridEl.style.gridTemplateColumns = `repeat(${cfg.cols}, minmax(0, 1fr))`;
+                msMinesLeftEl.textContent = cfg.mines;
+                msTimerEl.textContent = '00:00';
+                msHintBtn.textContent = `💡 Hint (${msHintsLeft})`;
+                msHintBtn.disabled = false;
+                msStatusText.textContent = 'Click any square to begin. Your first click is always 100% safe!';
+                msStatusText.className = 'font-medium text-textDark';
+
+                const savedBest = localStorage.getItem(`5min_ms_best_${msDiff}`);
+                msBestEl.textContent = savedBest ? formatMsTime(parseInt(savedBest, 10)) : '--:--';
+
+                renderMsBoard();
+            }
+
+            function placeMinesSafely(safeR, safeC) {
+                const cfg = MS_CONFIGS[msDiff];
+                let placed = 0;
+                while (placed < cfg.mines) {
+                    const r = Math.floor(Math.random() * cfg.rows);
+                    const c = Math.floor(Math.random() * cfg.cols);
+                    const isSafeZone = Math.abs(r - safeR) <= 1 && Math.abs(c - safeC) <= 1;
+                    if (!msBoard[r][c].mine && !isSafeZone) {
+                        msBoard[r][c].mine = true;
+                        placed++;
+                    }
+                }
+
+                // Calculate neighbor counts
+                for (let r = 0; r < cfg.rows; r++) {
+                    for (let c = 0; c < cfg.cols; c++) {
+                        if (msBoard[r][c].mine) continue;
+                        let count = 0;
+                        getNeighbors(r, c).forEach(n => { if (n.mine) count++; });
+                        msBoard[r][c].count = count;
+                    }
+                }
+            }
+
+            function getNeighbors(r, c) {
+                const cfg = MS_CONFIGS[msDiff];
+                const list = [];
+                for (let dr = -1; dr <= 1; dr++) {
+                    for (let dc = -1; dc <= 1; dc++) {
+                        if (dr === 0 && dc === 0) continue;
+                        const nr = r + dr, nc = c + dc;
+                        if (nr >= 0 && nr < cfg.rows && nc >= 0 && nc < cfg.cols) {
+                            list.push(msBoard[nr][nc]);
+                        }
+                    }
+                }
+                return list;
+            }
+
+            function handleCellClick(r, c) {
+                if (msGameOver) return;
+                const cell = msBoard[r][c];
+
+                if (msFlagMode) {
+                    toggleCellFlag(r, c);
+                    return;
+                }
+                if (cell.flagged || cell.revealed) return;
+
+                if (msFirstClick) {
+                    msFirstClick = false;
+                    placeMinesSafely(r, c);
+                    msTimerId = setInterval(() => {
+                        msSeconds++;
+                        msTimerEl.textContent = formatMsTime(msSeconds);
+                    }, 1000);
+                }
+
+                if (cell.mine) {
+                    triggerMsEnd(false, r, c);
+                    return;
+                }
+
+                revealCellFlood(r, c);
+                checkMsWin();
+                renderMsBoard();
+            }
+
+            function toggleCellFlag(r, c) {
+                if (msGameOver) return;
+                const cell = msBoard[r][c];
+                if (cell.revealed) return;
+
+                cell.flagged = !cell.flagged;
+                msFlagsPlaced += cell.flagged ? 1 : -1;
+                msMinesLeftEl.textContent = MS_CONFIGS[msDiff].mines - msFlagsPlaced;
+                renderMsBoard();
+            }
+
+            function revealCellFlood(startR, startC) {
+                const queue = [msBoard[startR][startC]];
+                while (queue.length > 0) {
+                    const curr = queue.shift();
+                    if (curr.revealed || curr.flagged) continue;
+                    curr.revealed = true;
+                    if (curr.count === 0 && !curr.mine) {
+                        getNeighbors(curr.r, curr.c).forEach(n => {
+                            if (!n.revealed && !n.flagged) queue.push(n);
+                        });
+                    }
+                }
+            }
+
+            function useRadarHint() {
+                if (msGameOver || msHintsLeft <= 0) return;
+                if (msFirstClick) {
+                    handleCellClick(Math.floor(MS_CONFIGS[msDiff].rows / 2), Math.floor(MS_CONFIGS[msDiff].cols / 2));
+                    return;
+                }
+
+                const unrevealedSafe = [];
+                msBoard.forEach(row => row.forEach(cell => {
+                    if (!cell.mine && !cell.revealed) unrevealedSafe.push(cell);
+                }));
+
+                if (unrevealedSafe.length === 0) return;
+                const pick = unrevealedSafe[Math.floor(Math.random() * unrevealedSafe.length)];
+                pick.flagged = false;
+                revealCellFlood(pick.r, pick.c);
+                msHintsLeft--;
+                msHintBtn.textContent = `💡 Hint (${msHintsLeft})`;
+                if (msHintsLeft === 0) msHintBtn.disabled = true;
+
+                checkMsWin();
+                renderMsBoard();
+            }
+
+            function checkMsWin() {
+                const cfg = MS_CONFIGS[msDiff];
+                let unrevealedCount = 0;
+                msBoard.forEach(row => row.forEach(c => {
+                    if (!c.revealed) unrevealedCount++;
+                }));
+                if (unrevealedCount === cfg.mines) {
+                    triggerMsEnd(true);
+                }
+            }
+
+            function triggerMsEnd(won, boomR = -1, boomC = -1) {
+                msGameOver = true;
+                if (msTimerId) clearInterval(msTimerId);
+
+                msBoard.forEach(row => row.forEach(cell => {
+                    if (cell.mine) {
+                        if (won) cell.flagged = true;
+                        else cell.revealed = true;
+                    }
+                    if (cell.r === boomR && cell.c === boomC) {
+                        cell.exploded = true;
+                    }
+                }));
+
+                if (won) {
+                    msMinesLeftEl.textContent = '0';
+                    msStatusText.textContent = `🏆 Board Cleared in ${formatMsTime(msSeconds)}! Flawless deduction.`;
+                    msStatusText.className = 'font-bold text-brandGreen';
+                    const key = `5min_ms_best_${msDiff}`;
+                    const prev = localStorage.getItem(key);
+                    if (!prev || msSeconds < parseInt(prev, 10)) {
+                        localStorage.setItem(key, msSeconds);
+                        msBestEl.textContent = formatMsTime(msSeconds);
+                    }
+                } else {
+                    msStatusText.textContent = '💥 BOOM! You triggered a hidden mine. Click New Grid to try again.';
+                    msStatusText.className = 'font-bold text-rose-600';
+                }
+
+                renderMsBoard();
+            }
+
+            function renderMsBoard() {
+                const cfg = MS_CONFIGS[msDiff];
+                msGridEl.innerHTML = '';
+
+                for (let r = 0; r < cfg.rows; r++) {
+                    for (let c = 0; c < cfg.cols; c++) {
+                        const cell = msBoard[r][c];
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.onclick = () => handleCellClick(r, c);
+                        btn.oncontextmenu = (e) => { e.preventDefault(); toggleCellFlag(r, c); };
+
+                        let styleClass = 'bg-[#FBFBF8] hover:bg-white border border-[#C8C3B4] shadow-2xs';
+                        let content = '';
+
+                        if (cell.revealed) {
+                            if (cell.exploded) {
+                                styleClass = 'bg-rose-500 text-white border border-rose-700';
+                                content = '💥';
+                            } else if (cell.mine) {
+                                styleClass = 'bg-rose-100 text-textDark border border-rose-300';
+                                content = '💣';
+                            } else {
+                                styleClass = 'bg-[#EFECE4] border border-[#DDD8C8]';
+                                if (cell.count > 0) {
+                                    content = cell.count;
+                                    styleClass += ` font-mono font-extrabold ${NUM_COLORS[cell.count]}`;
+                                }
+                            }
+                        } else if (cell.flagged) {
+                            styleClass = 'bg-amber-50 border border-amber-300';
+                            content = '🚩';
+                        }
+
+                        btn.className = `${cfg.cellSize} rounded-lg flex items-center justify-center transition-colors select-none ${styleClass}`;
+                        btn.textContent = content;
+                        msGridEl.appendChild(btn);
+                    }
+                }
+            }
+
+            initMinesweeper();
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

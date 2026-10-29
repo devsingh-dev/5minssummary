@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>Tetris — Free Online PUZZLE Tool | 5minSummary</title>
+    <meta name="description" content="Tetris: क्लासिक ब्लॉक-पज़ल गेम का मज़ा लें। Use this free interactive puzzle utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/tetris.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="Tetris — Free Online PUZZLE Tool | 5minSummary">
+    <meta property="og:description" content="Tetris: क्लासिक ब्लॉक-पज़ल गेम का मज़ा लें। Use this free interactive puzzle utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/tetris.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tetris — Free Online PUZZLE Tool | 5minSummary">
+    <meta name="twitter:description" content="Tetris: क्लासिक ब्लॉक-पज़ल गेम का मज़ा लें। Use this free interactive puzzle utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tetris","url":"https://5minssummary.com/tools/tetris.html","description":"Tetris: क्लासिक ब्लॉक-पज़ल गेम का मज़ा लें। Use this free interactive puzzle utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>PUZZLE • Tetris</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+<!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/tetris.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        PUZZLE & SPATIAL LOGIC
+                    </span>
+                    <span class="text-xs text-textMuted">• Ghost Guide, Hold Slot & Next Queue</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    Tetris Block Puzzle
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Rotate, position, and drop falling geometric Tetrominoes to clear horizontal lines. Features a ghost landing guide, piece hold slot, progressive speed levels, and high-score tracking.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE TETRIS WORKSPACE                               -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-5 sm:p-10 shadow-sm mb-12">
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                    
+                    <!-- Left 7 Cols: 10x20 Tetris Canvas & Mobile Touch Pad -->
+                    <div class="md:col-span-7 flex flex-col items-center">
+                        <div class="relative rounded-2xl overflow-hidden border-2 border-[#191918] bg-[#191918] shadow-md select-none">
+                            <canvas id="tetris-canvas" width="280" height="560" class="block"></canvas>
+
+                            <!-- Start / Pause / Game Over Overlay -->
+                            <div id="tet-overlay" class="absolute inset-0 bg-[#191918]/85 backdrop-blur-2xs flex flex-col items-center justify-center p-6 text-center text-white">
+                                <span id="tet-overlay-badge" class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 mb-2">
+                                    CLASSIC PUZZLE
+                                </span>
+                                <h2 id="tet-overlay-title" class="font-serif text-4xl mb-2">Tetris</h2>
+                                <p id="tet-overlay-sub" class="text-xs text-gray-300 mb-6 max-w-[220px]">
+                                    Stack blocks, clear up to 4 lines at once for a Tetris bonus, and survive increasing speeds.
+                                </p>
+                                <button onclick="startTetrisGame()" class="bg-brandGreen hover:bg-brandGreenHover text-white text-sm font-semibold px-7 py-3 rounded-xl transition shadow-md">
+                                    ▶ Start Game
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- On-Screen Touch / Click Controls -->
+                        <div class="mt-5 grid grid-cols-5 gap-2 w-full max-w-[300px]">
+                            <button onclick="tetAction('LEFT')" class="py-3 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen font-bold text-base active:scale-95 transition" title="Move Left">←</button>
+                            <button onclick="tetAction('ROTATE')" class="py-3 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen font-bold text-sm active:scale-95 transition" title="Rotate">↻</button>
+                            <button onclick="tetAction('DOWN')" class="py-3 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen font-bold text-base active:scale-95 transition" title="Soft Drop">↓</button>
+                            <button onclick="tetAction('RIGHT')" class="py-3 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen font-bold text-base active:scale-95 transition" title="Move Right">→</button>
+                            <button onclick="tetAction('DROP')" class="py-3 rounded-xl bg-brandGreen text-white font-bold text-xs active:scale-95 transition" title="Hard Drop">⏬</button>
+                        </div>
+                    </div>
+
+                    <!-- Right 5 Cols: Next & Hold Previews, Telemetry & Controls -->
+                    <div class="md:col-span-5 space-y-4">
+                        
+                        <!-- Next & Hold Mini Canvases -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-bgMain border border-borderLight rounded-2xl p-3.5 text-center">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-brandGreen block mb-2">Next Piece</span>
+                                <canvas id="tet-next-canvas" width="100" height="80" class="mx-auto bg-[#191918] rounded-xl"></canvas>
+                            </div>
+                            <div class="bg-bgMain border border-borderLight rounded-2xl p-3.5 text-center">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-textMuted">Hold (C)</span>
+                                    <button onclick="tetAction('HOLD')" class="text-[10px] font-bold text-brandGreen hover:underline">Swap</button>
+                                </div>
+                                <canvas id="tet-hold-canvas" width="100" height="80" class="mx-auto bg-[#191918] rounded-xl"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Score, Best, Lines & Level Grid -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-bgMain border border-borderLight rounded-xl p-3.5">
+                                <span class="text-[10px] font-bold uppercase text-textMuted block">Score</span>
+                                <span id="tet-score" class="font-serif text-2xl font-bold text-textDark">0</span>
+                            </div>
+                            <div class="bg-bgMain border border-borderLight rounded-xl p-3.5">
+                                <span class="text-[10px] font-bold uppercase text-brandGreen block">High Score</span>
+                                <span id="tet-best" class="font-serif text-2xl font-bold text-brandGreen">0</span>
+                            </div>
+                            <div class="bg-bgMain border border-borderLight rounded-xl p-3.5">
+                                <span class="text-[10px] font-bold uppercase text-textMuted block">Lines Cleared</span>
+                                <span id="tet-lines" class="font-mono text-xl font-bold text-textDark">0</span>
+                            </div>
+                            <div class="bg-bgMain border border-borderLight rounded-xl p-3.5">
+                                <span class="text-[10px] font-bold uppercase text-[#FF6B00] block">Speed Level</span>
+                                <span id="tet-level" class="font-mono text-xl font-bold text-[#FF6B00]">1</span>
+                            </div>
+                        </div>
+
+                        <!-- Pause & New Game Buttons -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <button id="tet-pause-btn" onclick="toggleTetrisPause()" class="py-2.5 px-4 rounded-xl bg-bgCard hover:bg-borderLight text-xs font-semibold text-textDark transition">
+                                ⏸ Pause (P)
+                            </button>
+                            <button onclick="startTetrisGame()" class="py-2.5 px-4 rounded-xl bg-[#0F2942] hover:opacity-95 text-white text-xs font-semibold transition">
+                                New Game ↻
+                            </button>
+                        </div>
+
+                        <!-- Keyboard Shortcuts Card -->
+                        <div class="bg-bgCard/60 border border-borderLight rounded-xl p-4 space-y-1.5 text-xs text-textMuted">
+                            <p class="font-bold text-textDark uppercase text-[10px] tracking-wider mb-1">Keyboard Controls</p>
+                            <div class="flex justify-between"><span>Move Left / Right</span><kbd class="font-mono font-semibold text-textDark">← / →</kbd></div>
+                            <div class="flex justify-between"><span>Rotate Clockwise</span><kbd class="font-mono font-semibold text-textDark">↑ or W</kbd></div>
+                            <div class="flex justify-between"><span>Soft Drop</span><kbd class="font-mono font-semibold text-textDark">↓ or S</kbd></div>
+                            <div class="flex justify-between"><span>Instant Hard Drop</span><kbd class="font-mono font-semibold text-textDark">Spacebar</kbd></div>
+                            <div class="flex justify-between"><span>Hold Piece</span><kbd class="font-mono font-semibold text-textDark">C or Shift</kbd></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO PLAY & SCORING MATH (English Guide)                 -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO PLAY TETRIS</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Mastering Tetromino Stacking & Line Clears</h2>
+                <ol class="space-y-3 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
+                    <li><strong>Align & Rotate Shapes:</strong> Guide the 7 geometric Tetrominoes (<em>I, O, T, S, Z, J, L</em>) left or right and rotate them so they interlock without leaving empty gaps.</li>
+                    <li><strong>Use the Ghost Piece:</strong> A translucent outline at the bottom of the matrix shows the exact landing spot if you press <strong>Spacebar</strong> for an instant Hard Drop.</li>
+                    <li><strong>Save Pieces in the Hold Slot:</strong> Press <strong>C</strong> (or click <em>Swap</em>) to store an inconvenient piece in the Hold box and swap it back when needed.</li>
+                </ol>
+            </div>
+
+            <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">SCORING FORMULA</p>
+                <h3 class="font-serif text-2xl text-textDark">How Line Multipliers & Levels Work</h3>
+                <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                    Points scale with your current <strong>Level ($L$)</strong> and reward multi-line clears exponentially:
+                </p>
+                <ul class="text-xs text-textMuted space-y-1 list-disc pl-4 font-mono">
+                    <li>1 Line (Single): 100 × L pts</li>
+                    <li>2 Lines (Double): 300 × L pts</li>
+                    <li>3 Lines (Triple): 500 × L pts</li>
+                    <li>4 Lines (Tetris!): 800 × L pts</li>
+                </ul>
+                <p class="text-xs text-textMuted leading-relaxed">
+                    Every <strong>10 lines cleared</strong> advances you to the next Level, reducing the gravity drop interval for a faster challenge.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED TETRIS JAVASCRIPT                                 -->
+        <!-- ============================================================= -->
+        <script>
+            const tCanvas = document.getElementById('tetris-canvas');
+            const tCtx = tCanvas.getContext('2d');
+            const nextCanvas = document.getElementById('tet-next-canvas');
+            const nextCtx = nextCanvas.getContext('2d');
+            const holdCanvas = document.getElementById('tet-hold-canvas');
+            const holdCtx = holdCanvas.getContext('2d');
+
+            const COLS = 10;
+            const ROWS = 20;
+            const BLOCK = 28;
+
+            const TETROMINOES = {
+                I: { shape: [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]], color: '#38BDF8' },
+                J: { shape: [[1,0,0],[1,1,1],[0,0,0]], color: '#6366F1' },
+                L: { shape: [[0,0,1],[1,1,1],[0,0,0]], color: '#FF6B00' },
+                O: { shape: [[1,1],[1,1]], color: '#FACC15' },
+                S: { shape: [[0,1,1],[1,1,0],[0,0,0]], color: '#34D399' },
+                T: { shape: [[0,1,0],[1,1,1],[0,0,0]], color: '#A855F7' },
+                Z: { shape: [[1,1,0],[0,1,1],[0,0,0]], color: '#F43F5E' }
+            };
+            const KEYS = Object.keys(TETROMINOES);
+
+            let tGrid = [];
+            let currentPiece = null;
+            let nextKey = null;
+            let holdKey = null;
+            let canHold = true;
+            let tScore = 0;
+            let tBest = parseInt(localStorage.getItem('5min_tetris_best') || '0', 10);
+            let tLines = 0;
+            let tLevel = 1;
+            let tState = 'IDLE'; // IDLE, PLAYING, PAUSED, OVER
+            let dropTimer = null;
+
+            document.getElementById('tet-best').textContent = tBest.toLocaleString();
+
+            function randomKey() {
+                return KEYS[Math.floor(Math.random() * KEYS.length)];
+            }
+
+            function createPiece(key) {
+                const proto = TETROMINOES[key];
+                const shape = proto.shape.map(r => [...r]);
+                return {
+                    key,
+                    shape,
+                    color: proto.color,
+                    x: Math.floor((COLS - shape[0].length) / 2),
+                    y: 0
+                };
+            }
+
+            function startTetrisGame() {
+                if (dropTimer) clearInterval(dropTimer);
+                tGrid = Array.from({ length: ROWS }, () => Array(COLS).fill(null));
+                tScore = 0;
+                tLines = 0;
+                tLevel = 1;
+                holdKey = null;
+                canHold = true;
+                nextKey = randomKey();
+                spawnNextPiece();
+                tState = 'PLAYING';
+                document.getElementById('tet-overlay').classList.add('hidden');
+                document.getElementById('tet-pause-btn').textContent = '⏸ Pause (P)';
+                updateTetrisStats();
+                resetDropInterval();
+                drawTetrisAll();
+            }
+
+            function resetDropInterval() {
+                if (dropTimer) clearInterval(dropTimer);
+                const speed = Math.max(110, 800 - (tLevel - 1) * 65);
+                dropTimer = setInterval(() => {
+                    if (tState === 'PLAYING') stepDown();
+                }, speed);
+            }
+
+            function spawnNextPiece() {
+                currentPiece = createPiece(nextKey);
+                nextKey = randomKey();
+                canHold = true;
+                drawMiniPreview(nextCtx, nextKey);
+                drawMiniPreview(holdCtx, holdKey);
+                if (collides(currentPiece.x, currentPiece.y, currentPiece.shape)) {
+                    tState = 'OVER';
+                    clearInterval(dropTimer);
+                    const ov = document.getElementById('tet-overlay');
+                    ov.classList.remove('hidden');
+                    document.getElementById('tet-overlay-badge').textContent = 'STACK FULL';
+                    document.getElementById('tet-overlay-title').textContent = `Score: ${tScore.toLocaleString()}`;
+                    document.getElementById('tet-overlay-sub').textContent = `Cleared ${tLines} lines at Level ${tLevel}.`;
+                }
+            }
+
+            function collides(nx, ny, shape) {
+                for (let r = 0; r < shape.length; r++) {
+                    for (let c = 0; c < shape[r].length; c++) {
+                        if (!shape[r][c]) continue;
+                        const gx = nx + c;
+                        const gy = ny + r;
+                        if (gx < 0 || gx >= COLS || gy >= ROWS) return true;
+                        if (gy >= 0 && tGrid[gy][gx]) return true;
+                    }
+                }
+                return false;
+            }
+
+            function rotateMatrix(mat) {
+                return mat[0].map((_, i) => mat.map(row => row[i]).reverse());
+            }
+
+            function stepDown() {
+                if (!collides(currentPiece.x, currentPiece.y + 1, currentPiece.shape)) {
+                    currentPiece.y++;
+                } else {
+                    lockPiece();
+                }
+                drawTetrisAll();
+            }
+
+            function getGhostY() {
+                let gy = currentPiece.y;
+                while (!collides(currentPiece.x, gy + 1, currentPiece.shape)) {
+                    gy++;
+                }
+                return gy;
+            }
+
+            function lockPiece() {
+                const { shape, x, y, color } = currentPiece;
+                for (let r = 0; r < shape.length; r++) {
+                    for (let c = 0; c < shape[r].length; c++) {
+                        if (shape[r][c] && y + r >= 0) {
+                            tGrid[y + r][x + c] = color;
+                        }
+                    }
+                }
+                clearFullLines();
+                spawnNextPiece();
+            }
+
+            function clearFullLines() {
+                let cleared = 0;
+                for (let r = ROWS - 1; r >= 0; r--) {
+                    if (tGrid[r].every(cell => cell !== null)) {
+                        tGrid.splice(r, 1);
+                        tGrid.unshift(Array(COLS).fill(null));
+                        cleared++;
+                        r++;
+                    }
+                }
+                if (cleared > 0) {
+                    const lineScores = [0, 100, 300, 500, 800];
+                    tScore += (lineScores[cleared] || 800) * tLevel;
+                    tLines += cleared;
+                    const newLevel = Math.floor(tLines / 10) + 1;
+                    if (newLevel > tLevel) {
+                        tLevel = newLevel;
+                        resetDropInterval();
+                    }
+                    if (tScore > tBest) {
+                        tBest = tScore;
+                        localStorage.setItem('5min_tetris_best', tBest);
+                    }
+                    updateTetrisStats();
+                }
+            }
+
+            function tetAction(act) {
+                if (tState !== 'PLAYING' || !currentPiece) return;
+                if (act === 'LEFT' && !collides(currentPiece.x - 1, currentPiece.y, currentPiece.shape)) {
+                    currentPiece.x--;
+                } else if (act === 'RIGHT' && !collides(currentPiece.x + 1, currentPiece.y, currentPiece.shape)) {
+                    currentPiece.x++;
+                } else if (act === 'DOWN') {
+                    stepDown();
+                    return;
+                } else if (act === 'ROTATE') {
+                    const rotated = rotateMatrix(currentPiece.shape);
+                    if (!collides(currentPiece.x, currentPiece.y, rotated)) {
+                        currentPiece.shape = rotated;
+                    } else if (!collides(currentPiece.x - 1, currentPiece.y, rotated)) {
+                        currentPiece.x--;
+                        currentPiece.shape = rotated;
+                    } else if (!collides(currentPiece.x + 1, currentPiece.y, rotated)) {
+                        currentPiece.x++;
+                        currentPiece.shape = rotated;
+                    }
+                } else if (act === 'DROP') {
+                    const gy = getGhostY();
+                    tScore += (gy - currentPiece.y) * 2;
+                    currentPiece.y = gy;
+                    lockPiece();
+                    updateTetrisStats();
+                } else if (act === 'HOLD' && canHold) {
+                    const curKey = currentPiece.key;
+                    if (holdKey === null) {
+                        holdKey = curKey;
+                        spawnNextPiece();
+                    } else {
+                        const swapKey = holdKey;
+                        holdKey = curKey;
+                        currentPiece = createPiece(swapKey);
+                    }
+                    canHold = false;
+                    drawMiniPreview(holdCtx, holdKey);
+                }
+                drawTetrisAll();
+            }
+
+            function toggleTetrisPause() {
+                if (tState === 'PLAYING') {
+                    tState = 'PAUSED';
+                    document.getElementById('tet-pause-btn').textContent = '▶ Resume (P)';
+                } else if (tState === 'PAUSED') {
+                    tState = 'PLAYING';
+                    document.getElementById('tet-pause-btn').textContent = '⏸ Pause (P)';
+                }
+            }
+
+            function updateTetrisStats() {
+                document.getElementById('tet-score').textContent = tScore.toLocaleString();
+                document.getElementById('tet-best').textContent = tBest.toLocaleString();
+                document.getElementById('tet-lines').textContent = tLines;
+                document.getElementById('tet-level').textContent = tLevel;
+            }
+
+            function drawCell(ctx, x, y, color, size = BLOCK, alpha = 1) {
+                ctx.save();
+                ctx.globalAlpha = alpha;
+                ctx.fillStyle = color;
+                ctx.fillRect(x * size + 1, y * size + 1, size - 2, size - 2);
+                ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+                ctx.strokeRect(x * size + 1.5, y * size + 1.5, size - 3, size - 3);
+                ctx.restore();
+            }
+
+            function drawMiniPreview(ctx, key) {
+                ctx.fillStyle = '#191918';
+                ctx.fillRect(0, 0, 100, 80);
+                if (!key) return;
+                const { shape, color } = TETROMINOES[key];
+                const s = 18;
+                const offX = (100 - shape[0].length * s) / 2 / s;
+                const offY = (80 - shape.length * s) / 2 / s;
+                for (let r = 0; r < shape.length; r++) {
+                    for (let c = 0; c < shape[r].length; c++) {
+                        if (shape[r][c]) drawCell(ctx, offX + c, offY + r, color, s);
+                    }
+                }
+            }
+
+            function drawTetrisAll() {
+                tCtx.fillStyle = '#191918';
+                tCtx.fillRect(0, 0, tCanvas.width, tCanvas.height);
+
+                // Subtle Grid Lines
+                tCtx.strokeStyle = 'rgba(255,255,255,0.04)';
+                for (let c = 1; c < COLS; c++) {
+                    tCtx.beginPath(); tCtx.moveTo(c * BLOCK, 0); tCtx.lineTo(c * BLOCK, tCanvas.height); tCtx.stroke();
+                }
+                for (let r = 1; r < ROWS; r++) {
+                    tCtx.beginPath(); tCtx.moveTo(0, r * BLOCK); tCtx.lineTo(tCanvas.width, r * BLOCK); tCtx.stroke();
+                }
+
+                // Locked Blocks
+                for (let r = 0; r < ROWS; r++) {
+                    for (let c = 0; c < COLS; c++) {
+                        if (tGrid[r][c]) drawCell(tCtx, c, r, tGrid[r][c]);
+                    }
+                }
+
+                // Active Piece & Ghost Guide
+                if (currentPiece) {
+                    const ghostY = getGhostY();
+                    const { shape, x, y, color } = currentPiece;
+                    for (let r = 0; r < shape.length; r++) {
+                        for (let c = 0; c < shape[r].length; c++) {
+                            if (shape[r][c]) {
+                                drawCell(tCtx, x + c, ghostY + r, color, BLOCK, 0.22);
+                                drawCell(tCtx, x + c, y + r, color, BLOCK, 1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener('keydown', (e) => {
+                if (tState !== 'PLAYING' && e.code !== 'KeyP') return;
+                const map = {
+                    ArrowLeft: 'LEFT', KeyA: 'LEFT',
+                    ArrowRight: 'RIGHT', KeyD: 'RIGHT',
+                    ArrowDown: 'DOWN', KeyS: 'DOWN',
+                    ArrowUp: 'ROTATE', KeyW: 'ROTATE',
+                    Space: 'DROP',
+                    KeyC: 'HOLD', ShiftLeft: 'HOLD'
+                };
+                if (e.code === 'KeyP') {
+                    toggleTetrisPause();
+                } else if (map[e.code]) {
+                    e.preventDefault();
+                    tetAction(map[e.code]);
+                }
+            });
+
+            drawTetrisAll();
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

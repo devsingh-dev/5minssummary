@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AUTOMATIC SEO META TAGS FOR TOOL -->
+    <title>2048 — Free Online PUZZLE Tool | 5minSummary</title>
+    <meta name="description" content="2048: नंबरों को जोड़कर 2048 तक पहुंचें। Use this free interactive puzzle utility online on 5minSummary.">
+    <link rel="canonical" href="https://5minssummary.com/tools/2048.html">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5minSummary">
+    <meta property="og:title" content="2048 — Free Online PUZZLE Tool | 5minSummary">
+    <meta property="og:description" content="2048: नंबरों को जोड़कर 2048 तक पहुंचें। Use this free interactive puzzle utility online on 5minSummary.">
+    <meta property="og:url" content="https://5minssummary.com/tools/2048.html">
+    <meta property="og:image" content="https://5minssummary.com/image/og-cover.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2048 — Free Online PUZZLE Tool | 5minSummary">
+    <meta name="twitter:description" content="2048: नंबरों को जोड़कर 2048 तक पहुंचें। Use this free interactive puzzle utility online on 5minSummary.">
+
+    <!-- Universal Meta & Inline Favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="5minSummary">
+    <meta name="theme-color" content="#134E3A">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='6' fill='%23134E3A'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Georgia, serif' font-size='22'>5</text></svg>">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#FBFBF8',
+                        bgCard: '#EFECE4',
+                        bgInput: '#EFECE4',
+                        brandGreen: '#134E3A',
+                        brandGreenHover: '#0E3B2C',
+                        textDark: '#191918',
+                        textMuted: '#6E6D68',
+                        borderLight: '#E5E2D9'
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #FBFBF8; color: #191918; font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBFBF8; }
+        ::-webkit-scrollbar-thumb { background: #D5D1C5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #134E3A; }
+    </style>
+
+    <!-- Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"2048","url":"https://5minssummary.com/tools/2048.html","description":"2048: नंबरों को जोड़कर 2048 तक पहुंचें। Use this free interactive puzzle utility online on 5minSummary.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R997595DVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R997595DVT');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
+     crossorigin="anonymous"></script></head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
+
+    <!-- 1. TOP LIVE DATE & TIME BAR -->
+    <div class="bg-brandGreen text-white text-xs border-b border-white/10">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium tracking-wide">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="live-datetime">Loading date & time...</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] text-emerald-100/90">
+                <span>PUZZLE • 2048</span>
+                <span class="hidden sm:inline">•</span>
+                <span class="hidden sm:inline">5minSummary Utilities</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. UNIVERSAL NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bgMain/95 backdrop-blur-md border-b border-borderLight">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2.5 shrink-0 group">
+                <div class="w-8 h-9 bg-brandGreen rounded-[5px] flex items-center justify-center text-white font-serif text-xl font-medium group-hover:bg-brandGreenHover transition">5</div>
+                <span class="font-serif text-2xl sm:text-[26px] tracking-tight text-textDark font-normal">5minSummary</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-textDark">
+                <a href="../Books.html" class="hover:text-brandGreen transition">Books</a>
+                <a href="../History.html" class="hover:text-brandGreen transition">History</a>
+                <a href="../Science.html" class="hover:text-brandGreen transition">Science</a>
+                <a href="../Article.html" class="hover:text-brandGreen transition">Articles</a>
+                <a href="../Tools.html" class="text-brandGreen font-semibold">Tools</a>
+                <div class="h-5 w-[1px] bg-borderLight"></div>
+                <div class="w-9 h-9 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center text-xs font-semibold">AK</div>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-textDark hover:bg-bgCard">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-borderLight bg-bgMain px-4 pt-3 pb-5 space-y-2 text-sm font-medium">
+            <a href="../Books.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Books</a>
+            <a href="../History.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">History</a>
+            <a href="../Science.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Science</a>
+            <a href="../Article.html" class="block py-2 px-3 rounded-md hover:bg-bgCard">Articles</a>
+            <a href="../Tools.html" class="block py-2 px-3 rounded-md bg-brandGreen/10 text-brandGreen font-semibold">Tools</a>
+        </div>
+    </header>
+
+    <!-- 3. MAIN TOOL BODY -->
+ <!-- 3. MAIN TOOL BODY (Copy-Paste & Replace <main>...</main> in tools/2048.html) -->
+    <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
+        
+        <!-- Top Breadcrumb & Tool Title Header (Pure English) -->
+        <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+                <a href="../Tools.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brandGreen hover:underline mb-3">
+                    <span>← Back to All Tools & Games</span>
+                </a>
+                <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
+                        PUZZLE & LOGIC
+                    </span>
+                    <span class="text-xs text-textMuted">• Brain Workout</span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
+                    2048 Puzzle Game
+                </h1>
+                <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
+                    Slide and combine matching number tiles on the 4×4 grid to reach the <strong>2048</strong> tile. A classic test of spatial strategy and foresight.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 1. INTERACTIVE 2048 GAME WORKSPACE                            -->
+        <!-- ============================================================= -->
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-5 sm:p-10 shadow-sm mb-12">
+            
+            <style>
+                @keyframes tilePop {
+                    0% { transform: scale(0.75); opacity: 0.5; }
+                    70% { transform: scale(1.06); }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+                .tile-animate {
+                    animation: tilePop 0.18s ease-out forwards;
+                }
+            </style>
+
+            <div class="max-w-md mx-auto">
+                
+                <!-- Scoreboard & Action Buttons -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                    <div class="flex items-center gap-2.5">
+                        <div class="bg-bgMain border border-borderLight rounded-xl px-4 py-2 text-center min-w-[92px]">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-textMuted">Score</p>
+                            <p id="g2048-score" class="font-serif text-2xl font-semibold text-textDark leading-tight">0</p>
+                        </div>
+                        <div class="bg-bgMain border border-borderLight rounded-xl px-4 py-2 text-center min-w-[92px]">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-brandGreen">Best</p>
+                            <p id="g2048-best" class="font-serif text-2xl font-semibold text-brandGreen leading-tight">0</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button id="g2048-undo-btn" onclick="undo2048Move()" disabled class="px-3.5 py-2.5 rounded-xl border border-borderLight bg-bgCard/70 text-xs font-semibold text-textDark hover:bg-bgCard disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-1.5" title="Undo Last Move">
+                            <span>↶ Undo</span>
+                        </button>
+                        <button onclick="startNew2048Game()" class="px-4 py-2.5 rounded-xl bg-brandGreen hover:bg-brandGreenHover text-white text-xs font-semibold transition shadow-sm">
+                            New Game ↻
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Status Banner -->
+                <div class="flex items-center justify-between text-xs text-textMuted mb-3 px-1">
+                    <span id="g2048-moves-counter">Moves: 0</span>
+                    <span>Use <strong>Arrow Keys</strong>, <strong>WASD</strong>, or <strong>Swipe</strong></span>
+                </div>
+
+                <!-- 4x4 Game Board Container -->
+                <div class="relative bg-[#DED9CC] p-3 sm:p-3.5 rounded-2xl shadow-inner select-none touch-none" id="g2048-touch-area">
+                    
+                    <div id="g2048-grid" class="grid grid-cols-4 gap-2.5 sm:gap-3 aspect-square">
+                        <!-- 16 Cells Injected by JS -->
+                    </div>
+
+                    <!-- Win / Game Over Overlay Modal -->
+                    <div id="g2048-overlay" class="hidden absolute inset-0 bg-[#191918]/80 backdrop-blur-xs rounded-2xl flex flex-col items-center justify-center p-6 text-center z-10">
+                        <span id="g2048-overlay-badge" class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 mb-2">
+                            PUZZLE COMPLETE
+                        </span>
+                        <h2 id="g2048-overlay-title" class="font-serif text-4xl text-white mb-2">You Reached 2048!</h2>
+                        <p id="g2048-overlay-desc" class="text-sm text-gray-200 mb-6 max-w-xs">
+                            Brilliant strategy! You can continue playing to reach 4096 or start a fresh board.
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <button id="g2048-keep-playing-btn" onclick="keepPlaying2048()" class="px-4 py-2.5 rounded-xl bg-white text-textDark text-xs font-semibold hover:bg-bgCard transition">
+                                Keep Playing
+                            </button>
+                            <button onclick="startNew2048Game()" class="px-5 py-2.5 rounded-xl bg-brandGreen text-white text-xs font-semibold hover:bg-brandGreenHover transition">
+                                Play Again ↻
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- On-Screen Mobile / Click Directional Pad -->
+                <div class="mt-6 flex flex-col items-center gap-1.5">
+                    <p class="text-[11px] font-medium text-textMuted mb-1">Quick Controls</p>
+                    <button onclick="handle2048Direction('UP')" class="w-14 h-11 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen hover:text-brandGreen font-bold text-base flex items-center justify-center shadow-2xs active:scale-95 transition" aria-label="Move Up">
+                        ↑
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <button onclick="handle2048Direction('LEFT')" class="w-14 h-11 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen hover:text-brandGreen font-bold text-base flex items-center justify-center shadow-2xs active:scale-95 transition" aria-label="Move Left">
+                            ←
+                        </button>
+                        <button onclick="handle2048Direction('DOWN')" class="w-14 h-11 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen hover:text-brandGreen font-bold text-base flex items-center justify-center shadow-2xs active:scale-95 transition" aria-label="Move Down">
+                            ↓
+                        </button>
+                        <button onclick="handle2048Direction('RIGHT')" class="w-14 h-11 rounded-xl bg-bgMain border border-borderLight hover:border-brandGreen hover:text-brandGreen font-bold text-base flex items-center justify-center shadow-2xs active:scale-95 transition" aria-label="Move Right">
+                            →
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 2. HOW TO PLAY & HOW SCORING WORKS (English Editorial Guide)  -->
+        <!-- ============================================================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left 7 Cols: How to Use / Play -->
+            <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-5">
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen mb-1">
+                        STEP-BY-STEP GUIDE
+                    </p>
+                    <h2 class="font-serif text-2xl sm:text-3xl text-textDark">
+                        How to Play 2048
+                    </h2>
+                </div>
+
+                <p class="text-sm sm:text-base text-textDark/85 leading-relaxed">
+                    <strong>2048</strong> is a single-player mathematical sliding block puzzle played on a 4×4 grid. The objective is to slide numbered tiles across the board to combine them and create a tile with the number <strong>2048</strong>.
+                </p>
+
+                <ol class="space-y-3.5 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
+                    <li>
+                        <strong>Slide the Tiles:</strong> Use your keyboard's <strong>Arrow keys</strong> (or <strong>W, A, S, D</strong>) on desktop, or simply <strong>swipe</strong> in any direction (Up, Down, Left, Right) on mobile.Every tile on the board will slide as far as possible in that chosen direction.
+                    </li>
+                    <li>
+                        <strong>Merge Matching Numbers:</strong> When two tiles carrying the exact same number collide while moving, they merge into a single tile equal to their sum (for example, two <strong>2s</strong> become <strong>4</strong>, two <strong>4s</strong> become <strong>8</strong>, and two <strong>1024s</strong> become <strong>2048</strong>).
+                    </li>
+                    <li>
+                        <strong>Plan for New Spawns:</strong> After every valid move, a new tile (either a <strong>2</strong> or a <strong>4</strong>) randomly appears in an empty spot on the board.
+                    </li>
+                    <li>
+                        <strong>Use Undo Strategically:</strong> Made an accidental slide? Click the <strong>↶ Undo</strong> button at the top to revert your last move and rethink your strategy.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Right 5 Cols: How Scoring & Math Work + Winning Tips -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <div class="bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-7 space-y-3">
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">
+                        GAME MECHANICS & MATH
+                    </p>
+                    <h3 class="font-serif text-2xl text-textDark">
+                        How We Calculate Your Score
+                    </h3>
+                    <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                        Every time two tiles merge, your score increases by the value of the <strong>newly created tile</strong>. For example, combining two <strong>64</strong> tiles adds <strong>+128 points</strong> to your total score.
+                    </p>
+                    <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
+                        New tiles spawn with a <strong>90% probability of being a 2</strong> and a <strong>10% probability of being a 4</strong>. Because tiles double exponentially ($2^1, 2^2, 2^3 \dots 2^{11} = 2048$), reaching the 2048 tile typically yields a total score between <strong>20,000 and 22,000 points</strong>.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-borderLight rounded-2xl p-6 sm:p-7 space-y-3 shadow-sm">
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#FF6B00]">
+                        PRO STRATEGY
+                    </p>
+                    <h3 class="font-serif text-2xl text-textDark">
+                        The Corner Technique
+                    </h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-textMuted list-disc pl-4 leading-relaxed">
+                        <li><strong>Pick One Corner:</strong> Choose one corner (e.g., bottom-right) and keep your highest-value tile locked there at all times.</li>
+                        <li><strong>Build a Descending Chain:</strong> Arrange the row next to your corner tile in descending order (e.g., 512 → 256 → 128 → 64).</li>
+                        <li><strong>Avoid Moving Away:</strong> If your highest tile is in the bottom-right corner, avoid pressing <em>Up</em> or <em>Left</em> unless strictly necessary.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- 3. EMBEDDED 2048 JAVASCRIPT LOGIC                             -->
+        <!-- ============================================================= -->
+        <script>
+            const GRID_SIZE = 4;
+            let board2048 = [];
+            let score2048 = 0;
+            let best2048 = parseInt(localStorage.getItem('5min_2048_best') || '0', 10);
+            let moves2048 = 0;
+            let previousState2048 = null;
+            let hasWon2048 = false;
+            let keepPlayingMode = false;
+
+            const gridEl = document.getElementById('g2048-grid');
+            const scoreEl = document.getElementById('g2048-score');
+            const bestEl = document.getElementById('g2048-best');
+            const movesEl = document.getElementById('g2048-moves-counter');
+            const undoBtn = document.getElementById('g2048-undo-btn');
+            const overlayEl = document.getElementById('g2048-overlay');
+            const overlayBadge = document.getElementById('g2048-overlay-badge');
+            const overlayTitle = document.getElementById('g2048-overlay-title');
+            const overlayDesc = document.getElementById('g2048-overlay-desc');
+            const keepPlayingBtn = document.getElementById('g2048-keep-playing-btn');
+
+            // Custom Color Palette for Each Tile Value
+            function getTileStyle(val) {
+                const styles = {
+                    0:    "bg-[#EFECE4]/60 text-transparent",
+                    2:    "bg-[#FBFBF8] text-[#191918] border border-[#E5E2D9] text-2xl sm:text-3xl",
+                    4:    "bg-[#F5EEDB] text-[#191918] border border-[#E6D9B8] text-2xl sm:text-3xl",
+                    8:    "bg-[#F3B27A] text-white text-2xl sm:text-3xl",
+                    16:   "bg-[#F69664] text-white text-2xl sm:text-3xl",
+                    32:   "bg-[#F77C5F] text-white text-2xl sm:text-3xl",
+                    64:   "bg-[#F75F3B] text-white text-2xl sm:text-3xl",
+                    128:  "bg-[#EDD073] text-[#191918] text-xl sm:text-2xl shadow-xs",
+                    256:  "bg-[#EDCC62] text-[#191918] text-xl sm:text-2xl shadow-xs",
+                    512:  "bg-[#EDC850] text-[#191918] text-xl sm:text-2xl shadow-sm",
+                    1024: "bg-[#1D6B50] text-white text-lg sm:text-xl shadow-sm",
+                    2048: "bg-[#134E3A] text-white text-lg sm:text-xl ring-2 ring-emerald-300 shadow-md"
+                };
+                return styles[val] || "bg-[#0E3B2C] text-emerald-200 text-base sm:text-lg shadow-md";
+            }
+
+            function startNew2048Game() {
+                board2048 = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(0));
+                score2048 = 0;
+                moves2048 = 0;
+                previousState2048 = null;
+                hasWon2048 = false;
+                keepPlayingMode = false;
+                overlayEl.classList.add('hidden');
+
+                spawnRandomTile();
+                spawnRandomTile();
+                render2048Board();
+            }
+
+            function spawnRandomTile() {
+                const emptyCells = [];
+                for (let r = 0; r < GRID_SIZE; r++) {
+                    for (let c = 0; c < GRID_SIZE; c++) {
+                        if (board2048[r][c] === 0) emptyCells.push({ r, c });
+                    }
+                }
+                if (emptyCells.length === 0) return null;
+                const chosen = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+                board2048[chosen.r][chosen.c] = Math.random() < 0.9 ? 2 : 4;
+                return chosen;
+            }
+
+            function render2048Board(animatedCell = null) {
+                gridEl.innerHTML = '';
+                for (let r = 0; r < GRID_SIZE; r++) {
+                    for (let c = 0; c < GRID_SIZE; c++) {
+                        const val = board2048[r][c];
+                        const cell = document.createElement('div');
+                        const isAnimated = animatedCell && animatedCell.r === r && animatedCell.c === c;
+                        cell.className = `rounded-xl font-serif font-bold flex items-center justify-center select-none transition-colors duration-150 ${getTileStyle(val)} ${isAnimated ? 'tile-animate' : ''}`;
+                        cell.textContent = val > 0 ? val : '';
+                        gridEl.appendChild(cell);
+                    }
+                }
+
+                scoreEl.textContent = score2048.toLocaleString();
+                if (score2048 > best2048) {
+                    best2048 = score2048;
+                    localStorage.setItem('5min_2048_best', best2048);
+                }
+                bestEl.textContent = best2048.toLocaleString();
+                movesEl.textContent = `Moves: ${moves2048}`;
+                undoBtn.disabled = !previousState2048;
+            }
+
+            function slideAndMergeRow(row) {
+                let filtered = row.filter(v => v !== 0);
+                let gained = 0;
+                for (let i = 0; i < filtered.length - 1; i++) {
+                    if (filtered[i] === filtered[i + 1]) {
+                        filtered[i] *= 2;
+                        gained += filtered[i];
+                        if (filtered[i] === 2048) hasWon2048 = true;
+                        filtered.splice(i + 1, 1);
+                    }
+                }
+                while (filtered.length < GRID_SIZE) {
+                    filtered.push(0);
+                }
+                return { newRow: filtered, gained };
+            }
+
+            function rotateLeft(matrix) {
+                return matrix[0].map((_, colIndex) => matrix.map(row => row[GRID_SIZE - 1 - colIndex]));
+            }
+
+            function rotateRight(matrix) {
+                return matrix[0].map((_, colIndex) => matrix.map(row => row[colIndex]).reverse());
+            }
+
+            function handle2048Direction(direction) {
+                if (!overlayEl.classList.contains('hidden')) return;
+
+                const snapshotBoard = board2048.map(row => [...row]);
+                const snapshotScore = score2048;
+
+                let workingBoard = board2048.map(row => [...row]);
+
+                if (direction === 'UP') workingBoard = rotateLeft(workingBoard);
+                else if (direction === 'RIGHT') workingBoard = workingBoard.map(row => [...row].reverse());
+                else if (direction === 'DOWN') workingBoard = rotateRight(workingBoard);
+
+                let totalGained = 0;
+                workingBoard = workingBoard.map(row => {
+                    const { newRow, gained } = slideAndMergeRow(row);
+                    totalGained += gained;
+                    return newRow;
+                });
+
+                if (direction === 'UP') workingBoard = rotateRight(workingBoard);
+                else if (direction === 'RIGHT') workingBoard = workingBoard.map(row => [...row].reverse());
+                else if (direction === 'DOWN') workingBoard = rotateLeft(workingBoard);
+
+                const changed = JSON.stringify(snapshotBoard) !== JSON.stringify(workingBoard);
+                if (!changed) return;
+
+                previousState2048 = {
+                    board: snapshotBoard,
+                    score: snapshotScore,
+                    moves: moves2048
+                };
+
+                board2048 = workingBoard;
+                score2048 += totalGained;
+                moves2048++;
+
+                const spawned = spawnRandomTile();
+                render2048Board(spawned);
+
+                if (hasWon2048 && !keepPlayingMode) {
+                    show2048Overlay(true);
+                } else if (is2048GameOver()) {
+                    show2048Overlay(false);
+                }
+            }
+
+            function undo2048Move() {
+                if (!previousState2048) return;
+                board2048 = previousState2048.board.map(row => [...row]);
+                score2048 = previousState2048.score;
+                moves2048 = previousState2048.moves;
+                previousState2048 = null;
+                overlayEl.classList.add('hidden');
+                render2048Board();
+            }
+
+            function is2048GameOver() {
+                for (let r = 0; r < GRID_SIZE; r++) {
+                    for (let c = 0; c < GRID_SIZE; c++) {
+                        if (board2048[r][c] === 0) return false;
+                        if (c < GRID_SIZE - 1 && board2048[r][c] === board2048[r][c + 1]) return false;
+                        if (r < GRID_SIZE - 1 && board2048[r][c] === board2048[r + 1][c]) return false;
+                    }
+                }
+                return true;
+            }
+
+            function show2048Overlay(won) {
+                overlayEl.classList.remove('hidden');
+                if (won) {
+                    overlayBadge.textContent = "PUZZLE COMPLETE";
+                    overlayBadge.className = "text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 mb-2";
+                    overlayTitle.textContent = "You Reached 2048!";
+                    overlayDesc.textContent = `Completed in ${moves2048} moves! Keep playing for 4096 or start a new game.`;
+                    keepPlayingBtn.classList.remove('hidden');
+                } else {
+                    overlayBadge.textContent = "NO MORE MOVES";
+                    overlayBadge.className = "text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-orange-400/20 text-orange-300 mb-2";
+                    overlayTitle.textContent = "Game Over";
+                    overlayDesc.textContent = `Final Score: ${score2048.toLocaleString()} points in ${moves2048} moves.`;
+                    keepPlayingBtn.classList.add('hidden');
+                }
+            }
+
+            function keepPlaying2048() {
+                keepPlayingMode = true;
+                overlayEl.classList.add('hidden');
+            }
+
+            // Keyboard Controls (Arrow Keys & WASD)
+            window.addEventListener('keydown', (e) => {
+                const tag = document.activeElement?.tagName?.toLowerCase();
+                if (tag === 'input' || tag === 'textarea') return;
+
+                const keyMap = {
+                    ArrowUp: 'UP', KeyW: 'UP',
+                    ArrowDown: 'DOWN', KeyS: 'DOWN',
+                    ArrowLeft: 'LEFT', KeyA: 'LEFT',
+                    ArrowRight: 'RIGHT', KeyD: 'RIGHT'
+                };
+
+                if (keyMap[e.code]) {
+                    e.preventDefault();
+                    handle2048Direction(keyMap[e.code]);
+                }
+            });
+
+            // Mobile Touch Swipe Support
+            let touchStartX = 0;
+            let touchStartY = 0;
+            const touchArea = document.getElementById('g2048-touch-area');
+
+            touchArea.addEventListener('touchstart', (e) => {
+                if (e.touches.length > 0) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            touchArea.addEventListener('touchend', (e) => {
+                if (e.changedTouches.length === 0) return;
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                const dy = e.changedTouches[0].clientY - touchStartY;
+                const absDx = Math.abs(dx);
+                const absDy = Math.abs(dy);
+
+                if (Math.max(absDx, absDy) > 28) {
+                    if (absDx > absDy) {
+                        handle2048Direction(dx > 0 ? 'RIGHT' : 'LEFT');
+                    } else {
+                        handle2048Direction(dy > 0 ? 'DOWN' : 'UP');
+                    }
+                }
+            }, { passive: true });
+
+            // Initialize Game on Load
+            startNew2048Game();
+        </script>
+
+    </main>
+
+    <!-- 4. UNIVERSAL FOOTER -->
+    <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-borderLight">
+                <div>
+                    <a href="../index.html" class="font-serif text-3xl text-brandGreen tracking-tight block mb-2">5minSummary</a>
+                    <p class="text-textMuted text-sm">Less scrolling. More understanding.</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-8 text-sm text-textMuted font-medium">
+                    <a href="../about/our-story.html" class="hover:text-brandGreen transition">Our story</a>
+                    <a href="../about/editorial-approach.html" class="hover:text-brandGreen transition">Editorial approach</a>
+                    <a href="../about/contact.html" class="hover:text-brandGreen transition">Contact</a>
+                    <a href="../about/privacy.html" class="hover:text-brandGreen transition">Privacy</a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-textMuted">
+                <p>© 2026 5minSummary. Made for curious minds.</p>
+                <p>An independent space for ideas, context and discovery.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateLiveDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('live-datetime').textContent = `${dateStr}  |  ${timeStr}`;
+        }
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
