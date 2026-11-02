@@ -129,6 +129,18 @@
 <!-- 3. MAIN TOOL BODY (Replace <main>...</main> in tools/image-compressor.html) -->
     <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8 pt-8 pb-20">
         
+        <!-- Hidden GPU-Accelerated SVG Convolution & Color Matrix Filters for 8K Enhancement -->
+        <svg class="hidden" width="0" height="0" aria-hidden="true">
+            <defs>
+                <filter id="gpu-enhance-filter" color-interpolation-filters="sRGB">
+                    <!-- Dynamic 3x3 Sharpening Convolution Kernel -->
+                    <feConvolveMatrix id="svg-sharpen-kernel" order="3 3" preserveAlpha="true" kernelMatrix="0 0 0 0 1 0 0 0 0" result="sharpened" />
+                    <!-- Dynamic Warmth / Color Balance Matrix -->
+                    <feColorMatrix id="svg-warmth-matrix" in="sharpened" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+                </filter>
+            </defs>
+        </svg>
+
         <!-- Top Breadcrumb & Tool Title Header -->
         <div class="mb-8 pb-6 border-b border-borderLight flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -137,125 +149,291 @@
                 </a>
                 <div class="flex items-center gap-2.5 mb-1.5">
                     <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#FF6B00]/10 text-[#FF6B00]">
-                        MEDIA & WEB OPTIMIZATION
+                        2-IN-1 PHOTO STUDIO
                     </span>
-                    <span class="text-xs text-textMuted">• 100% Private Browser Compression</span>
+                    <span class="text-xs text-textMuted">• Smart Compression & Up to 8K UHD Upscaling</span>
                 </div>
                 <h1 class="font-serif text-3xl sm:text-5xl text-textDark tracking-tight leading-tight">
-                    Image Compressor & Converter
+                    Image Compressor & 8K Photo Enhancer
                 </h1>
                 <p class="text-textMuted text-sm sm:text-base mt-1.5 max-w-2xl">
-                    Reduce image file size by up to 90% without losing visible quality. Resize dimensions, convert between WebP, JPEG, and PNG formats, and compare results side-by-side.
+                    Shrink image file sizes by up to 90% for fast web loading, or enhance details, sharpen edges, fix lighting, and upscale resolution up to <strong>8K Ultra HD (7680px)</strong> directly in your browser.
                 </p>
             </div>
         </div>
 
         <!-- ============================================================= -->
-        <!-- 1. INTERACTIVE IMAGE COMPRESSOR WORKSPACE                     -->
+        <!-- 1. INTERACTIVE COMPRESSOR & 8K ENHANCER WORKSPACE             -->
         <!-- ============================================================= -->
-        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-6 sm:p-10 shadow-sm mb-12">
+        <section id="tool-workspace" class="bg-white border border-borderLight rounded-2xl p-5 sm:p-10 shadow-sm mb-12 space-y-8">
             
-            <!-- Upload Dropzone -->
-            <div id="img-upload-zone" onclick="document.getElementById('img-file-input').click()" class="border-2 border-dashed border-borderLight hover:border-brandGreen rounded-2xl p-8 sm:p-12 text-center bg-bgMain/60 transition cursor-pointer">
+            <!-- STEP 1: TOP MODE SWITCHER (Choose Compress vs Enhance) -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pb-6 border-b border-borderLight">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brandGreen block mb-1">STEP 1: SELECT STUDIO MODE</span>
+                    <h2 id="studio-mode-title" class="font-serif text-2xl text-textDark">What would you like to do with your photo?</h2>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5 bg-bgCard p-1.5 rounded-2xl border border-borderLight sm:w-auto w-full">
+                    <button id="mode-btn-compress" onclick="switchStudioMode('compress')" class="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-brandGreen text-white shadow-xs transition flex items-center justify-center gap-2">
+                        <span>🗜️ Compress Size</span>
+                    </button>
+                    <button id="mode-btn-enhance" onclick="switchStudioMode('enhance')" class="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-textDark hover:bg-white/60 transition flex items-center justify-center gap-2">
+                        <span>✨ Enhance & 8K Upscale</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: UPLOAD DROPZONE (Visible before image is loaded) -->
+            <div id="img-upload-zone" onclick="document.getElementById('img-file-input').click()" class="border-2 border-dashed border-borderLight hover:border-brandGreen rounded-2xl p-8 sm:p-14 text-center bg-bgMain/60 transition cursor-pointer">
                 <input type="file" id="img-file-input" accept="image/jpeg,image/png,image/webp" class="hidden">
-                <div class="w-14 h-14 rounded-2xl bg-[#E3EFEA] text-brandGreen flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 rounded-2xl bg-[#E3EFEA] text-brandGreen flex items-center justify-center mx-auto mb-4 shadow-2xs">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
                 </div>
-                <h2 class="font-serif text-2xl text-textDark mb-1">Select or Drag & Drop an Image</h2>
-                <p class="text-xs sm:text-sm text-textMuted mb-5">Supports JPG, PNG, and WebP • Photos never leave your device</p>
-                <span class="inline-flex items-center gap-2 bg-brandGreen hover:bg-brandGreenHover text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">
-                    Browse Image File
+                <h3 class="font-serif text-2xl sm:text-3xl text-textDark mb-1">Select or Drag & Drop Your Photo</h3>
+                <p id="upload-sub-hint" class="text-xs sm:text-sm text-textMuted mb-6">
+                    Supports JPG, PNG, and WebP • 100% Private Client-Side GPU Processing
+                </p>
+                <span class="inline-flex items-center gap-2 bg-brandGreen hover:bg-brandGreenHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition shadow-xs">
+                    Browse Photo from Device
                 </span>
             </div>
 
-            <!-- Active Compression Studio (Hidden until image selected) -->
+            <!-- STEP 3: ACTIVE STUDIO WORKSPACE (Hidden until image is uploaded) -->
             <div id="img-editor-panel" class="hidden space-y-8">
                 
-                <!-- Top Savings Summary Banner -->
-                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 bg-bgMain border border-borderLight rounded-2xl p-4 sm:p-5 items-center">
+                <!-- Top Telemetry Bar: Original vs Output Stats & Download Button -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-bgMain border border-borderLight rounded-2xl p-4 sm:p-5 items-center">
                     <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Original Size</span>
-                        <span id="img-orig-size" class="font-mono text-xl font-bold text-textDark">0 KB</span>
-                        <span id="img-orig-dim" class="text-xs text-textMuted block">0 × 0 px</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Original Input</span>
+                        <span id="stat-orig-dim" class="font-mono text-lg font-bold text-textDark">0 × 0 px</span>
+                        <span id="stat-orig-size" class="text-xs text-textMuted block">File Size: 0 KB</span>
                     </div>
+
                     <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-brandGreen block">Compressed Size</span>
-                        <span id="img-comp-size" class="font-mono text-xl font-bold text-brandGreen">0 KB</span>
-                        <span id="img-comp-dim" class="text-xs text-textMuted block">0 × 0 px</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-brandGreen block">Processed Output</span>
+                        <span id="stat-out-dim" class="font-mono text-lg font-bold text-brandGreen">0 × 0 px</span>
+                        <span id="stat-out-size" class="text-xs text-textMuted block">Est. Size: 0 KB</span>
                     </div>
+
                     <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Space Saved</span>
-                        <span id="img-saved-badge" class="inline-block mt-0.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">0% Smaller</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted block">Status / Badge</span>
+                        <span id="stat-badge" class="inline-block mt-1 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                            Ready
+                        </span>
                     </div>
-                    <div class="flex sm:justify-end gap-2">
-                        <button onclick="resetImageCompressor()" class="px-3.5 py-2.5 rounded-xl border border-borderLight bg-white hover:border-red-300 text-xs font-semibold text-red-600 transition">
-                            New Image
+
+                    <div class="flex sm:justify-end items-center gap-2.5">
+                        <button onclick="resetPhotoStudio()" class="px-3.5 py-2.5 rounded-xl border border-borderLight bg-white hover:border-red-300 text-xs font-semibold text-red-600 transition">
+                            Change Photo
                         </button>
-                        <button onclick="downloadCompressedImage()" class="px-5 py-2.5 rounded-xl bg-brandGreen hover:bg-brandGreenHover text-white text-xs font-semibold transition shadow-xs">
-                            ⬇ Download
+                        <button id="btn-download-main" onclick="downloadProcessedPhoto()" class="px-5 py-2.5 rounded-xl bg-brandGreen hover:bg-brandGreenHover text-white text-xs sm:text-sm font-semibold transition shadow-xs">
+                            ⬇ Download Result
                         </button>
                     </div>
                 </div>
 
-                <!-- Compression Controls Row -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Main Grid: Controls on Left (5 Cols) | Interactive Before/After Preview on Right (7 Cols) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
-                    <!-- Quality Slider -->
-                    <div class="bg-bgMain border border-borderLight rounded-xl p-4">
-                        <div class="flex justify-between text-xs font-semibold mb-2">
-                            <span class="text-textMuted uppercase">Compression Quality</span>
-                            <span id="img-quality-label" class="font-mono font-bold text-brandGreen">75%</span>
+                    <!-- LEFT 5 COLS: MODE-SPECIFIC CONTROLS -->
+                    <div class="lg:col-span-5 space-y-6">
+                        
+                        <!-- ========================================= -->
+                        <!-- PANEL A: COMPRESSOR CONTROLS              -->
+                        <!-- ========================================= -->
+                        <div id="controls-compress-box" class="bg-bgMain border border-borderLight rounded-2xl p-5 sm:p-6 space-y-5">
+                            <div class="flex items-center justify-between border-b border-borderLight pb-3">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-brandGreen">COMPRESS MODE</span>
+                                    <h3 class="font-serif text-xl text-textDark">File Size & Format Controls</h3>
+                                </div>
+                                <button onclick="resetCompressDefaults()" class="text-xs font-semibold text-brandGreen hover:underline">Reset</button>
+                            </div>
+
+                            <!-- Compression Quality Slider -->
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                    <span class="text-textMuted uppercase">Compression Quality</span>
+                                    <span id="lbl-comp-quality" class="font-mono font-bold text-brandGreen">75%</span>
+                                </div>
+                                <input type="range" id="slider-comp-quality" min="5" max="100" step="1" value="75" class="w-full cursor-pointer">
+                                <p class="text-[11px] text-textMuted mt-1">Lower percentage = smaller KB size. 70%–80% keeps visual clarity intact.</p>
+                            </div>
+
+                            <!-- Downscale Dimensions (%) -->
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                    <span class="text-textMuted uppercase">Dimension Scale (%)</span>
+                                    <span id="lbl-comp-scale" class="font-mono font-bold text-textDark">100%</span>
+                                </div>
+                                <input type="range" id="slider-comp-scale" min="10" max="100" step="5" value="100" class="w-full cursor-pointer">
+                                <p class="text-[11px] text-textMuted mt-1">Scale down oversized camera dimensions to cut megabytes into kilobytes.</p>
+                            </div>
+
+                            <!-- Quick Target Size Presets -->
+                            <div>
+                                <span class="block text-xs font-semibold uppercase text-textMuted mb-2">Quick Compression Presets</span>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button onclick="applyCompressPreset(82, 100)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">High Quality</button>
+                                    <button onclick="applyCompressPreset(65, 85)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">Balanced Web</button>
+                                    <button onclick="applyCompressPreset(40, 60)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">Extreme Shrink</button>
+                                </div>
+                            </div>
                         </div>
-                        <input type="range" id="img-quality-slider" min="5" max="100" step="1" value="75" class="w-full cursor-pointer">
-                        <p class="text-[11px] text-textMuted mt-1.5">70%–80% offers the best balance of visual clarity and small file size.</p>
+
+                        <!-- ========================================= -->
+                        <!-- PANEL B: 8K PHOTO ENHANCER & UPSCALER     -->
+                        <!-- ========================================= -->
+                        <div id="controls-enhance-box" class="hidden bg-bgMain border border-borderLight rounded-2xl p-5 sm:p-6 space-y-5">
+                            <div class="flex items-center justify-between border-b border-borderLight pb-3">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#FF6B00]">ENHANCE & UPSCALE STUDIO</span>
+                                    <h3 class="font-serif text-xl text-textDark">Resolution & Detail Controls</h3>
+                                </div>
+                                <button onclick="resetEnhanceDefaults()" class="text-xs font-semibold text-brandGreen hover:underline">Reset All</button>
+                            </div>
+
+                            <!-- Target Upscale Resolution Selector (Up to 8K) -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-textMuted">Target Output Resolution</label>
+                                    <span id="lbl-target-res-badge" class="text-[11px] font-mono font-bold text-brandGreen bg-[#E3EFEA] px-2 py-0.5 rounded">2× Upscale</span>
+                                </div>
+                                <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                                    <button onclick="setEnhanceResolution('1x')" data-res="1x" class="res-btn py-2 px-2 rounded-xl border border-borderLight bg-white text-xs font-bold text-textDark hover:border-brandGreen transition">Original</button>
+                                    <button onclick="setEnhanceResolution('2x')" data-res="2x" class="res-btn py-2 px-2 rounded-xl border border-brandGreen bg-brandGreen text-white text-xs font-bold transition">2× Super</button>
+                                    <button onclick="setEnhanceResolution('fhd')" data-res="fhd" class="res-btn py-2 px-2 rounded-xl border border-borderLight bg-white text-xs font-bold text-textDark hover:border-brandGreen transition">1080p FHD</button>
+                                    <button onclick="setEnhanceResolution('2k')" data-res="2k" class="res-btn py-2 px-2 rounded-xl border border-borderLight bg-white text-xs font-bold text-textDark hover:border-brandGreen transition">2K QHD</button>
+                                    <button onclick="setEnhanceResolution('4k')" data-res="4k" class="res-btn py-2 px-2 rounded-xl border border-borderLight bg-white text-xs font-bold text-textDark hover:border-brandGreen transition">4K UHD</button>
+                                    <button onclick="setEnhanceResolution('8k')" data-res="8k" class="res-btn col-span-2 sm:col-span-3 py-2 px-3 rounded-xl border border-[#FF6B00] bg-[#FF6B00]/10 text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white text-xs font-extrabold transition">
+                                        🚀 8K Ultra HD (7680px Long Edge)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 1-Click AI-Style Enhancement Presets -->
+                            <div>
+                                <span class="block text-xs font-bold uppercase tracking-wider text-textMuted mb-2">1-Click Enhancement Presets</span>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <button onclick="applyEnhancePreset(45, 112, 104, 115, 0)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">✨ Auto HD Crisp</button>
+                                    <button onclick="applyEnhancePreset(75, 120, 102, 110, 0)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">🔍 8K Ultra Detail</button>
+                                    <button onclick="applyEnhancePreset(30, 108, 122, 112, 8)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">🌙 Low-Light Fix</button>
+                                    <button onclick="applyEnhancePreset(25, 106, 105, 108, 18)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">🧑 Portrait Glow</button>
+                                    <button onclick="applyEnhancePreset(50, 114, 102, 135, 6)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">🏞️ Vivid Nature</button>
+                                    <button onclick="applyEnhancePreset(60, 128, 100, 0, 0)" class="py-2 px-2.5 rounded-xl bg-white border border-borderLight hover:border-brandGreen text-xs font-semibold text-textDark transition">🎞️ Crisp B&W</button>
+                                </div>
+                            </div>
+
+                            <!-- Fine-Tune Enhancement Sliders -->
+                            <div class="space-y-3.5 pt-2 border-t border-borderLight">
+                                <!-- Edge Sharpening (3x3 Convolution) -->
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-brandGreen uppercase">Edge Sharpness & Detail</span>
+                                        <span id="lbl-enh-sharp" class="font-mono font-bold text-brandGreen">40%</span>
+                                    </div>
+                                    <input type="range" id="slider-enh-sharp" min="0" max="100" value="40" class="w-full cursor-pointer">
+                                </div>
+
+                                <!-- Micro-Contrast / Clarity -->
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-textMuted uppercase">Contrast & HDR Clarity</span>
+                                        <span id="lbl-enh-contrast" class="font-mono text-textDark">110%</span>
+                                    </div>
+                                    <input type="range" id="slider-enh-contrast" min="60" max="160" value="110" class="w-full cursor-pointer">
+                                </div>
+
+                                <!-- Brightness / Exposure -->
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-textMuted uppercase">Brightness & Exposure</span>
+                                        <span id="lbl-enh-bright" class="font-mono text-textDark">102%</span>
+                                    </div>
+                                    <input type="range" id="slider-enh-bright" min="60" max="160" value="102" class="w-full cursor-pointer">
+                                </div>
+
+                                <!-- Color Vibrance / Saturation -->
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-textMuted uppercase">Color Vibrance</span>
+                                        <span id="lbl-enh-sat" class="font-mono text-textDark">112%</span>
+                                    </div>
+                                    <input type="range" id="slider-enh-sat" min="0" max="200" value="112" class="w-full cursor-pointer">
+                                </div>
+
+                                <!-- Color Temperature (Warm / Cool) -->
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-textMuted uppercase">Color Temperature (Cool ↔ Warm)</span>
+                                        <span id="lbl-enh-warmth" class="font-mono text-textDark">0</span>
+                                    </div>
+                                    <input type="range" id="slider-enh-warmth" min="-40" max="40" value="0" class="w-full cursor-pointer">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ========================================= -->
+                        <!-- SHARED EXPORT FORMAT SELECTOR             -->
+                        <!-- ========================================= -->
+                        <div class="bg-bgMain border border-borderLight rounded-2xl p-5">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-textMuted mb-2">Export Image Format</label>
+                            <select id="img-format-select" class="w-full bg-white border border-borderLight rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-textDark focus:outline-none focus:border-brandGreen">
+                                <option value="image/webp">WebP (Best Quality-to-Size Ratio)</option>
+                                <option value="image/jpeg" selected>JPEG / JPG (Universal High Compatibility)</option>
+                                <option value="image/png">PNG (Lossless Uncompressed Master)</option>
+                            </select>
+                        </div>
+
                     </div>
 
-                    <!-- Output Format Selector -->
-                    <div class="bg-bgMain border border-borderLight rounded-xl p-4">
-                        <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Output Image Format</label>
-                        <select id="img-format-select" class="w-full bg-white border border-borderLight rounded-lg px-3 py-2 text-sm font-semibold text-textDark focus:outline-none focus:border-brandGreen">
-                            <option value="image/webp" selected>WebP (Best Compression for Web)</option>
-                            <option value="image/jpeg">JPEG / JPG (Universal Compatibility)</option>
-                            <option value="image/png">PNG (Lossless Graphics)</option>
-                        </select>
-                        <p class="text-[11px] text-textMuted mt-1.5">WebP typically saves 25%–35% more space than standard JPEG.</p>
+                    <!-- RIGHT 7 COLS: INTERACTIVE BEFORE / AFTER COMPARISON STAGE -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="bg-bgMain border border-borderLight rounded-2xl p-4 sm:p-5 space-y-4">
+                            
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-brandGreen">Interactive Live Comparison</span>
+                                    <span class="text-[11px] text-textMuted">(Drag slider left or right)</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-[11px] font-mono">
+                                    <span class="px-2 py-0.5 rounded bg-white border border-borderLight text-textMuted">Left: Original</span>
+                                    <span class="px-2 py-0.5 rounded bg-[#E3EFEA] text-brandGreen font-bold">Right: Processed</span>
+                                </div>
+                            </div>
+
+                            <!-- Before / After Split Container -->
+                            <div class="relative w-full h-[360px] sm:h-[440px] bg-[#191918] rounded-xl overflow-hidden select-none flex items-center justify-center border border-borderLight">
+                                
+                                <!-- Bottom Layer: Processed / Enhanced Image -->
+                                <img id="preview-img-after" src="" alt="Processed Output" class="max-h-full max-w-full object-contain pointer-events-none">
+
+                                <!-- Top Clipped Layer: Original Image -->
+                                <div id="before-clip-wrapper" class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none" style="clip-path: inset(0 50% 0 0);">
+                                    <img id="preview-img-before" src="" alt="Original Input" class="max-h-full max-w-full object-contain pointer-events-none">
+                                </div>
+
+                                <!-- Vertical Divider Line -->
+                                <div id="split-divider-line" class="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_8px_rgba(0,0,0,0.8)] pointer-events-none" style="left: 50%;">
+                                    <div class="w-8 h-8 rounded-full bg-brandGreen border-2 border-white text-white text-xs font-bold flex items-center justify-center absolute top-1/2 -translate-y-1/2 -translate-x-1/2 shadow-md">
+                                        ↔
+                                    </div>
+                                </div>
+
+                                <!-- Invisible Range Slider Controlling the Split -->
+                                <input type="range" id="split-compare-slider" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Before and After Comparison Slider">
+                            </div>
+
+                            <p id="render-progress-note" class="text-xs text-center text-textMuted">
+                                Drag the center handle across the photo to inspect edge sharpness, color vibrancy, and compression fidelity.
+                            </p>
+
+                        </div>
                     </div>
 
-                    <!-- Resize Scale / Max Width -->
-                    <div class="bg-bgMain border border-borderLight rounded-xl p-4">
-                        <div class="flex justify-between text-xs font-semibold mb-2">
-                            <span class="text-textMuted uppercase">Resize Scale (%)</span>
-                            <span id="img-scale-label" class="font-mono font-bold text-textDark">100% (Original)</span>
-                        </div>
-                        <input type="range" id="img-scale-slider" min="15" max="100" step="5" value="100" class="w-full cursor-pointer">
-                        <p class="text-[11px] text-textMuted mt-1.5">Maintains exact aspect ratio while reducing pixel dimensions.</p>
-                    </div>
-
-                </div>
-
-                <!-- Side-by-Side Visual Comparison -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-bgMain border border-borderLight rounded-2xl p-4 flex flex-col">
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold uppercase tracking-wider text-textMuted">Original Image</span>
-                            <span id="preview-orig-tag" class="text-xs font-mono text-textMuted"></span>
-                        </div>
-                        <div class="flex-grow bg-[#191918]/5 rounded-xl overflow-hidden flex items-center justify-center p-2 max-h-96">
-                            <img id="img-preview-orig" src="" alt="Original Preview" class="max-h-80 w-auto object-contain rounded-lg">
-                        </div>
-                    </div>
-
-                    <div class="bg-bgMain border border-borderLight rounded-2xl p-4 flex flex-col">
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold uppercase tracking-wider text-brandGreen">Compressed Output Preview</span>
-                            <span id="preview-comp-tag" class="text-xs font-mono font-bold text-brandGreen"></span>
-                        </div>
-                        <div class="flex-grow bg-[#191918]/5 rounded-xl overflow-hidden flex items-center justify-center p-2 max-h-96">
-                            <img id="img-preview-comp" src="" alt="Compressed Preview" class="max-h-80 w-auto object-contain rounded-lg">
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -263,172 +441,408 @@
         </section>
 
         <!-- ============================================================= -->
-        <!-- 2. HOW TO USE & HOW IT WORKS (English Guide)                  -->
+        <!-- 2. HOW TO USE & HOW 8K UPSCALING WORKS (English Guide)        -->
         <!-- ============================================================= -->
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div class="lg:col-span-7 bg-white border border-borderLight rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
-                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO USE THIS TOOL</p>
-                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Optimizing Images for Fast Websites & Forms</h2>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brandGreen">HOW TO USE THIS 2-IN-1 STUDIO</p>
+                <h2 class="font-serif text-2xl sm:text-3xl text-textDark">Compressing or Upscaling Photos to 8K</h2>
                 <ol class="space-y-3 text-sm text-textDark/90 list-decimal pl-5 leading-relaxed">
-                    <li><strong>Select Your Image:</strong> Click the upload area or drag and drop any JPG, PNG, or WebP photograph from your computer or phone.</li>
-                    <li><strong>Choose Quality & Format:</strong> Set the <strong>Compression Quality</strong> slider around <code>75%</code> and select <strong>WebP</strong> or <strong>JPEG</strong> to achieve dramatic file size reductions.</li>
-                    <li><strong>Optional Dimension Scaling:</strong> If your camera photo is <code>4000px</code> wide, slide the <strong>Resize Scale</strong> down to <code>50%</code> to cut megabytes down to kilobytes instantly.</li>
-                    <li><strong>Inspect & Download:</strong> Compare the visual sharpness side-by-side and click <strong>Download</strong> to save your optimized file.</li>
+                    <li><strong>Choose Your Mode First:</strong> At the top of the workspace, click <strong>🗜️ Compress Size</strong> if you want to reduce KB/MB for websites and online forms, or click <strong>✨ Enhance & 8K Upscale</strong> to boost image resolution and clarity.</li>
+                    <li><strong>Upscale up to 8K Ultra HD:</strong> In Enhance mode, choose between <strong>2× Super</strong>, <strong>1080p FHD</strong>, <strong>2K QHD</strong>, <strong>4K UHD (3840px)</strong>, or <strong>8K Ultra HD (7680px)</strong>. Our engine automatically preserves your photo's exact aspect ratio.</li>
+                    <li><strong>Sharpen Edges & Restore Lighting:</strong> Apply a 1-click preset like <em>Auto HD Crisp</em> or <em>8K Ultra Detail</em>, or manually adjust the <strong>Edge Sharpness</strong> convolution slider to bring out fine textures in hair, fabric, foliage, and text.</li>
+                    <li><strong>Compare & Download:</strong> Slide the center comparison handle left and right to verify the improvement, then click <strong>⬇ Download Result</strong>.</li>
                 </ol>
             </div>
 
             <div class="lg:col-span-5 bg-bgCard/70 border border-borderLight rounded-2xl p-6 sm:p-8 space-y-3">
-                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">COMPRESSION SCIENCE</p>
-                <h3 class="font-serif text-2xl text-textDark">How Browser Image Compression Works</h3>
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-brandGreen">CLIENT-SIDE GPU IMAGE PROCESSING</p>
+                <h3 class="font-serif text-2xl text-textDark">How 8K Upscaling & Convolution Sharpening Work</h3>
                 <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
-                    This utility renders your uploaded image onto an off-screen HTML5 <code>&lt;canvas&gt;</code> element and encodes it locally via <code>canvas.toBlob(callback, mimeType, quality)</code>.
+                    Standard single-pass browser resizing often produces soft or pixelated edges when stretching a photo to <strong>4K (3840px)</strong> or <strong>8K (7680px)</strong>. Our engine uses <strong>progressive multi-step bicubic interpolation</strong> (`imageSmoothingQuality: "high"`) combined with a hardware-accelerated **3×3 Laplacian Convolution Matrix**:
+                    $$\begin{bmatrix} 0 & -s & 0 \\ -s & 1 + 4s & -s \\ 0 & -s & 0 \end{bmatrix}$$
                 </p>
                 <p class="text-xs sm:text-sm text-textMuted leading-relaxed">
-                    Formats like <strong>JPEG</strong> and <strong>WebP</strong> use quantization and perceptual chroma subsampling—grouping similar neighboring color frequencies that the human eye barely notices—allowing an 80% reduction in bytes with virtually identical visual fidelity.
+                    This mathematical kernel amplifies high-frequency luminance transitions between neighboring pixels—restoring crisp micro-contrast and edge definition right on your device's GPU without uploading your personal photos to any external server.
                 </p>
             </div>
         </section>
 
         <!-- ============================================================= -->
-        <!-- 3. EMBEDDED IMAGE COMPRESSOR JAVASCRIPT                       -->
+        <!-- 3. EMBEDDED COMPRESSOR & 8K ENHANCER JAVASCRIPT               -->
         <!-- ============================================================= -->
         <script>
-            const imgFileInput = document.getElementById('img-file-input');
-            const imgUploadZone = document.getElementById('img-upload-zone');
-            const imgEditorPanel = document.getElementById('img-editor-panel');
-            const qualitySlider = document.getElementById('img-quality-slider');
-            const formatSelect = document.getElementById('img-format-select');
-            const scaleSlider = document.getElementById('img-scale-slider');
+            let studioMode = 'compress'; // 'compress' or 'enhance'
+            let targetResMode = '2x';    // '1x', '2x', 'fhd', '2k', '4k', '8k'
+            let sourceImg = new Image();
+            let rawFile = null;
+            let baseName = 'photo';
+            let previewBlobUrl = null;
 
-            let sourceImage = new Image();
-            let originalFile = null;
-            let compressedBlobUrl = null;
-            let baseFileName = "compressed-image";
+            const fileInputEl = document.getElementById('img-file-input');
+            const uploadZoneEl = document.getElementById('img-upload-zone');
+            const editorPanelEl = document.getElementById('img-editor-panel');
+            const formatSelectEl = document.getElementById('img-format-select');
 
-            function formatBytes(bytes) {
+            // Compressor Sliders
+            const sCompQual = document.getElementById('slider-comp-quality');
+            const sCompScale = document.getElementById('slider-comp-scale');
+
+            // Enhancer Sliders
+            const sEnhSharp = document.getElementById('slider-enh-sharp');
+            const sEnhContrast = document.getElementById('slider-enh-contrast');
+            const sEnhBright = document.getElementById('slider-enh-bright');
+            const sEnhSat = document.getElementById('slider-enh-sat');
+            const sEnhWarmth = document.getElementById('slider-enh-warmth');
+
+            // Before/After Split Slider
+            const splitSlider = document.getElementById('split-compare-slider');
+            const beforeClip = document.getElementById('before-clip-wrapper');
+            const splitLine = document.getElementById('split-divider-line');
+
+            splitSlider.addEventListener('input', (e) => {
+                const v = e.target.value;
+                beforeClip.style.clipPath = `inset(0 ${100 - v}% 0 0)`;
+                splitLine.style.left = `${v}%`;
+            });
+
+            function fmtBytes(bytes) {
                 if (bytes < 1024) return bytes + ' B';
                 if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
                 return (bytes / 1048576).toFixed(2) + ' MB';
             }
 
-            imgFileInput.addEventListener('change', (e) => {
-                if (e.target.files && e.target.files[0]) {
-                    handleImageFile(e.target.files[0]);
+            function switchStudioMode(mode) {
+                studioMode = mode;
+                const btnComp = document.getElementById('mode-btn-compress');
+                const btnEnh = document.getElementById('mode-btn-enhance');
+
+                if (mode === 'compress') {
+                    btnComp.className = "px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-brandGreen text-white shadow-xs transition flex items-center justify-center gap-2";
+                    btnEnh.className = "px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-textDark hover:bg-white/60 transition flex items-center justify-center gap-2";
+                    document.getElementById('controls-compress-box').classList.remove('hidden');
+                    document.getElementById('controls-enhance-box').classList.add('hidden');
+                    formatSelectEl.value = 'image/webp';
+                } else {
+                    btnEnh.className = "px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#FF6B00] text-white shadow-xs transition flex items-center justify-center gap-2";
+                    btnComp.className = "px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-textDark hover:bg-white/60 transition flex items-center justify-center gap-2";
+                    document.getElementById('controls-enhance-box').classList.remove('hidden');
+                    document.getElementById('controls-compress-box').classList.add('hidden');
+                    formatSelectEl.value = 'image/jpeg';
                 }
-            });
 
-            imgUploadZone.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                imgUploadZone.classList.add('border-brandGreen');
-            });
-
-            imgUploadZone.addEventListener('dragleave', () => {
-                imgUploadZone.classList.remove('border-brandGreen');
-            });
-
-            imgUploadZone.addEventListener('drop', (e) => {
-                e.preventDefault();
-                imgUploadZone.classList.remove('border-brandGreen');
-                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-                    handleImageFile(e.dataTransfer.files[0]);
+                if (rawFile && sourceImg.width) {
+                    updateLivePreview();
                 }
+            }
+
+            // Upload & Drag-Drop Handlers
+            fileInputEl.addEventListener('change', (e) => {
+                if (e.target.files && e.target.files[0]) loadPhotoFile(e.target.files[0]);
             });
 
-            function handleImageFile(file) {
+            uploadZoneEl.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadZoneEl.classList.add('border-brandGreen');
+            });
+            uploadZoneEl.addEventListener('dragleave', () => {
+                uploadZoneEl.classList.remove('border-brandGreen');
+            });
+            uploadZoneEl.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadZoneEl.classList.remove('border-brandGreen');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) loadPhotoFile(e.dataTransfer.files[0]);
+            });
+
+            function loadPhotoFile(file) {
                 if (!file.type.startsWith('image/')) {
-                    alert('Please select a valid JPG, PNG, or WebP image.');
+                    alert('Please select a valid JPG, PNG, or WebP image file.');
                     return;
                 }
-                originalFile = file;
-                baseFileName = file.name.replace(/\.[^/.]+$/, "");
+                rawFile = file;
+                baseName = file.name.replace(/\.[^/.]+$/, "");
 
                 const reader = new FileReader();
                 reader.onload = (ev) => {
-                    sourceImage = new Image();
-                    sourceImage.onload = () => {
-                        imgUploadZone.classList.add('hidden');
-                        imgEditorPanel.classList.remove('hidden');
+                    sourceImg = new Image();
+                    sourceImg.onload = () => {
+                        uploadZoneEl.classList.add('hidden');
+                        editorPanelEl.classList.remove('hidden');
 
-                        document.getElementById('img-preview-orig').src = ev.target.result;
-                        document.getElementById('img-orig-size').textContent = formatBytes(file.size);
-                        document.getElementById('img-orig-dim').textContent = `${sourceImage.width} × ${sourceImage.height} px`;
-                        document.getElementById('preview-orig-tag').textContent = formatBytes(file.size);
+                        document.getElementById('preview-img-before').src = ev.target.result;
+                        document.getElementById('stat-orig-dim').textContent = `${sourceImg.width} × ${sourceImg.height} px`;
+                        document.getElementById('stat-orig-size').textContent = `File Size: ${fmtBytes(file.size)}`;
 
-                        runImageCompression();
+                        updateLivePreview();
                     };
-                    sourceImage.src = ev.target.result;
+                    sourceImg.src = ev.target.result;
                 };
                 reader.readAsDataURL(file);
             }
 
-            function runImageCompression() {
-                if (!originalFile || !sourceImage.width) return;
+            function getOutputDimensions() {
+                const origW = sourceImg.width;
+                const origH = sourceImg.height;
 
-                const quality = parseInt(qualitySlider.value, 10) / 100;
-                const scale = parseInt(scaleSlider.value, 10) / 100;
-                const mime = formatSelect.value;
+                if (studioMode === 'compress') {
+                    const scale = parseInt(sCompScale.value, 10) / 100;
+                    return {
+                        w: Math.max(1, Math.round(origW * scale)),
+                        h: Math.max(1, Math.round(origH * scale))
+                    };
+                } else {
+                    const aspect = origW / origH;
+                    let targetLongEdge = Math.max(origW, origH);
 
-                document.getElementById('img-quality-label').textContent = `${qualitySlider.value}%`;
-                document.getElementById('img-scale-label').textContent = `${scaleSlider.value}%`;
+                    if (targetResMode === '1x') targetLongEdge = Math.max(origW, origH);
+                    else if (targetResMode === '2x') targetLongEdge = Math.min(7680, Math.max(origW, origH) * 2);
+                    else if (targetResMode === 'fhd') targetLongEdge = 1920;
+                    else if (targetResMode === '2k') targetLongEdge = 2560;
+                    else if (targetResMode === '4k') targetLongEdge = 3840;
+                    else if (targetResMode === '8k') targetLongEdge = 7680;
 
-                const targetW = Math.max(1, Math.round(sourceImage.width * scale));
-                const targetH = Math.max(1, Math.round(sourceImage.height * scale));
+                    if (origW >= origH) {
+                        return { w: Math.round(targetLongEdge), h: Math.round(targetLongEdge / aspect) };
+                    } else {
+                        return { w: Math.round(targetLongEdge * aspect), h: Math.round(targetLongEdge) };
+                    }
+                }
+            }
 
-                const canvas = document.createElement('canvas');
-                canvas.width = targetW;
-                canvas.height = targetH;
-                const ctx = canvas.getContext('2d');
+            function updateSvgFilterMatrices() {
+                const sharpAmt = (parseInt(sEnhSharp.value, 10) / 100) * 1.15;
+                const center = (1 + 4 * sharpAmt).toFixed(3);
+                const edge = (-sharpAmt).toFixed(3);
+                const kernelStr = `0 ${edge} 0 ${edge} ${center} ${edge} 0 ${edge} 0`;
+                document.getElementById('svg-sharpen-kernel').setAttribute('kernelMatrix', kernelStr);
 
-                // Fill white background for JPEG transparency
-                if (mime === 'image/jpeg') {
-                    ctx.fillStyle = '#FFFFFF';
-                    ctx.fillRect(0, 0, targetW, targetH);
+                const w = parseInt(sEnhWarmth.value, 10) / 200; // -0.20 to +0.20
+                const rScale = (1 + Math.max(0, w)).toFixed(3);
+                const bScale = (1 + Math.max(0, -w)).toFixed(3);
+                const matrixStr = `${rScale} 0 0 0 0  0 1 0 0 0  0 0 ${bScale} 0 0  0 0 0 1 0`;
+                document.getElementById('svg-warmth-matrix').setAttribute('values', matrixStr);
+            }
+
+            function buildFilterString() {
+                if (studioMode === 'compress') return 'none';
+                updateSvgFilterMatrices();
+                const c = sEnhContrast.value;
+                const b = sEnhBright.value;
+                const s = sEnhSat.value;
+                return `url(#gpu-enhance-filter) contrast(${c}%) brightness(${b}%) saturate(${s}%)`;
+            }
+
+            function updateLivePreview() {
+                if (!rawFile || !sourceImg.width) return;
+
+                // Update UI Labels
+                document.getElementById('lbl-comp-quality').textContent = `${sCompQual.value}%`;
+                document.getElementById('lbl-comp-scale').textContent = `${sCompScale.value}%`;
+                document.getElementById('lbl-enh-sharp').textContent = `${sEnhSharp.value}%`;
+                document.getElementById('lbl-enh-contrast').textContent = `${sEnhContrast.value}%`;
+                document.getElementById('lbl-enh-bright').textContent = `${sEnhBright.value}%`;
+                document.getElementById('lbl-enh-sat').textContent = `${sEnhSat.value}%`;
+                const wVal = parseInt(sEnhWarmth.value, 10);
+                document.getElementById('lbl-enh-warmth').textContent = wVal > 0 ? `+${wVal} (Warm)` : (wVal < 0 ? `${wVal} (Cool)` : '0 (Neutral)');
+
+                const outDim = getOutputDimensions();
+                document.getElementById('stat-out-dim').textContent = `${outDim.w} × ${outDim.h} px`;
+
+                // For instant interactive slider responsiveness, cap live preview canvas at 2560px max edge,
+                // while full 4K/8K resolution is rendered on Download or when dimensions <= 2560px.
+                const maxPreviewEdge = 2200;
+                let prevW = outDim.w;
+                let prevH = outDim.h;
+                if (Math.max(prevW, prevH) > maxPreviewEdge && studioMode === 'enhance') {
+                    const ratio = maxPreviewEdge / Math.max(prevW, prevH);
+                    prevW = Math.round(prevW * ratio);
+                    prevH = Math.round(prevH * ratio);
                 }
 
-                ctx.drawImage(sourceImage, 0, 0, targetW, targetH);
+                const canvas = document.createElement('canvas');
+                canvas.width = prevW;
+                canvas.height = prevH;
+                const ctx = canvas.getContext('2d');
+                ctx.imageSmoothingEnabled = true;
+                ctx.imageSmoothingQuality = 'high';
+
+                const mime = formatSelectEl.value;
+                if (mime === 'image/jpeg') {
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, prevW, prevH);
+                }
+
+                ctx.filter = buildFilterString();
+                ctx.drawImage(sourceImg, 0, 0, prevW, prevH);
+
+                const quality = studioMode === 'compress' ? (parseInt(sCompQual.value, 10) / 100) : 0.94;
 
                 canvas.toBlob((blob) => {
                     if (!blob) return;
-                    if (compressedBlobUrl) URL.revokeObjectURL(compressedBlobUrl);
-                    compressedBlobUrl = URL.createObjectURL(blob);
+                    if (previewBlobUrl) URL.revokeObjectURL(previewBlobUrl);
+                    previewBlobUrl = URL.createObjectURL(blob);
+                    document.getElementById('preview-img-after').src = previewBlobUrl;
 
-                    document.getElementById('img-preview-comp').src = compressedBlobUrl;
-                    document.getElementById('img-comp-size').textContent = formatBytes(blob.size);
-                    document.getElementById('img-comp-dim').textContent = `${targetW} × ${targetH} px`;
-                    document.getElementById('preview-comp-tag').textContent = formatBytes(blob.size);
-
-                    const savedRatio = ((originalFile.size - blob.size) / originalFile.size) * 100;
-                    const badge = document.getElementById('img-saved-badge');
-                    if (savedRatio >= 0) {
-                        badge.textContent = `${savedRatio.toFixed(1)}% Smaller`;
-                        badge.className = "inline-block mt-0.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800";
+                    const badge = document.getElementById('stat-badge');
+                    if (studioMode === 'compress') {
+                        document.getElementById('stat-out-size').textContent = `Compressed: ${fmtBytes(blob.size)}`;
+                        const saved = ((rawFile.size - blob.size) / rawFile.size) * 100;
+                        if (saved >= 0) {
+                            badge.textContent = `✓ ${saved.toFixed(1)}% Space Saved`;
+                            badge.className = "inline-block mt-1 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800";
+                        } else {
+                            badge.textContent = `+${Math.abs(saved).toFixed(1)}% Larger`;
+                            badge.className = "inline-block mt-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+                        }
                     } else {
-                        badge.textContent = `+${Math.abs(savedRatio).toFixed(1)}% Larger`;
-                        badge.className = "inline-block mt-0.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+                        // Estimate full resolution size if preview was capped
+                        const scaleFactor = (outDim.w * outDim.h) / (prevW * prevH);
+                        const estBytes = Math.round(blob.size * Math.pow(scaleFactor, 0.75));
+                        document.getElementById('stat-out-size').textContent = `Est. Output: ~${fmtBytes(estBytes)}`;
+                        const longEdge = Math.max(outDim.w, outDim.h);
+                        const resLabel = longEdge >= 7680 ? '8K Ultra HD Enhanced' : (longEdge >= 3840 ? '4K UHD Enhanced' : 'HD Enhanced');
+                        badge.textContent = `✨ ${resLabel}`;
+                        badge.className = "inline-block mt-1 px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-[#FF6B00]";
                     }
                 }, mime, quality);
             }
 
-            function downloadCompressedImage() {
-                if (!compressedBlobUrl) return;
-                const extMap = { 'image/webp': 'webp', 'image/jpeg': 'jpg', 'image/png': 'png' };
-                const ext = extMap[formatSelect.value] || 'webp';
-                const a = document.createElement('a');
-                a.href = compressedBlobUrl;
-                a.download = `${baseFileName}-optimized.${ext}`;
-                a.click();
+            // Progressive Multi-Step High-Resolution Renderer for Final Download (Supports full 8K 7680px)
+            function downloadProcessedPhoto() {
+                if (!rawFile || !sourceImg.width) return;
+
+                const btn = document.getElementById('btn-download-main');
+                const origBtnText = btn.textContent;
+                const outDim = getOutputDimensions();
+                const mime = formatSelectEl.value;
+                const quality = studioMode === 'compress' ? (parseInt(sCompQual.value, 10) / 100) : 0.95;
+
+                btn.disabled = true;
+                btn.textContent = `⏳ Rendering ${outDim.w}×${outDim.h}px...`;
+
+                setTimeout(() => {
+                    // Step-scaling intermediate pass for crisp 4K/8K upscaling
+                    let curCanvas = document.createElement('canvas');
+                    let curW = sourceImg.width;
+                    let curH = sourceImg.height;
+                    curCanvas.width = curW;
+                    curCanvas.height = curH;
+                    let curCtx = curCanvas.getContext('2d');
+                    curCtx.imageSmoothingEnabled = true;
+                    curCtx.imageSmoothingQuality = 'high';
+                    curCtx.drawImage(sourceImg, 0, 0);
+
+                    while (curW * 1.8 < outDim.w) {
+                        const nextW = Math.min(outDim.w, Math.round(curW * 1.75));
+                        const nextH = Math.min(outDim.h, Math.round(curH * 1.75));
+                        const stepCanvas = document.createElement('canvas');
+                        stepCanvas.width = nextW;
+                        stepCanvas.height = nextH;
+                        const stepCtx = stepCanvas.getContext('2d');
+                        stepCtx.imageSmoothingEnabled = true;
+                        stepCtx.imageSmoothingQuality = 'high';
+                        stepCtx.drawImage(curCanvas, 0, 0, nextW, nextH);
+                        curCanvas = stepCanvas;
+                        curW = nextW;
+                        curH = nextH;
+                    }
+
+                    const finalCanvas = document.createElement('canvas');
+                    finalCanvas.width = outDim.w;
+                    finalCanvas.height = outDim.h;
+                    const finalCtx = finalCanvas.getContext('2d');
+                    finalCtx.imageSmoothingEnabled = true;
+                    finalCtx.imageSmoothingQuality = 'high';
+
+                    if (mime === 'image/jpeg') {
+                        finalCtx.fillStyle = '#FFFFFF';
+                        finalCtx.fillRect(0, 0, outDim.w, outDim.h);
+                    }
+
+                    finalCtx.filter = buildFilterString();
+                    finalCtx.drawImage(curCanvas, 0, 0, outDim.w, outDim.h);
+
+                    finalCanvas.toBlob((blob) => {
+                        btn.disabled = false;
+                        btn.textContent = origBtnText;
+                        if (!blob) {
+                            alert('Browser memory limit reached for this resolution. Try 4K UHD instead.');
+                            return;
+                        }
+                        const extMap = { 'image/webp': 'webp', 'image/jpeg': 'jpg', 'image/png': 'png' };
+                        const ext = extMap[mime] || 'jpg';
+                        const suffix = studioMode === 'compress' ? 'compressed' : `enhanced-${outDim.w}p`;
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `${baseName}-${suffix}.${ext}`;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    }, mime, quality);
+                }, 60);
             }
 
-            function resetImageCompressor() {
-                if (compressedBlobUrl) URL.revokeObjectURL(compressedBlobUrl);
-                originalFile = null;
-                imgFileInput.value = '';
-                imgEditorPanel.classList.add('hidden');
-                imgUploadZone.classList.remove('hidden');
+            function setEnhanceResolution(resKey) {
+                targetResMode = resKey;
+                const labels = {
+                    '1x': 'Original Size',
+                    '2x': '2× Super Upscale',
+                    'fhd': '1080p Full HD',
+                    '2k': '2K Quad HD (2560px)',
+                    '4k': '4K Ultra HD (3840px)',
+                    '8k': '8K Ultra HD (7680px)'
+                };
+                document.getElementById('lbl-target-res-badge').textContent = labels[resKey] || '2× Upscale';
+
+                document.querySelectorAll('.res-btn').forEach(btn => {
+                    const isSelected = btn.dataset.res === resKey;
+                    if (btn.dataset.res === '8k') {
+                        btn.className = isSelected
+                            ? "res-btn col-span-2 sm:col-span-3 py-2 px-3 rounded-xl border border-[#FF6B00] bg-[#FF6B00] text-white text-xs font-extrabold transition shadow-xs"
+                            : "res-btn col-span-2 sm:col-span-3 py-2 px-3 rounded-xl border border-[#FF6B00] bg-[#FF6B00]/10 text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white text-xs font-extrabold transition";
+                    } else {
+                        btn.className = isSelected
+                            ? "res-btn py-2 px-2 rounded-xl border border-brandGreen bg-brandGreen text-white text-xs font-bold transition"
+                            : "res-btn py-2 px-2 rounded-xl border border-borderLight bg-white text-xs font-bold text-textDark hover:border-brandGreen transition";
+                    }
+                });
+                updateLivePreview();
             }
 
-            [qualitySlider, formatSelect, scaleSlider].forEach(el => {
-                el.addEventListener('input', runImageCompression);
+            function applyCompressPreset(qual, scale) {
+                sCompQual.value = qual;
+                sCompScale.value = scale;
+                updateLivePreview();
+            }
+
+            function resetCompressDefaults() {
+                applyCompressPreset(75, 100);
+            }
+
+            function applyEnhancePreset(sharp, contrast, bright, sat, warmth) {
+                sEnhSharp.value = sharp;
+                sEnhContrast.value = contrast;
+                sEnhBright.value = bright;
+                sEnhSat.value = sat;
+                sEnhWarmth.value = warmth;
+                updateLivePreview();
+            }
+
+            function resetEnhanceDefaults() {
+                applyEnhancePreset(40, 110, 102, 112, 0);
+                setEnhanceResolution('2x');
+            }
+
+            function resetPhotoStudio() {
+                if (previewBlobUrl) URL.revokeObjectURL(previewBlobUrl);
+                rawFile = null;
+                fileInputEl.value = '';
+                editorPanelEl.classList.add('hidden');
+                uploadZoneEl.classList.remove('hidden');
+            }
+
+            [sCompQual, sCompScale, sEnhSharp, sEnhContrast, sEnhBright, sEnhSat, sEnhWarmth, formatSelectEl].forEach(el => {
+                el.addEventListener('input', updateLivePreview);
             });
         </script>
 
