@@ -93,7 +93,14 @@
   gtag('config', 'G-R997595DVT');
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4676323756696849"
-     crossorigin="anonymous"></script></head>
+     crossorigin="anonymous"></script>
+    <!-- Super-Advanced PWA Meta & Manifest -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1A5D42">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="5minSummary">
+    </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-brandGreen selection:text-white">
 
     <!-- 1. TOP LIVE DATE & TIME BAR (Same as Books.html) -->
@@ -200,7 +207,10 @@
     <!-- MAIN CONTENT CONTAINER -->
     <main class="flex-grow max-w-[1360px] w-full mx-auto px-4 sm:px-8">
 
-        <!-- ================================================================= -->
+       <button onclick="openPwaAppStudio()" id="nav-download-app-btn" class="inline-flex items-center gap-2 bg-[#1A5D42] hover:bg-[#144933] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-xs cursor-pointer">
+    <span>📲 Download App</span>
+    <span id="pwa-status-dot" class="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse"></span>
+</button> <!-- ================================================================= -->
         <!-- 3. HERO SECTION & TRENDING TODAY (Figma Screenshot 1 & 2)         -->
         <!-- ================================================================= -->
         <section class="pt-10 pb-14 border-b border-borderLight">
@@ -972,5 +982,301 @@
 
         window.addEventListener('DOMContentLoaded', loadHomeBooks);
     </script>
+    <!-- ================================================================= -->
+<!-- SUPER-ADVANCED PWA APP INSTALLER, FLOATING BANNER & OFFLINE HUB   -->
+<!-- ================================================================= -->
+
+<!-- 1. Floating Bottom Smart App Banner (Auto-appears on Mobile/Desktop) -->
+<div id="pwa-floating-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:w-[410px] bg-white border border-[#E6E2D8] rounded-2xl p-4 shadow-2xl z-40 hidden transition-all duration-300">
+    <div class="flex items-start gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#1A5D42] text-white font-serif font-bold text-xl flex items-center justify-center shrink-0 shadow-xs relative">
+            5m
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FF6B00] absolute top-1.5 right-1.5"></span>
+        </div>
+        <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-2">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#1A5D42] bg-[#E3EFEA] px-2 py-0.5 rounded">OFFICIAL WEB APP</span>
+                <button onclick="dismissPwaBanner()" class="text-xs text-gray-400 hover:text-gray-700 font-bold px-1">✕</button>
+            </div>
+            <h4 class="font-serif text-base font-bold text-[#191918] mt-1 truncate">Install 5minSummary App</h4>
+            <p class="text-xs text-[#6E6D68] leading-snug mt-0.5">
+                Fast 1-tap home screen access, distraction-free reading & 100% offline 27+ tools.
+            </p>
+            <div class="flex items-center gap-2 mt-3">
+                <button onclick="triggerDirectOrModalInstall()" class="flex-1 bg-[#1A5D42] hover:bg-[#144933] text-white text-xs font-bold py-2 px-3.5 rounded-xl transition shadow-2xs cursor-pointer">
+                    ⬇ Install App (Free)
+                </button>
+                <button onclick="openPwaAppStudio()" class="bg-[#F3EFE6] hover:bg-[#E6E2D8] text-[#191918] text-xs font-semibold py-2 px-3 rounded-xl transition cursor-pointer">
+                    Offline Pack
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Full Interactive App Download & Offline Sync Modal -->
+<div id="pwa-studio-modal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#FBF9F5] border border-[#E6E2D8] rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-6 relative max-h-[90vh] overflow-y-auto">
+        
+        <!-- Close Button -->
+        <button onclick="closePwaAppStudio()" class="w-8 h-8 rounded-full bg-white border border-[#E6E2D8] text-gray-600 hover:text-black flex items-center justify-center text-sm font-bold absolute top-5 right-5 cursor-pointer">
+            ✕
+        </button>
+
+        <!-- App Header -->
+        <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-[#1A5D42] text-white font-serif font-bold text-3xl flex items-center justify-center shadow-md relative shrink-0">
+                5m
+                <span class="w-3.5 h-3.5 rounded-full bg-[#FF6B00] absolute top-2 right-2"></span>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#E3EFEA] text-[#1A5D42]">v2.6 PRO PWA</span>
+                    <span id="modal-net-badge" class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">● Online</span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-[#191918] mt-1">5minSummary App</h3>
+                <p class="text-xs text-[#6E6D68]">Zero Ads Bloat • Works Offline • 4.9★ Reader Experience</p>
+            </div>
+        </div>
+
+        <!-- App Highlights Grid -->
+        <div class="grid grid-cols-3 gap-2.5 text-center bg-white border border-[#E6E2D8] rounded-2xl p-3.5">
+            <div>
+                <span class="font-mono text-base font-bold text-[#1A5D42] block">40+</span>
+                <span class="text-[11px] text-[#6E6D68]">Deep Articles</span>
+            </div>
+            <div class="border-x border-[#E6E2D8]">
+                <span class="font-mono text-base font-bold text-[#FF6B00] block">27+</span>
+                <span class="text-[11px] text-[#6E6D68]">Tools & Games</span>
+            </div>
+            <div>
+                <span class="font-mono text-base font-bold text-[#191918] block">&lt; 2 MB</span>
+                <span class="text-[11px] text-[#6E6D68]">Instant Install</span>
+            </div>
+        </div>
+
+        <!-- OPTION 1: Native 1-Click App Install (Android / Desktop Chrome / Edge) -->
+        <div class="bg-white border border-[#E6E2D8] rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1A5D42]">STEP 1: INSTALL TO DEVICE</span>
+                <span id="os-detected-label" class="text-[11px] font-mono text-[#6E6D68]">Detecting OS...</span>
+            </div>
+            <p id="install-method-desc" class="text-xs text-[#6E6D68] leading-relaxed">
+                Install 5minSummary directly onto your phone home screen or desktop taskbar with its own dedicated app window.
+            </p>
+            <button id="modal-primary-install-btn" onclick="executeNativePwaInstall()" class="w-full py-3.5 px-5 rounded-xl bg-[#1A5D42] hover:bg-[#144933] text-white text-sm font-bold transition flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                <span>📲 Install 5minSummary App Now</span>
+            </button>
+
+            <!-- Fallback Manual Instructions (Shown automatically on iOS Safari or when native prompt already used) -->
+            <div id="manual-install-guide" class="hidden bg-[#FBF9F5] border border-[#E6E2D8] rounded-xl p-3.5 text-xs text-[#191918] space-y-1.5">
+                <p class="font-bold text-[#1A5D42]" id="manual-guide-title">How to Add to Home Screen in 2 Seconds:</p>
+                <p id="manual-guide-steps" class="text-[#6E6D68] leading-relaxed"></p>
+            </div>
+        </div>
+
+        <!-- OPTION 2: Super-Advanced 1-Click Offline Content Downloader (0% -> 100%) -->
+        <div class="bg-white border border-[#E6E2D8] rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#FF6B00]">STEP 2: SAVE ALL ARTICLES & TOOLS OFFLINE</span>
+                <span id="offline-pack-status" class="text-[11px] font-mono font-bold text-[#1A5D42]">Ready</span>
+            </div>
+            <p class="text-xs text-[#6E6D68] leading-relaxed">
+                Download all Science, History, Weekly digests, and 27+ interactive tools into your browser's secure offline vault so you can read and use tools without internet.
+            </p>
+
+            <!-- Live Progress Bar -->
+            <div id="offline-progress-wrap" class="hidden space-y-1.5">
+                <div class="w-full h-2.5 bg-[#F3EFE6] rounded-full overflow-hidden">
+                    <div id="offline-progress-bar" class="h-full bg-[#1A5D42] transition-all duration-200" style="width: 0%;"></div>
+                </div>
+                <div class="flex justify-between text-[11px] font-mono text-[#6E6D68]">
+                    <span id="offline-progress-text">Caching pages...</span>
+                    <span id="offline-progress-pct">0%</span>
+                </div>
+            </div>
+
+            <button id="btn-download-offline-pack" onclick="startOfflineVaultDownload()" class="w-full py-3 px-4 rounded-xl border-2 border-[#1A5D42] text-[#1A5D42] hover:bg-[#1A5D42] hover:text-white text-xs sm:text-sm font-bold transition cursor-pointer">
+                ⚡ Download Full Offline Pack (Articles + 27 Tools)
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    let deferredInstallEvent = null;
+    const isStandaloneApp = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+    // 1. Register Service Worker & Listen for Offline Pack Progress
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then((reg) => {
+                console.log('5minSummary Pro SW Registered:', reg.scope);
+            }).catch((err) => console.warn('SW Error:', err));
+        });
+
+        navigator.serviceWorker.addEventListener('message', (event) => {
+            const data = event.data;
+            if (!data) return;
+
+            if (data.type === 'OFFLINE_PACK_PROGRESS') {
+                document.getElementById('offline-progress-bar').style.width = data.percent + '%';
+                document.getElementById('offline-progress-pct').textContent = data.percent + '%';
+                document.getElementById('offline-progress-text').textContent = `Saved ${data.completed} of ${data.total} files...`;
+            } else if (data.type === 'OFFLINE_PACK_COMPLETE') {
+                document.getElementById('offline-pack-status').textContent = '✓ 100% Saved Offline';
+                document.getElementById('offline-progress-text').textContent = `All ${data.totalCached} pages & tools ready for offline use!`;
+                const btn = document.getElementById('btn-download-offline-pack');
+                btn.textContent = '✅ Full Site Saved for Offline Reading';
+                btn.className = 'w-full py-3 px-4 rounded-xl bg-emerald-700 text-white text-xs sm:text-sm font-bold transition';
+                localStorage.setItem('5min_offline_ready', 'true');
+            }
+        });
+    }
+
+    // 2. Detect OS for Smart Instructions
+    function detectUserPlatform() {
+        const ua = navigator.userAgent || '';
+        const osLabel = document.getElementById('os-detected-label');
+        const guideTitle = document.getElementById('manual-guide-title');
+        const guideSteps = document.getElementById('manual-guide-steps');
+
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+            if (osLabel) osLabel.textContent = 'iOS / iPhone Safari';
+            if (guideTitle) guideTitle.textContent = 'Install on iPhone / iPad:';
+            if (guideSteps) guideSteps.innerHTML = '1. Tap the <strong>Share (⬆️)</strong> icon at the bottom of Safari.<br>2. Scroll down and tap <strong>"Add to Home Screen"</strong>.';
+            return 'ios';
+        } else if (/Android/.test(ua)) {
+            if (osLabel) osLabel.textContent = 'Android OS';
+            if (guideTitle) guideTitle.textContent = 'Install on Android Browser:';
+            if (guideSteps) guideSteps.innerHTML = '1. Tap the <strong>⋮ (Three Dots Menu)</strong> in the top-right corner of Chrome.<br>2. Tap <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.';
+            return 'android';
+        } else {
+            if (osLabel) osLabel.textContent = 'Desktop / Laptop';
+            if (guideTitle) guideTitle.textContent = 'Install on Windows / Mac Desktop:';
+            if (guideSteps) guideSteps.innerHTML = 'Click the <strong>Install icon (⊕ / 🖥️)</strong> on the right side of your browser address bar, or open browser menu → <strong>"Install 5minSummary"</strong>.';
+            return 'desktop';
+        }
+    }
+
+    // 3. Capture Browser's Native Install Prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredInstallEvent = e;
+
+        // Show floating banner after 2.5 seconds if user hasn't dismissed it recently
+        if (!isStandaloneApp && !sessionStorage.getItem('pwa_banner_dismissed')) {
+            setTimeout(() => {
+                const banner = document.getElementById('pwa-floating-banner');
+                if (banner) banner.classList.remove('hidden');
+            }, 2500);
+        }
+    });
+
+    // Show floating banner even on browsers without immediate event if first visit
+    window.addEventListener('DOMContentLoaded', () => {
+        detectUserPlatform();
+        updateNetworkBadge();
+
+        if (isStandaloneApp) {
+            const navBtn = document.getElementById('nav-download-app-btn');
+            if (navBtn) navBtn.innerHTML = '<span>⚡ Offline Vault</span>';
+        } else if (!sessionStorage.getItem('pwa_banner_dismissed')) {
+            setTimeout(() => {
+                const banner = document.getElementById('pwa-floating-banner');
+                if (banner) banner.classList.remove('hidden');
+            }, 4000);
+        }
+
+        if (localStorage.getItem('5min_offline_ready') === 'true') {
+            const st = document.getElementById('offline-pack-status');
+            if (st) st.textContent = '✓ Cached Offline';
+        }
+    });
+
+    function openPwaAppStudio() {
+        detectUserPlatform();
+        const modal = document.getElementById('pwa-studio-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        if (!deferredInstallEvent) {
+            document.getElementById('manual-install-guide').classList.remove('hidden');
+        }
+    }
+
+    function closePwaAppStudio() {
+        const modal = document.getElementById('pwa-studio-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    function dismissPwaBanner() {
+        document.getElementById('pwa-floating-banner').classList.add('hidden');
+        sessionStorage.setItem('pwa_banner_dismissed', '1');
+    }
+
+    async function triggerDirectOrModalInstall() {
+        if (deferredInstallEvent) {
+            await executeNativePwaInstall();
+        } else {
+            openPwaAppStudio();
+        }
+    }
+
+    async function executeNativePwaInstall() {
+        if (deferredInstallEvent) {
+            deferredInstallEvent.prompt();
+            const { outcome } = await deferredInstallEvent.userChoice;
+            if (outcome === 'accepted') {
+                dismissPwaBanner();
+                closePwaAppStudio();
+            }
+            deferredInstallEvent = null;
+        } else {
+            // Show visual step-by-step guide inside modal & trigger offline cache
+            document.getElementById('manual-install-guide').classList.remove('hidden');
+            startOfflineVaultDownload();
+        }
+    }
+
+    function startOfflineVaultDownload() {
+        const wrap = document.getElementById('offline-progress-wrap');
+        wrap.classList.remove('hidden');
+
+        if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({ type: 'DOWNLOAD_OFFLINE_PACK' });
+        } else {
+            // Fallback if SW just registered on first page load
+            navigator.serviceWorker.ready.then((reg) => {
+                if (reg.active) {
+                    reg.active.postMessage({ type: 'DOWNLOAD_OFFLINE_PACK' });
+                }
+            });
+        }
+    }
+
+    function updateNetworkBadge() {
+        const badge = document.getElementById('modal-net-badge');
+        if (!badge) return;
+        if (navigator.onLine) {
+            badge.textContent = '● Online';
+            badge.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800';
+        } else {
+            badge.textContent = '⚡ Offline Mode';
+            badge.className = 'text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-100 text-amber-800';
+        }
+    }
+
+    window.addEventListener('online', updateNetworkBadge);
+    window.addEventListener('offline', updateNetworkBadge);
+
+    window.addEventListener('appinstalled', () => {
+        dismissPwaBanner();
+        const navBtn = document.getElementById('nav-download-app-btn');
+        if (navBtn) navBtn.innerHTML = '<span>✅ App Installed</span>';
+    });
+</script>
 </body>
 </html>

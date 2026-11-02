@@ -1,0 +1,79 @@
+{
+  "id": "/?source=pwa",
+  "name": "5minSummary — Knowledge, History, Science & 27+ Web Tools",
+  "short_name": "5minSummary",
+  "description": "Read 5-minute deep summaries across Science, History, Global Economics, and use 27+ client-side utilities including the 8K Photo Enhancer completely offline.",
+  "start_url": "/index.html?utm_source=pwa_app",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FBF9F5",
+  "theme_color": "#1A5D42",
+  "dir": "ltr",
+  "lang": "en-US",
+  "categories": ["education", "productivity", "utilities", "news", "books"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%231A5D42'/%3E%3Ccircle cx='390' cy='122' r='44' fill='%23FF6B00'/%3E%3Ctext x='256' y='325' font-family='Georgia, serif' font-weight='bold' font-size='260' fill='%23FBF9F5' text-anchor='middle'%3E5m%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=192&h=192&fit=crop&auto=format",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=512&h=512&fit=crop&auto=format",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1280&h=720&fit=crop&auto=format",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "5minSummary Editorial Knowledge & 27+ Web Tools"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=720&h=1280&fit=crop&auto=format",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Read Science, History & Use Tools Offline on Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "All 27+ Web Tools & Games",
+      "short_name": "27+ Tools",
+      "description": "Open calculators, converters, games & utilities",
+      "url": "/Tools.html"
+    },
+    {
+      "name": "8K Photo Enhancer & Compressor",
+      "short_name": "8K Photo Studio",
+      "description": "Compress KB/MB or upscale photos to 8K UHD",
+      "url": "/tools/image-compressor.html"
+    },
+    {
+      "name": "Science Deep Explainers",
+      "short_name": "Science",
+      "description": "Read trending cosmos, brain & physics articles",
+      "url": "/Science.html"
+    },
+    {
+      "name": "World & Indian History",
+      "short_name": "History",
+      "description": "Explore ancient civilizations & turning points",
+      "url": "/History.html"
+    }
+  ]
+}
