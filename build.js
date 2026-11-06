@@ -240,7 +240,16 @@ function createDedicatedPostHtml(post, backPage = '../index.html') {
             </div>
         </div>
     </div>
-
+<script>
+  atOptions = {
+    'key' : '4ba09beadacb79dba4d98456e702ad80',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/4ba09beadacb79dba4d98456e702ad80"></script>
     <!-- Pure Article Body -->
     <main class="flex-grow max-w-3xl w-full mx-auto px-4 sm:px-6 pt-10 pb-24">
         <article>
