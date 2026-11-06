@@ -222,7 +222,16 @@ function createToolPageHtml(tool) {
             </div>
         </section>
         <!-- PASTE YOUR TOOL CODE ABOVE THIS LINE -->
-    </main>
+    <script>
+  atOptions = {
+    'key' : '4ba09beadacb79dba4d98456e702ad80',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/4ba09beadacb79dba4d98456e702ad80"></script></main>
 
     <!-- 4. UNIVERSAL FOOTER -->
     <footer class="border-t border-borderLight bg-[#F6F5F0] mt-auto">

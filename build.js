@@ -287,7 +287,16 @@ function createDedicatedPostHtml(post, backPage = '../index.html') {
                 </button>
             </div>
         </article>
-    </main>
+    <script>
+  atOptions = {
+    'key' : '4ba09beadacb79dba4d98456e702ad80',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/4ba09beadacb79dba4d98456e702ad80"></script></main>
 
     <script>
         function updateLiveDateTime() {
