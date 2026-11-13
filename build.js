@@ -264,10 +264,12 @@ function createDedicatedPostHtml(post, backPage = '../index.html') {
             <h1 class="font-serif text-3xl sm:text-5xl text-textDark leading-[1.14] tracking-tight mb-4">
                 ${post.title}
             </h1>
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
 
             <p class="text-lg sm:text-xl text-textMuted font-normal leading-relaxed mb-6">
                 ${post.subtitle || ''}
             </p>
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
 
             <div class="flex items-center gap-3 pb-8 mb-8 border-b border-borderLight">
                 <div class="w-10 h-10 rounded-full bg-[#E3EFEA] text-brandGreen flex items-center justify-center font-bold text-xs">
@@ -278,24 +280,33 @@ function createDedicatedPostHtml(post, backPage = '../index.html') {
                     <p class="text-xs text-textMuted">5minSummary Editorial</p>
                 </div>
             </div>
-
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<div id="container-2b238a63cfa0aeca31f4ad1f0e5a8d8c"></div>
             <div class="w-full h-64 sm:h-[400px] rounded-lg overflow-hidden mb-10 bg-bgCard">
                 <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover">
             </div>
-
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<div id="container-2b238a63cfa0aeca31f4ad1f0e5a8d8c"></div>
             <div id="art-content" class="article-body">
                 ${bodyHtml}
             </div>
-
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<div id="container-2b238a63cfa0aeca31f4ad1f0e5a8d8c"></div>
             <div class="mt-16 pt-8 border-t border-borderLight flex justify-between items-center">
                 <button onclick="goBackPage()" class="inline-flex items-center gap-2 bg-brandGreen text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:opacity-95 transition">
                     ← Back
                 </button>
+                <script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<div id="container-2b238a63cfa0aeca31f4ad1f0e5a8d8c"></div>
                 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-medium text-textMuted hover:text-textDark">
                     Back to top ↑
                 </button>
             </div>
         </article>
+        <script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+<script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+
     <script>
   atOptions = {
     'key' : '4ba09beadacb79dba4d98456e702ad80',
@@ -412,6 +423,8 @@ function renderTrendingHtml(trendingItems) {
                                     <h3 class="font-serif text-lg text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
                                         ${item.trendingTitle || item.title}
                                     </h3>
+                                    <script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+
                                     <span class="text-[11px] text-textMuted flex items-center gap-1">
                                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                         ${item.readTime || '5 min read'}
@@ -436,6 +449,8 @@ function renderGridCardHtml(item, cardClass, labelOverride) {
                         ${item.readTime || '5 min read'}
                     </span>
                 </div>
+                <script async="async" data-cfasync="false" src="https://bauval.org/21/2b238a63cfa0aeca31f4ad1f0e5a8d8c"></script>
+
                 <h2 class="font-serif text-2xl text-textDark group-hover:text-brandGreen transition leading-snug mb-1.5">
                     ${item.title}
                 </h2>
